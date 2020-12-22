@@ -1,14 +1,15 @@
 /*Importing google fonts*/
-@import url('https://fonts.googleapis.com/css?family=Lexend+Tera:100,200,300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700');
 
 /*Global CSS selectors which affect all the webpages*/
 /*Setting font to Lexend Tera and the text color to black*/
 body {
-    font-family: "Lexend Tera", sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: #000000;
     margin: 0;
     padding: 0;
     border: 0;
+    background-color: #e1e2e2;
 }
 
 /*Setting all class row to have no left or right margin*/
@@ -23,8 +24,9 @@ a {
 }
 
 /*index.html*/
-#main-site-heading {
+.main-site-heading {
     font-size: 50px;
     letter-spacing: 10px;
     text-transform: uppercase;
+    background-color: ghostwhite;
 }
