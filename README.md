@@ -58,7 +58,7 @@ My users for this project are people who are in need of a tradesperson who requi
 
 # Wireframes
 
-## All Pages Web Browser -> [View All](writeup_files/wireframes/all-pages-web-browser.png)
+## All Pages Web Browser -> [View PDF](writeup_files/wireframes/pdf/all-pages-web-browser.pdf) -> [View Image](writeup_files/wireframes/all-pages-web-browser.png)
 
 * Homepage - Web Browser -> [Click To View](writeup_files/wireframes/homepage-web-browser.png)
 
@@ -66,7 +66,7 @@ My users for this project are people who are in need of a tradesperson who requi
 
 * Contact Page - Web Browser -> [Click To View](writeup_files/wireframes/contact-page-web-browser.png)
 
-## All Pages Tablet -> [View All](writeup_files/wireframes/all-pages-tablet.png)
+## All Pages Tablet -> [View PDF](writeup_files/wireframes/pdf/all-pages-tablet.pdf) -> [View Image](writeup_files/wireframes/all-pages-tablet.png)
 
 * Homepage - Tablet -> [Click To View](writeup_files/wireframes/homepage-tablet.png)
 
@@ -74,7 +74,7 @@ My users for this project are people who are in need of a tradesperson who requi
 
 * Contact Page - Tablet -> [Click To View](writeup_files/wireframes/contact-page-tablet.png)
 
-## All Pages Smartphone -> [View All](writeup_files/wireframes/all-pages-smartphone.png)
+## All Pages Smartphone -> [View PDF](writeup_files/wireframes/pdf/all-pages-smartphone.pdf) -> [View Image](writeup_files/wireframes/all-pages-smartphone.png)
 
 * Homepage - Smartphone -> [Click To View](writeup_files/wireframes/homepage-smartphone.png)
 
