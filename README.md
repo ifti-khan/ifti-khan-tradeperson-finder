@@ -23,7 +23,7 @@ The projects has a dual purpose, the first purpose is that it will help users fi
 When I say unregistered I mean a business or person who is not registered to Google Places, not in the sense that the business or person is not certified in that trade. So this project will help those who are not registered with Google Places to help them advertise their service and find work, not only through a friend or the spoken word but online using the Google Maps API.   
 
 ## The what?
-The project will serve as a platform to help businesses and people around the world, in cities, towns or even a small villages to advertise their services to users in the same area or around them. 
+The project will help users of the platform to find a tradesperson where ever they are in thr world. It will also be a platform for businesses around the world, in cities, towns or even a small villages to advertise their services to users in the same area or around them.
 
 ## The how?
 I will be using a variety of different technologies to create this project, the first and most important is utilising Googles API which are Google Places and Google Maps. To help the user search for a tradesperson a search form will be created that will allow users to select a country. Then a town or city they are in and then filtering the search further to a specific tradesperson not all at once. Once the search parameters have been inputted to then display the results to the user using Google maps with markers and also displaying the business or tradespersons info below for them to see.  
@@ -57,6 +57,30 @@ My users for this project are people who are in need of a tradesperson who requi
 * As a user, I want to be able to get in contact with the developer, so that I can add myself or business to this tradesperson platform. 
 
 # Wireframes
+
+## All Pages Web Browser -> [View All](writeup_files/wireframes/all-pages-web-browser.png)
+
+* Homepage - Web Browser -> [Click To View](writeup_files/wireframes/homepage-web-browser.png)
+
+* Locals Page - Web Browser -> [Click To View](writeup_files/wireframes/locals-page-web-browser.png)
+
+* Contact Page - Web Browser -> [Click To View](writeup_files/wireframes/contact-page-web-browser.png)
+
+## All Pages Tablet -> [View All](writeup_files/wireframes/all-pages-tablet.png)
+
+* Homepage - Tablet -> [Click To View](writeup_files/wireframes/homepage-tablet.png)
+
+* Locals Page - Tablet -> [Click To View](writeup_files/wireframes/locals-page-tablet.png)
+
+* Contact Page - Tablet -> [Click To View](writeup_files/wireframes/contact-page-tablet.png)
+
+## All Pages Smartphone -> [View All](writeup_files/wireframes/all-pages-smartphone.png)
+
+* Homepage - Smartphone -> [Click To View](writeup_files/wireframes/homepage-smartphone.png)
+
+* Locals Page - Smartphone -> [Click To View](writeup_files/wireframes/locals-page-smartphone.png)
+
+* Contact Page - Smartphone -> [Click To View](writeup_files/wireframes/contact-page-smartphone.png)
 
 # Features
 
