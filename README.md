@@ -84,9 +84,51 @@ My users for this project are people who are in need of a tradesperson who requi
 
 # Features
 
+Here is a list of features that will be implemented and utilized within my project. There will also be a list for future features that I would like to add to the project but cannot becuase they are outside the projects scope but as I learn and progress through out the course these features can be added at a later date.
+
 ### Existing Features
 
+* Feature 1 –
+
+* Feature 2 –
+
+* Feature 3 –
+
+* Feature 4 –
+
+* Feature 5 –
+
+* Feature 6 –
+
+* Feature 7 –
+
+* Feature 8 –
+
+* Feature 9 –
+
+* Feature 10 –
+
 ### Future Features To Implement
+
+* Feature 1 –
+
+* Feature 2 –
+
+* Feature 3 –
+
+* Feature 4 –
+
+* Feature 5 –
+
+* Feature 6 –
+
+* Feature 7 –
+
+* Feature 8 –
+
+* Feature 9 –
+
+* Feature 10 –
 
 ## Technologies Used
 
