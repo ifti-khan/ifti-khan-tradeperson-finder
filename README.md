@@ -124,10 +124,56 @@ Please Note that all features in this section here are outside of the scope of t
 * Feature 4 – A database system, so a log in system can be created for users and local business information can be stored.
 
 ## Technologies Used
+Here is a list of programming languages that i used to create this project along with a list of frameworks, libraries and tools I also used to create this project.
 
 ### Programming Languages
 
+* HTML5 -> [Visit Site](https://en.wikipedia.org/wiki/HTML5)
+    - HTML5 was used to create the overall structure and page elements to be viewed in a web browser.
+
+* CSS3 -> [Visit Site](https://en.wikipedia.org/wiki/CSS)
+    - CSS3 was used to give my project and its content style, layout, colours, a different font and format.
+
+* JavaScript -> [Visit Site](https://en.wikipedia.org/wiki/JavaScript)
+    - JavaScript was used to give my project an iteractive look and feel and to be used to interact with APIs.
+
 ### Frameworks, Libraries & Tools Used
+
+* Bootstrap v4.5.3 CDN -> [Visit Site](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
+    * Bootstrap will be used for the responsive side of my project and some visual elements as well.
+
+* Font Awesome v5.15.1 CDN -> [Visit Site](https://cdnjs.com/libraries/font-awesome)
+    * The Font Awesome CDN will be used for the icons that i use within my project to help give the project good visual elements and a good user experience.
+
+* Hover.css v2.3.1 CDN -> [Visit Site](https://cdnjs.com/libraries/hover.css)
+    * The hover css will be used to give my project a nice simple hover visual effect.
+
+* JQuery v3.5.1 -> [Visit Site](https://cdnjs.com/libraries/jquery)
+    * JQuery will be used to manipulate the Document Object Model (DOM), create animations and events.
+
+* Google Fonts -> [Visit Site]( https://fonts.google.com/)
+    * Google fonts has been used to import the font i have chosen directly from google into my main CSS file.
+
+* Brackets -> [Visit Site]( http://brackets.io/)
+    * Brackets is the text editor that I have downloaded and used to create my project.
+
+* GitHub -> [Visit Site]( https://github.com/)
+    * I used GitHub to store my project files by creating a repository for it and then using the Git terminal and its commands to version control and store my files.
+
+* Git Terminal Desktop -> [Visit Site]( https://git-scm.com/)
+    * Git is the terminal program I used to commit and push my files to my GitHub repository to store my files and version control.
+
+* GitHub Desktop -> [Visit Site]( https://desktop.github.com/)
+    * GitHub desktop was used to clone my online repositories to my local storage so I could edit my project files using Brackets and also to create new files and directories for my online repository locally and then using the Git terminal to commit and push to my GitHub repo.
+
+* Balsamiq Desktop -> [Visit Site]( https://balsamiq.com/wireframes/desktop/)
+    * Balsamiq was used in the design stage where I created my wireframes for my project to help me get visual representation of what my project could look like.
+
+* Paint 3D -> [Visit Site]( https://www.microsoft.com/en-gb/p/paint-3d/9nblggh5fv99?activetab=pivot:overviewtab)
+    * Paint 3D was used to crop screenshot images and then saved to an appropriate image format.
+
+* Google Chrome & Chrome Dev Tools -> [Visit Site](https://support.google.com/chrome/answer/95346?co=GENIE.Platform%3DDesktop&hl=en)
+    * Google Chrome and Chrome Dev Tools was used to help create my project as well as testing it using the developer tools.
 
 # Validation
 
