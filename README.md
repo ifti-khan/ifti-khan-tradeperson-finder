@@ -84,51 +84,44 @@ My users for this project are people who are in need of a tradesperson who requi
 
 # Features
 
-Here is a list of features that will be implemented and utilized within my project. There will also be a list for future features that I would like to add to the project but cannot becuase they are outside the projects scope but as I learn and progress through out the course these features can be added at a later date.
+Here is a list of features that will be implemented and utilized within my project. There will also be a list for future features that I would like to add to the project but cannot because they are outside the projects scope but as I learn and progress throughout the course these features can be added at a later date.
 
 ### Existing Features
 
-* Feature 1 –
+* Feature 1 – Making my project fully responsive to allow users to access and view the project on a variety of different device sizes e.g. web browser, tablet and smartphone.
 
-* Feature 2 –
+* Feature 2 - A dropdown list will be added to help users make a country selection for their search parameters.
 
-* Feature 3 –
+* Feature 3 - An input field will added for users to type in a town/city to help them select their town/city.
 
-* Feature 4 –
+* Feature 4 - A further refine search will be added so users can choose which tradesperson they want to look for specifically.
 
-* Feature 5 –
+* Feature 5 - The Google Places API will be used to display the user search results on an embedded Google Map.
 
-* Feature 6 –
+* Feature 6 – I will incorporate useful icons, visual effects and transitions to certain elements to give the project a better visual.
 
-* Feature 7 –
+* Feature 7 – My project pages will have quick loading times by loading the core elements and scripts first.
 
-* Feature 8 –
+* Feature 8 – I will include visual markers to help indicate to users which pages they are on and also which element they are hovering over or selected.
 
-* Feature 9 –
+* Feature 9 – A set of quick links will be located in the footer to help users navigate around the site quickly.
 
-* Feature 10 –
+* Feature 10 – Social links to my Facebook, LinkedIn, GitHub and Personal Portfolio will be provided in the footer.
+
+* Feature 11 – A fully functioning contact form will be added so that users can get in contact me with using an Email API.
+
+* Feature 12 - A collapsible navigation menu for smartphone devices.
 
 ### Future Features To Implement
+Please Note that all features in this section here are outside of the scope of this project requirements.
 
-* Feature 1 –
+* Feature 1 – Adding in a registration system for users to sign up to the website.
 
-* Feature 2 –
+* Feature 2 – Adding in a rating and review system for users to leave reviews and comments for businesses.
 
-* Feature 3 –
+* Feature 3 – An instant messaging service so that users get in contact with businesses faster.
 
-* Feature 4 –
-
-* Feature 5 –
-
-* Feature 6 –
-
-* Feature 7 –
-
-* Feature 8 –
-
-* Feature 9 –
-
-* Feature 10 –
+* Feature 4 – A database system, so a log in system can be created for users and local business information can be stored.
 
 ## Technologies Used
 
