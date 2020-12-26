@@ -16,20 +16,32 @@
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/media_queries.css" type="text/css" />
 
-    <title>I Know Someone MS2</title>
+    <title>Hey, I Know Someone MS2</title>
 </head>
 
 <body>
 
-    <header>
-        <div class="row">
-            <div class="col-12 main-site-heading">
-                <h1>&quot;Hey, I Know Someone&quot;</h1>
-            </div>
+    <nav class="main-nav navbar navbar-expand-md navbar-light sticky-top">
+        <div class="col col-lg-6 main-site-heading">
+            <h1><a href="index.html">&quot;Hey, I Know Someone&quot;</a></h1>
         </div>
-    </header>
-
-    <nav></nav>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active-nav" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="locals.html">Locals</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
     <main></main>
 
@@ -39,6 +51,8 @@
 
 <!--JQuery v3.5.1 script-->
 <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<!--Bootstrap JS-->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <!--My JS file link-->
 <script src="assets/js/script.js"></script>
 
