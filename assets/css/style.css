@@ -9,7 +9,7 @@ body {
     margin: 0;
     padding: 0;
     border: 0;
-    background-color: #e1e2e2;
+    background-color: #95ff00;
 }
 
 /*Setting all class row to have no left or right margin*/
@@ -28,5 +28,6 @@ a {
     font-size: 50px;
     letter-spacing: 10px;
     text-transform: uppercase;
-    background-color: ghostwhite;
+    background-color: #f2f2f2;
+    padding-top: 10px;
 }
