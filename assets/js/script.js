@@ -13,3 +13,8 @@ function darkTheme() {
         darkButton.innerHTML = "Dark Mode<br> On";
     }
 }
+
+function backToTop() {
+    let body = document.body;
+    body.scrollTop(0);
+}

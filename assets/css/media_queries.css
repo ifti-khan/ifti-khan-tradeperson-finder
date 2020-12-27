@@ -128,6 +128,18 @@
         padding: 1px 6px;
     }
 
+    /*Footer*/
+    #quick-links-heading {
+        text-align: center;
+
+    }
+
+    .quick-links h6 {
+        font-size: 12px;
+        text-align: center;
+        margin-left: 0px;
+    }
+
 }
 
 /*Medium Mobile*/

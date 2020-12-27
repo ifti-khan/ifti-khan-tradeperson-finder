@@ -10,6 +10,7 @@ body {
     padding: 0;
     border: 0;
     background-color: #95ff00;
+    scroll-behavior: smooth;
 }
 
 /*Setting all class row to have no left or right margin*/
@@ -24,10 +25,15 @@ a {
 }
 
 .dark-mode {
-    background-color: black;
+    background-color: #000000;
 }
 
 /*Nav Bar*/
+/*Had to use important to overide the original bg color*/
+.bg-light {
+    background-color: #f0f0f0 !important;
+}
+
 .navbar-light .navbar-brand {
     color: #000000;
     text-decoration: none;
@@ -73,4 +79,70 @@ a {
 
 .navbar-light .navbar-toggler {
     border-color: #808080;
+}
+
+/*Main Section*/
+.main-con {
+    height: 1000px;
+    margin: 20px 0px;
+}
+
+/*Footer*/
+.footer-con {
+    background-color: #f0f0f0;
+}
+
+#quick-links-heading {
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: 3px;
+    margin: 10px 0px;
+}
+
+.quick-links h6 {
+    font-size: 12px;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+.quick-links h6 a:hover {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #808080;
+}
+
+.to-top-copy {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.to-top-copy a:hover {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #808080;
+}
+
+#to-top {
+    margin-top: 10px;
+}
+
+#copy {
+    font-size: 14px;
+    margin-top: 33px;
+}
+
+.social-logos {
+    font-size: 35px;
+    letter-spacing: 10px;
+    text-align: right;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#social_icons a:hover {
+    color: #808080;
 }
