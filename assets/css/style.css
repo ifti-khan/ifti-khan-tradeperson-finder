@@ -23,6 +23,10 @@ a {
     color: #000000;
 }
 
+.dark-mode {
+    background-color: black;
+}
+
 /*Nav Bar*/
 .navbar-light .navbar-brand {
     color: #000000;
@@ -30,7 +34,8 @@ a {
     text-transform: uppercase;
     letter-spacing: 10px;
     font-weight: 500;
-    font-size: 28px;
+    font-size: 30px;
+
 }
 
 .navbar-light .navbar-brand:hover {
@@ -43,6 +48,7 @@ a {
     font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 5px;
+    line-height: 18px;
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
@@ -57,6 +63,12 @@ a {
 .navbar-light .navbar-nav .nav-link.active-nav {
     color: #ffffff;
     background-color: #808080;
+}
+
+#dark-btn {
+    font-size: 10px;
+    text-align: center;
+    line-height: normal;
 }
 
 .navbar-light .navbar-toggler {
