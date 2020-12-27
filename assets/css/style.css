@@ -24,52 +24,41 @@ a {
 }
 
 /*Nav Bar*/
-.main-site-heading {
-    padding-top: 10px;
-}
-
-.main-site-heading a {
-    font-size: 40px;
-    letter-spacing: 10px;
-    text-transform: uppercase;
+.navbar-light .navbar-brand {
+    color: #000000;
     text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-weight: 500;
+    font-size: 28px;
 }
 
-.main-site-heading a:hover {
+.navbar-light .navbar-brand:hover {
     color: #ffffff;
     background-color: #808080;
-}
-
-.main-nav {
-    background-color: #f2f2f2;
-    color: #000000;
-    text-transform: uppercase;
-    font-size: 18px;
-    letter-spacing: 5px;
-    font-weight: 500;
 }
 
 .navbar-light .navbar-nav .nav-link {
     color: #000000;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
 }
 
-.navbar-light:hover .navbar-nav:hover .nav-link:hover {
+.navbar-light .navbar-nav .nav-link:hover {
     color: #ffffff;
     background-color: #808080;
 }
 
+.nav-link {
+    margin-left: 15px;
+}
+
 .navbar-light .navbar-nav .nav-link.active-nav {
     color: #ffffff;
-    background-color: #808080
+    background-color: #808080;
 }
 
-.nav-link {
-    margin-left: 20px;
-}
-
-.navbar-toggler {
-    margin: 0 auto;
-    border: 2px solid #000;
-    color: black;
-    width: 100%;
+.navbar-light .navbar-toggler {
+    border-color: #808080;
 }
