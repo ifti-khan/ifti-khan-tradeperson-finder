@@ -3,10 +3,6 @@
 
 /*Global CSS selectors which affect all the webpages*/
 /*Setting font to Montserrat and the text color to black*/
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     font-family: "Montserrat", sans-serif;
     color: #000000;
@@ -83,6 +79,17 @@ a {
 
 .navbar-light .navbar-toggler {
     border-color: #808080;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: none;
+}
+
+.menu-icon {
+    font-size: 22px;
+    color: #000000;
+    text-align: center;
+    margin-top: 4px;
 }
 
 /*Main Section*/
