@@ -23,8 +23,14 @@ a {
     color: #000000;
 }
 
+/*Dark Theme Mode Colour*/
 .dark-mode {
     background-color: #000000;
+}
+
+/*From hover.css Sweep To Top bg color*/
+.hvr-sweep-to-top:before {
+    background: #808080;
 }
 
 /*********************************************************************************/
@@ -46,7 +52,6 @@ a {
 
 .navbar-light .navbar-brand:hover {
     color: #ffffff;
-    background-color: #808080;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -59,7 +64,6 @@ a {
 
 .navbar-light .navbar-nav .nav-link:hover {
     color: #ffffff;
-    background-color: #808080;
 }
 
 .nav-link {
@@ -123,7 +127,6 @@ a {
 .quick-links h6 a:hover {
     text-decoration: none;
     color: #ffffff;
-    background-color: #808080;
 }
 
 .social-logos {
@@ -147,7 +150,6 @@ a {
 .copyright a:hover {
     text-decoration: none;
     color: #ffffff;
-    background-color: #808080;
 }
 
 #copy {
@@ -161,7 +163,6 @@ a {
     width: 50px;
     height: 50px;
     text-align: center;
-    border-radius: 4px;
     position: fixed;
     bottom: 123px;
     right: 5px;
@@ -178,7 +179,6 @@ a {
 
 #to-top-btn:hover {
     cursor: pointer;
-    background-color: #808080;
     color: #ffffff;
 }
 
