@@ -14,7 +14,23 @@ function darkTheme() {
     }
 }
 
-function backToTop() {
-    let body = document.body;
-    body.scrollTop(0);
-}
+$(document).ready(function () {
+
+    var topButton = $('#to-top-btn');
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 100) {
+            topButton.addClass('visible');
+        } else {
+            topButton.removeClass('visible');
+        }
+    });
+
+    topButton.on('click', function (event) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: 0
+        }, '100');
+    });
+
+});

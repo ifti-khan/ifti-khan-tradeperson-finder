@@ -2,7 +2,11 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700');
 
 /*Global CSS selectors which affect all the webpages*/
-/*Setting font to Lexend Tera and the text color to black*/
+/*Setting font to Montserrat and the text color to black*/
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Montserrat", sans-serif;
     color: #000000;
@@ -10,7 +14,6 @@ body {
     padding: 0;
     border: 0;
     background-color: #95ff00;
-    scroll-behavior: smooth;
 }
 
 /*Setting all class row to have no left or right margin*/
@@ -28,6 +31,7 @@ a {
     background-color: #000000;
 }
 
+/*********************************************************************************/
 /*Nav Bar*/
 /*Had to use important to overide the original bg color*/
 .bg-light {
@@ -92,20 +96,21 @@ a {
     background-color: #f0f0f0;
 }
 
+.quick-links {
+    text-align: center;
+}
+
 #quick-links-heading {
     text-transform: uppercase;
-    text-align: left;
     letter-spacing: 3px;
     margin: 10px 0px;
 }
 
 .quick-links h6 {
     font-size: 12px;
-    text-align: left;
     text-transform: uppercase;
     letter-spacing: 3px;
     margin-bottom: 10px;
-    margin-left: 5px;
 }
 
 .quick-links h6 a:hover {
@@ -114,35 +119,63 @@ a {
     background-color: #808080;
 }
 
-.to-top-copy {
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-}
-
-.to-top-copy a:hover {
-    text-decoration: none;
-    color: #ffffff;
-    background-color: #808080;
-}
-
-#to-top {
-    margin-top: 10px;
-}
-
-#copy {
-    font-size: 14px;
-    margin-top: 33px;
-}
-
 .social-logos {
     font-size: 35px;
     letter-spacing: 10px;
-    text-align: right;
+    text-align: center;
     margin-top: auto;
     margin-bottom: auto;
 }
 
 #social_icons a:hover {
     color: #808080;
+}
+
+.copyright {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.copyright a:hover {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #808080;
+}
+
+#copy {
+    font-size: 14px;
+}
+
+/*Back To Top Button*/
+#to-top-btn {
+    background-color: #f0f0f0;
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 123px;
+    right: 5px;
+    transition: background-color 1s,
+        opacity 1s, visibility 1s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+}
+
+.fa-angle-double-up {
+    margin-top: 10px;
+}
+
+#to-top-btn:hover {
+    cursor: pointer;
+    background-color: #808080;
+    color: #ffffff;
+}
+
+#to-top-btn.visible {
+    opacity: 1;
+    visibility: visible;
 }

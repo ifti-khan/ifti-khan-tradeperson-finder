@@ -129,15 +129,22 @@
     }
 
     /*Footer*/
-    #quick-links-heading {
-        text-align: center;
-
+    .social-logos {
+        margin-bottom: 5px
     }
 
-    .quick-links h6 {
-        font-size: 12px;
-        text-align: center;
-        margin-left: 0px;
+    #contactme-link {
+        margin-bottom: 5px;
+    }
+
+    .empty-space {
+        display: none;
+    }
+
+    /*Back To Top Button*/
+    #to-top-btn {
+        bottom: 175px;
+        right: 5px;
     }
 
 }
