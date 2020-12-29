@@ -20,6 +20,13 @@
 </head>
 
 <body>
+    <!--    <div class="col-12 col-lg-12 overlay">
+        <h1 id="overlay-heading">Please Make A Selection</h1>
+        <button type="button" class="btn btn-secondary btn-lg" id="btn-google">Google Search</button>
+        <button type="button" class="btn btn-secondary btn-lg" id="btn-local">Local Search</button>
+    </div>-->
+
+
     <!--This block of code below is for the Bootstrap collapsable Navigation bar, which contains the websites main heading, nav bar and dark theme mode. I have left the default bootstrap classes in place so save code space, readability and also because they are called in the bootstrap JS file. I have manipulated this block of code to my liking with my own style in the style.css and media queries file-->
 
     <!--Bootstrap Collapsable Navigation Bar-->
@@ -58,9 +65,70 @@
     <main>
         <div class="container-fluid main-con">
             <div class="row">
-                <div class="col-lg-4">col 1</div>
-                <div class="col-lg-4">col 2</div>
-                <div class="col-lg-4">col 3</div>
+                <div class="col-lg-4 step-one">
+                    <h2>step one</h2>
+                    <h6>select a country</h6>
+
+                    <div id="controls">
+                        <select id="country">
+                            <option value="all" selected>All</option>
+                            <option value="au">Australia</option>
+                            <option value="br">Brazil</option>
+                            <option value="ca">Canada</option>
+                            <option value="fr">France</option>
+                            <option value="de">Germany</option>
+                            <option value="mx">Mexico</option>
+                            <option value="nz">New Zealand</option>
+                            <option value="it">Italy</option>
+                            <option value="za">South Africa</option>
+                            <option value="es">Spain</option>
+                            <option value="pt">Portugal</option>
+                            <option value="us">U.S.A.</option>
+                            <option value="uk">United Kingdom</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 step-two">
+                    <h2>step two</h2>
+                    <h6>type a city or town</h6>
+
+                    <div id="locationField">
+                        <input id="autocomplete" placeholder="Type a city or town" type="text" />
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4 step-three">
+                    <h2>step three</h2>
+                    <h6>choose a trade</h6>
+
+                    <div class="row">
+                        <div class="col-lg-6 left-options">
+                            <input type="checkbox" id="electrician" name="electrician" value="electrician">
+                            <label for="electrician">electrician</label><br>
+
+                            <input type="checkbox" id="plumber" name="plumber" value="plumber">
+                            <label for="plumber">plumber</label><br>
+
+                            <input type="checkbox" id="car_repair" name="car_repair" value="car_repair">
+                            <label for="car_repair">Mechanic</label><br>
+                        </div>
+
+                        <div class="col-lg-6 right-options">
+                            <input type="checkbox" id="locksmith" name="locksmith" value="locksmith">
+                            <label for="locksmith">locksmith</label><br>
+
+                            <input type="checkbox" id="painter" name="painter" value="painter">
+                            <label for="painter">painter</label><br>
+
+                            <input type="checkbox" id="hardware_store" name="hardware_store" value="hardware_store">
+                            <label for="hardware_store">Hardware Store</label><br>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
         </div>
 
