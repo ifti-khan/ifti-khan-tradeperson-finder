@@ -5,12 +5,12 @@ function darkTheme() {
     let darkButton = document.getElementById("dark-btn");
     darkButton.classList.toggle("active-nav");
 
-    if (darkButton.innerHTML === "Dark Mode<br> Off") {
-        darkButton.innerHTML = "Dark Mode<br> On";
-    } else if (darkButton.innerHTML === "Dark Mode<br> On") {
+    if (darkButton.innerHTML === "Dark Mode<br> On") {
         darkButton.innerHTML = "Dark Mode<br> Off";
-    } else {
+    } else if (darkButton.innerHTML === "Dark Mode<br> Off") {
         darkButton.innerHTML = "Dark Mode<br> On";
+    } else {
+        darkButton.innerHTML = "Dark Mode<br> Off";
     }
 }
 
