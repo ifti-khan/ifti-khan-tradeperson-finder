@@ -20,13 +20,6 @@
 </head>
 
 <body>
-    <!--    <div class="col-12 col-lg-12 overlay">
-        <h1 id="overlay-heading">Please Make A Selection</h1>
-        <button type="button" class="btn btn-secondary btn-lg" id="btn-google">Google Search</button>
-        <button type="button" class="btn btn-secondary btn-lg" id="btn-local">Local Search</button>
-    </div>-->
-
-
     <!--This block of code below is for the Bootstrap collapsable Navigation bar, which contains the websites main heading, nav bar and dark theme mode. I have left the default bootstrap classes in place so save code space, readability and also because they are called in the bootstrap JS file. I have manipulated this block of code to my liking with my own style in the style.css and media queries file-->
 
     <!--Bootstrap Collapsable Navigation Bar-->
@@ -62,7 +55,7 @@
     </nav>
 
     <!--This block of code below is for the main section of my html and i used the bootstrap grid sytem to create a fluid container, then a row and last the columns that i needed-->
-    <main>
+    <main class="google-search">
         <div class="container-fluid main-con">
             <div class="row">
                 <div class="col-12 col-lg-4 step-one">
@@ -104,7 +97,7 @@
                     <h6>choose a trade</h6>
 
                     <div class="row">
-                        <div class="col-6 col-lg-6 left-options">
+                        <div class="col-5 col-lg-4 left-options">
                             <input type="checkbox" id="electrician" name="electrician" value="electrician">
                             <label for="electrician">electrician</label><br>
 
@@ -128,10 +121,8 @@
 
                     </div>
                 </div>
-
             </div>
         </div>
-
     </main>
 
     <!--This block of code is for the footer section of my html file, i used the bootstrap grid system to help create a rown then the columns i needed. They contains quick link to other pages, social icons linked to there websites and a copyright to me which is also a link to my personal portfolio and two empty columns to help with spacing and positioning-->

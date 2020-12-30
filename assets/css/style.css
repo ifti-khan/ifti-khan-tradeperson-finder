@@ -108,7 +108,11 @@ a {
     text-transform: uppercase;
     letter-spacing: 5px;
     text-align: center;
-    padding-top: 25px;
+}
+
+.step-one,
+.step-two {
+    padding-top: 45px;
 }
 
 .step-two {
@@ -116,9 +120,20 @@ a {
     border-right: 2px solid #808080;
 }
 
+.step-three {
+    padding-top: 25px
+}
+
+.step-one h6,
+.step-two h6,
+.step-three h6 {
+    margin-bottom: 10px;
+}
+
 .left-options {
     text-align: left;
     font-size: 13px;
+    margin-left: auto;
 }
 
 .right-options {
@@ -210,17 +225,3 @@ a {
     opacity: 1;
     visibility: visible;
 }
-
-/*Overlay*/
-/*.overlay {
-    background-color: #808080;
-    width: 100%;
-    height: 1000px;
-    position: fixed;
-    z-index: 2000;
-    text-align: center;
-}
-
-#overlay-heading {
-    margin-top: 400px;
-}*/

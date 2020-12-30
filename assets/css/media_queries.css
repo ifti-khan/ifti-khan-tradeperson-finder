@@ -148,16 +148,21 @@
 
     .left-options {
         text-align: left;
-        font-size: 11px;
-        letter-spacing: 2px;
+        font-size: 14px;
+        letter-spacing: 0px;
         margin-top: 10px;
+        text-transform: capitalize;
+        padding: 0px 0px;
+        margin-left: auto;
     }
 
     .right-options {
         text-align: left;
-        font-size: 11px;
-        letter-spacing: 2px;
+        font-size: 14px;
+        letter-spacing: 0px;
         margin-top: 10px;
+        text-transform: capitalize;
+        padding: 0px 0px;
     }
 
     /*Footer*/
