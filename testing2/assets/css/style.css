@@ -1,0 +1,141 @@
+/*Importing google fonts*/
+@import url('https://fonts.googleapis.com/css?family=Exo+2:100,200,300,400,500,600,700');
+
+/*Global CSS selectors which affect all the webpages*/
+/*Setting font to Lexend Tera and the text color to black*/
+body {
+    font-family: "Exo 2", sans-serif;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: #e1e2e2;
+}
+
+/*Setting all class row to have no left or right margin*/
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+/*Setting all a elements text color to black*/
+a {
+    color: #000000;
+}
+
+/*******************************************************/
+
+/*index.html*/
+.main-site-heading {
+    font-size: 50px;
+    letter-spacing: 15px;
+    text-transform: uppercase;
+    background-color: ghostwhite;
+    text-align: left;
+}
+
+/* Always set the map height explicitly to define the size of the div
+* element that contains the map. */
+#map {
+    height: 100%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 0 !important;
+}
+
+table {
+    font-size: 12px;
+}
+
+.hotel-search {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 440px;
+
+}
+
+#map {
+    margin-top: 40px;
+    width: 100%
+}
+
+#listing {
+    width: 100%;
+    height: 500px;
+    overflow: auto;
+    cursor: pointer;
+    overflow-x: hidden;
+}
+
+#findhotels {
+    font-size: 14px;
+}
+
+#locationField {
+    -webkit-box-flex: 1 1 190px;
+    -ms-flex: 1 1 190px;
+    flex: 1 1 190px;
+    margin: 0 8px;
+}
+
+#controls {
+    -webkit-box-flex: 1 1 140px;
+    -ms-flex: 1 1 140px;
+    flex: 1 1 140px;
+}
+
+#autocomplete {
+    width: 100%;
+}
+
+#country {
+    width: 100%;
+}
+
+.placeIcon {
+    width: 20px;
+    height: 34px;
+    margin: 4px;
+}
+
+.hotelIcon {
+    width: 24px;
+    height: 24px;
+}
+
+#resultsTable {
+    border-collapse: collapse;
+    width: 240px;
+}
+
+#rating {
+    font-size: 13px;
+    font-family: Arial Unicode MS;
+}
+
+.iw_table_row {
+    height: 18px;
+}
+
+.iw_attribute_name {
+    font-weight: bold;
+    text-align: right;
+}
+
+.iw_table_icon {
+    text-align: right;
+}

@@ -1,0 +1,38 @@
+/*4K Screen*/
+@media (max-width: 2560px) {}
+
+/*Large Laptop*/
+@media (max-width: 1440px) {}
+
+/*Medium Laptop*/
+@media (max-width: 1024px) {}
+
+/*Small Laptop*/
+@media (max-width: 991px) {}
+
+/*Tablet*/
+@media (max-width: 768px) {}
+
+/*Large Mobile*/
+@media (max-width: 425px) {
+
+    /*index.html*/
+    #main-site-heading {
+        font-size: 50px;
+        letter-spacing: 15px;
+        text-align: center;
+    }
+}
+
+/*Medium Mobile*/
+@media (max-width: 375px) {}
+
+/*Small Mobile*/
+@media (max-width: 320px) {
+
+    /*index.html*/
+    #main-site-heading {
+        font-size: 30px;
+        text-align: center;
+    }
+}

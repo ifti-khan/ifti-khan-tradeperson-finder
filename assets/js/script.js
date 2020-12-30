@@ -33,13 +33,4 @@ $(document).ready(function () {
         }, '100');
     });
 
-    //Overlay
-    /*    $("#btn-google").click(function () {
-            $(".overlay").fadeOut('slow').removeClass('.overlay');
-        });
-
-        $("#btn-local").click(function () {
-            window.location.href = "locals.html";
-        });*/
-
 });
