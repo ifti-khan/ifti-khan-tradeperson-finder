@@ -64,7 +64,7 @@
                     <h6>select a country</h6>
 
                     <div id="controls">
-                        <select id="country">
+                        <select id="country-list">
                             <option value="all" selected>All</option>
                             <option value="au">Australia</option>
                             <option value="br">Brazil</option>
@@ -87,8 +87,8 @@
                     <h2>step two</h2>
                     <h6>type a city or town</h6>
 
-                    <div id="locationField">
-                        <input id="autocomplete" placeholder="Type a city or town" type="text" />
+                    <div id="town-city-field">
+                        <input id="town-city" placeholder="Type a city or town" type="text" />
                     </div>
 
                 </div>
@@ -127,8 +127,8 @@
     </main>
 
     <div class="container-fluid gmaps-con">
-        <div class="row gmaps-row">
-            <div class="col-lg-12 gmaps-column">
+        <div class="row no-gutters gmaps-row">
+            <div class="col-12 col-lg-12 gmaps-column">
 
                 <div id="map"></div>
 
@@ -137,8 +137,8 @@
     </div>
 
     <div class="container-fluid gmaps-res-con">
-        <div class="row gmaps-res-row">
-            <div class="col-lg-12 gmaps-res-column">
+        <div class="row no-gutters gmaps-res-row">
+            <div class="col-12 col-lg-12 gmaps-res-column">
 
                 <div id="listing">
                     <table id="resultsTable">

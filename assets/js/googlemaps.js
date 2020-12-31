@@ -11,13 +11,13 @@ let infoWindow;
 let markers = [];
 let autocomplete;
 const countryRestrict = {
-    country: "defcen"
+    country: "defaultcenter"
 };
 const MARKER_PATH =
     "https://developers.google.com/maps/documentation/javascript/images/marker_green";
 const hostnameRegexp = new RegExp("^https?://.+?/");
 const countries = {
-    defcen: {
+    defaultcenter: {
         center: {
             lat: 0,
             lng: 0
@@ -119,8 +119,8 @@ const countries = {
 
 function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
-        zoom: countries["defcen"].zoom,
-        center: countries["defcen"].center,
+        zoom: countries["defaultcenter"].zoom,
+        center: countries["defaultcenter"].center,
         mapTypeControl: false,
         panControl: false,
         zoomControl: false,
@@ -132,7 +132,7 @@ function initMap() {
     // Create the autocomplete object and associate it with the UI input control.
     // Restrict the search to the default country, and to place type "cities".
     autocomplete = new google.maps.places.Autocomplete(
-        document.getElementById("autocomplete"), {
+        document.getElementById("town-city"), {
             types: ["(cities)"],
             componentRestrictions: countryRestrict,
         }
@@ -141,7 +141,7 @@ function initMap() {
     autocomplete.addListener("place_changed", onPlaceChanged);
     // Add a DOM event listener to react when the user selects a country.
     document
-        .getElementById("country")
+        .getElementById("country-list")
         .addEventListener("change", setAutocompleteCountry);
 }
 
@@ -155,7 +155,7 @@ function onPlaceChanged() {
         map.setZoom(15);
         search();
     } else {
-        document.getElementById("autocomplete").placeholder = "Enter a city";
+        document.getElementById("town-city").placeholder = "Type a city or town";
     }
 }
 
@@ -204,7 +204,7 @@ function clearMarkers() {
 // Set the country restriction based on user input.
 // Also center and zoom the map on the given country.
 function setAutocompleteCountry() {
-    const country = document.getElementById("country").value;
+    const country = document.getElementById("country-list").value;
 
     if (country == "all") {
         autocomplete.setComponentRestrictions({
