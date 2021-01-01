@@ -141,6 +141,14 @@ a {
     font-size: 13px;
 }
 
+#reset-btn {
+    margin-top: 6px;
+    border-radius: px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    height: 35px
+}
+
 /*Footer*/
 .footer-con {
     margin-top: 10px;

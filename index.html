@@ -26,7 +26,7 @@
     <!--Bootstrap Collapsable Navigation Bar-->
     <nav class="navbar navbar-expand-lg bg-light navbar-light sticky-top">
         <!--Main Site Header with link to homepage-->
-        <a class="main-heading navbar-brand hvr-sweep-to-top hvr-pulse" href="index.html">"Hey, I Know Someone"</a>
+        <a class="main-heading navbar-brand hvr-sweep-to-top" href="index.html">"Hey, I Know Someone"</a>
 
         <!--Toggle Button/ Navigation Bar Collapse is being called from the Bootstrap JS file using the data attribute-->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -67,16 +67,7 @@
                         <select id="country-list">
                             <option value="all" selected>All</option>
                             <option value="au">Australia</option>
-                            <option value="br">Brazil</option>
                             <option value="ca">Canada</option>
-                            <option value="fr">France</option>
-                            <option value="de">Germany</option>
-                            <option value="mx">Mexico</option>
-                            <option value="nz">New Zealand</option>
-                            <option value="it">Italy</option>
-                            <option value="za">South Africa</option>
-                            <option value="es">Spain</option>
-                            <option value="pt">Portugal</option>
                             <option value="us">U.S.A.</option>
                             <option value="uk">United Kingdom</option>
                         </select>
@@ -87,10 +78,10 @@
                     <h2>step two</h2>
                     <h6>type a city or town</h6>
 
-                    <div id="town-city-field">
-                        <input id="town-city" placeholder="Type a city or town" type="text" />
+                    <div id="city-town-field">
+                        <input id="city-town" placeholder="Type a city or town" type="text" required />
                     </div>
-
+                    <input type="reset" onclick="resetSearch()" id="reset-btn">
                 </div>
 
                 <div class="col-12 col-lg-4 step-three">
@@ -99,24 +90,25 @@
 
                     <div class="row">
                         <div class="col-5 col-lg-4 left-options">
-                            <input type="checkbox" id="electrician" name="electrician" value="electrician">
+                            <input type="radio" id="electrician" name="tradesperson" value="electrician">
                             <label for="electrician">electrician</label><br>
 
-                            <input type="checkbox" id="plumber" name="plumber" value="plumber">
+                            <input type="radio" id="plumber" name="tradesperson" value="plumber">
                             <label for="plumber">plumber</label><br>
 
-                            <input type="checkbox" id="car_repair" name="car_repair" value="car_repair">
-                            <label for="car_repair">Mechanic</label><br>
+                            <input type="radio" id="painter" name="tradesperson" value="painter">
+                            <label for="painter">Painter</label><br>
+
                         </div>
 
                         <div class="col-6 col-lg-6 right-options">
-                            <input type="checkbox" id="locksmith" name="locksmith" value="locksmith">
+                            <input type="radio" id="car_repair" name="tradesperson" value="car_repair">
+                            <label for="car_repair">Mechanic</label><br>
+
+                            <input type="radio" id="locksmith" name="tradesperson" value="locksmith">
                             <label for="locksmith">locksmith</label><br>
 
-                            <input type="checkbox" id="painter" name="painter" value="painter">
-                            <label for="painter">painter</label><br>
-
-                            <input type="checkbox" id="hardware_store" name="hardware_store" value="hardware_store">
+                            <input type="radio" id="hardware_store" name="tradesperson" value="hardware_store">
                             <label for="hardware_store">Hardware Store</label><br>
                         </div>
 
