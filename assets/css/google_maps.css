@@ -12,12 +12,17 @@
     min-height: 600px;
 }
 
-#listing {
+.result-con {
     cursor: pointer;
 }
 
-#resultsTable {
-    width: 100%;
+.card-body {
+    background-color: #f0f0f0;
+    margin: 2px 2px;
+    width: 23%;
+    display: inline-grid;
+    text-align: center;
+
 }
 
 .placeIcon {
@@ -26,7 +31,7 @@
     margin: 10px;
 }
 
-.hotelIcon {
+.tradeIcon {
     width: 24px;
     height: 24px;
 }

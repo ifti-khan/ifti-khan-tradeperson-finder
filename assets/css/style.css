@@ -29,7 +29,7 @@ a {
 }
 
 /*From hover.css Sweep To Top bg color*/
-.hvr-sweep-to-top:before {
+.hvr-sweep-to-bottom:before {
     background: #808080;
 }
 
@@ -151,7 +151,7 @@ a {
 
 /*Footer*/
 .footer-con {
-    margin-top: 10px;
+    margin-top: 1px;
     background-color: #f0f0f0;
 }
 

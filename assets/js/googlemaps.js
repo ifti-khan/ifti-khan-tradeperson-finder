@@ -399,24 +399,36 @@ function addResult(result, i) {
     const results = document.getElementById("results");
     const markerLetter = String.fromCharCode("A".charCodeAt(0) + (i % 26));
     const markerIcon = MARKER_PATH + markerLetter + ".png";
-    const tr = document.createElement("tr");
-    tr.style.backgroundColor = i % 2 === 0 ? "#F0F0F0" : "#FFFFFF";
 
-    tr.onclick = function () {
+    const card = document.createElement("div");
+    card.setAttribute("class", "card-body");
+    card.setAttribute("className", "card-body");
+
+    const cbody = document.createElement("div");
+    cbody.setAttribute("class", "card-body");
+    cbody.setAttribute("className", "card-body");
+
+    cbody.onclick = function () {
         google.maps.event.trigger(markers[i], "click");
     };
-    const iconTd = document.createElement("td");
-    const nameTd = document.createElement("td");
+    const iconTd = document.createElement("span");
+    const nameTd = document.createElement("span");
+    const addressTd = document.createElement("div");
+
     const icon = document.createElement("img");
     icon.src = markerIcon;
     icon.setAttribute("class", "placeIcon");
     icon.setAttribute("className", "placeIcon");
+
     const name = document.createTextNode(result.name);
+    const address = document.createTextNode(result.vicinity);
     iconTd.appendChild(icon);
     nameTd.appendChild(name);
-    tr.appendChild(iconTd);
-    tr.appendChild(nameTd);
-    results.appendChild(tr);
+    addressTd.appendChild(address);
+    cbody.appendChild(iconTd);
+    cbody.appendChild(nameTd);
+    cbody.appendChild(addressTd);
+    results.appendChild(cbody);
 }
 
 //This function removes the markers from the map, i have used this for the reset button
@@ -456,10 +468,10 @@ function showInfoWindow() {
 //Loads the place information into the HTML elements used by the info window.
 function buildIWContent(place) {
     document.getElementById("iw-icon").innerHTML =
-        '<img class="hotelIcon" ' + 'src="' + place.icon + '"/>';
+        '<img class="tradeIcon" ' + 'src="' + place.icon + '"/>';
     document.getElementById("iw-url").innerHTML =
         '<b><a href="' + place.url + '">' + place.name + "</a></b>";
-    document.getElementById("iw-address").textContent = place.vicinity;
+    document.getElementById("iw-address").textContent = place.formatted_address;
 
     if (place.formatted_phone_number) {
         document.getElementById("iw-phone-row").style.display = "";
