@@ -1,9 +1,9 @@
 #city-town {
-    width: 50%;
+    width: 75%;
 }
 
 #country-list {
-    width: 50%;
+    width: 75%;
 }
 
 #map {
@@ -14,15 +14,18 @@
 
 .result-con {
     cursor: pointer;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+
 }
 
 .card-body {
     background-color: #f0f0f0;
     margin: 2px 2px;
-    width: 23%;
-    display: inline-grid;
-    text-align: center;
+}
 
+.pop-up-con {
+    display: none;
 }
 
 .placeIcon {
@@ -35,7 +38,6 @@
     width: 24px;
     height: 24px;
 }
-
 
 #rating {
     font-size: 13px;
@@ -53,4 +55,51 @@
 
 .iw_table_icon {
     text-align: right;
+}
+
+/*Media Queries*/
+
+@media (min-width: 2560px) {
+
+    #city-town {
+        width: 60%;
+    }
+
+    #country-list {
+        width: 60%;
+    }
+
+    .result-con {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    #city-town {
+        width: 50%;
+    }
+
+    #country-list {
+        width: 50%;
+    }
+
+}
+
+@media (max-width: 425px) {
+
+    #city-town {
+        width: 75%;
+    }
+
+    #country-list {
+        width: 75%;
+    }
+
+    .result-con {
+        display: block;
+    }
+
 }

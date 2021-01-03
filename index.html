@@ -138,7 +138,7 @@
         </div>
     </div>
 
-    <div style="display: none">
+    <div class="pop-up-con">
         <div id="info-content">
             <table>
                 <tr id="iw-url-row" class="iw_table_row">
@@ -164,9 +164,6 @@
             </table>
         </div>
     </div>
-
-
-
 
     <!--This block of code is for the footer section of my html file, i used the bootstrap grid system to help create a rown then the columns i needed. They contains quick link to other pages, social icons linked to there websites and a copyright to me which is also a link to my personal portfolio and two empty columns to help with spacing and positioning-->
     <footer>
@@ -209,21 +206,21 @@
     <!--This line of code below is for the back to top button. when a user scrolls down if will appear in the bottom right just above the footer. I achieved this by a mix of html, css and javascript-->
 
     <!--Back to top button-->
-    <a id="to-top-btn" class="hvr-sweep-to-top hvr-pulse"><i class="fas fa-angle-double-up" aria-hidden="true"></i></a>
+    <a id="to-top-btn" class="hvr-sweep-to-bottom hvr-pulse"><i class="fas fa-angle-double-up" aria-hidden="true"></i></a>
+
+    <!--Here below you will find all of my Javascript files, here i have linked the most recent JQuery via URL, Bootstrap JS via URL and my own Javascript file which is stored in my js directory in the assets folder-->
+
+    <!--JQuery v3.5.1 script-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!--Bootstrap JS-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Google API Files-->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBY5zt-488Aq3MH-93TXudTj4sCSoa5N6o&callback=initMap&libraries=places,geometry&v=weekly" defer></script>
+    <!--My JS Files-->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/googlemaps.js"></script>
 
 </body>
-
-<!--Here below you will find all of my Javascript files, here i have linked the most recent JQuery via URL, Bootstrap JS via URL and my own Javascript file which is stored in my js directory in the assets folder-->
-
-<!--JQuery v3.5.1 script-->
-<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-<!--Bootstrap JS-->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<!--Google API Files-->
-<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBY5zt-488Aq3MH-93TXudTj4sCSoa5N6o&callback=initMap&libraries=places,geometry&v=weekly" defer></script>
-<!--My JS Files-->
-<script src="assets/js/script.js"></script>
-<script src="assets/js/googlemaps.js"></script>
 
 </html>

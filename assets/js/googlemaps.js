@@ -429,6 +429,7 @@ function addResult(result, i) {
     cbody.appendChild(nameTd);
     cbody.appendChild(addressTd);
     results.appendChild(cbody);
+
 }
 
 //This function removes the markers from the map, i have used this for the reset button

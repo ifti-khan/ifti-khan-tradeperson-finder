@@ -8,14 +8,19 @@
     }
 
     .navbar-light .navbar-nav .nav-link {
-        font-size: 30px;
+        font-size: 25px;
         letter-spacing: 10px;
-        line-height: 34px;
+        line-height: 44px;
     }
 
     #dark-btn {
         font-size: 18px;
         line-height: normal;
+    }
+
+    .step-one,
+    .step-two {
+        padding-top: 30px;
     }
 
 }
@@ -32,11 +37,30 @@
     .navbar-light .navbar-nav .nav-link {
         font-size: 16px;
         letter-spacing: 5px;
-        line-height: 18px;
+        line-height: 26px;
     }
 
     #dark-btn {
         line-height: normal;
+    }
+
+    .step-one,
+    .step-two {
+        padding-top: 30px;
+    }
+
+    .left-options {
+        margin-left: auto;
+        padding: 0 0;
+        font-size: 12px;
+        letter-spacing: 4px;
+    }
+
+    .right-options {
+        margin-left: auto;
+        padding: 0 0;
+        font-size: 12px;
+        letter-spacing: 4px;
     }
 
 }
@@ -52,7 +76,7 @@
 
     .navbar-light .navbar-nav .nav-link {
         font-size: 14px;
-        line-height: 16px;
+        line-height: 26px;
     }
 
     #dark-btn {
@@ -61,6 +85,28 @@
 
     .nav-link {
         margin-left: 5px;
+    }
+
+    .step-one,
+    .step-two {
+        padding-top: 25px;
+    }
+
+    .left-options {
+        font-size: 12px;
+        letter-spacing: 0px;
+        margin-top: 5px;
+        text-transform: uppercase;
+        padding: 0px 0px;
+        margin-left: auto;
+    }
+
+    .right-options {
+        font-size: 12px;
+        letter-spacing: 0px;
+        margin-top: 5px;
+        text-transform: uppercase;
+        padding: 0px 0px;
     }
 
 }
@@ -80,6 +126,29 @@
         margin-top: 5px;
         font-size: 18px;
         letter-spacing: 5px;
+    }
+
+    .step-one,
+    .step-two {
+        border-left: none;
+        border-right: none;
+        border-bottom: 2px solid #808080;
+        padding-top: 30px;
+    }
+
+    .left-options {
+        text-align: center;
+        font-size: 14px;
+        margin-top: 5px;
+        padding: 0px 0px;
+        margin-left: 40px;
+    }
+
+    .right-options {
+        text-align: center;
+        font-size: 14px;
+        margin-top: 5px;
+        padding: 0px 0px;
     }
 
 }
@@ -103,6 +172,33 @@
 
     #dark-btn {
         font-size: 12px;
+    }
+
+    .step-one,
+    .step-two {
+        border-left: none;
+        border-right: none;
+        border-bottom: 2px solid #808080;
+        padding-top: 30px;
+    }
+
+    .left-options {
+        text-align: center;
+        font-size: 14px;
+        margin-top: 5px;
+        padding: 0px 0px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    .right-options {
+        text-align: center;
+        font-size: 14px;
+        margin-top: 5px;
+        padding: 0px 0px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+
     }
 }
 
@@ -143,29 +239,27 @@
         border-left: none;
         border-right: none;
         border-bottom: 2px solid #808080;
-        padding-top: 45px;
+        padding-top: 30px;
     }
 
     .left-options {
         text-align: left;
         font-size: 14px;
-        letter-spacing: 0px;
+        letter-spacing: 1px;
         margin-top: 10px;
-        text-transform: capitalize;
+        text-transform: uppercase;
         padding: 0px 0px;
-        margin-left: auto;
+        margin-left: 30px;
     }
 
     .right-options {
         text-align: left;
         font-size: 14px;
-        letter-spacing: 0px;
+        letter-spacing: 1px;
         margin-top: 10px;
-        text-transform: capitalize;
+        text-transform: uppercase;
         padding: 0px 0px;
     }
-
-    /*Results Container*/
 
     /*Footer*/
     .social-logos {
@@ -198,6 +292,29 @@
         letter-spacing: 2px
     }
 
+    .step-two {
+        padding-top: 30px;
+    }
+
+    .left-options {
+        text-align: left;
+        font-size: 14px;
+        letter-spacing: 0px;
+        margin-top: 5px;
+        text-transform: uppercase;
+        padding: 0px 0px;
+        margin-left: 20px;
+    }
+
+    .right-options {
+        text-align: left;
+        font-size: 14px;
+        letter-spacing: 0px;
+        margin-top: 5px;
+        text-transform: uppercase;
+        padding: 0px 0px;
+    }
+
 }
 
 /*Small Mobile*/
@@ -209,5 +326,25 @@
         margin-right: 0px;
         letter-spacing: 2px
     }
+
+    .step-two {
+        padding-top: 20px;
+    }
+
+    .left-options {
+        font-size: 12px;
+        letter-spacing: 0px;
+        text-transform: uppercase;
+        padding: 0px 0px;
+    }
+
+    .right-options {
+        font-size: 12px;
+        letter-spacing: 0px;
+        text-transform: uppercase;
+        padding: 0px 0px;
+    }
+
+
 
 }
