@@ -33,10 +33,6 @@ a {
     background: #808080;
 }
 
-.hvr-sweep-to-bottom {
-    display: block;
-}
-
 /*********************************************************************************/
 /*Nav Bar*/
 /*Had to use important to overide the original bg color*/

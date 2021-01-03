@@ -163,6 +163,7 @@
     }
 
     .navbar-light .navbar-nav .nav-link {
+        display: block;
         text-align: center;
         margin-left: 0px;
         margin-top: 5px;

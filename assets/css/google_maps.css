@@ -28,33 +28,48 @@
     display: none;
 }
 
-.placeIcon {
+.gmapMarkers {
     width: 20px;
     height: 34px;
     margin: 10px;
 }
 
-.tradeIcon {
-    width: 24px;
-    height: 24px;
+.popUp-table-icon {
+    font-size: 40px;
+    color: green;
 }
 
-#rating {
-    font-size: 13px;
-    font-family: Arial Unicode MS;
-}
-
-.iw_table_row {
+.popUp-table-row {
     height: 18px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
 }
 
-.iw_attribute_name {
+#popUp-url-name {
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 5px;
+    letter-spacing: 1px;
+    color: #000000;
+    text-align: left;
+}
+
+#popUp-url-name a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.popUp-attrib-name {
     font-weight: bold;
     text-align: right;
 }
 
-.iw_table_icon {
+.popUp-table-icon {
     text-align: right;
+}
+
+#popUp-rating {
+    font-size: 20px;
 }
 
 /*Media Queries*/

@@ -411,23 +411,23 @@ function addResult(result, i) {
     cbody.onclick = function () {
         google.maps.event.trigger(markers[i], "click");
     };
-    const iconTd = document.createElement("span");
-    const nameTd = document.createElement("span");
-    const addressTd = document.createElement("div");
+    const iconSpan = document.createElement("span");
+    const nameSpan = document.createElement("span");
+    const addressDiv = document.createElement("div");
 
     const icon = document.createElement("img");
     icon.src = markerIcon;
-    icon.setAttribute("class", "placeIcon");
-    icon.setAttribute("className", "placeIcon");
+    icon.setAttribute("class", "gmapMarkers");
+    icon.setAttribute("className", "gmapMarkers");
 
     const name = document.createTextNode(result.name);
     const address = document.createTextNode(result.vicinity);
-    iconTd.appendChild(icon);
-    nameTd.appendChild(name);
-    addressTd.appendChild(address);
-    cbody.appendChild(iconTd);
-    cbody.appendChild(nameTd);
-    cbody.appendChild(addressTd);
+    iconSpan.appendChild(icon);
+    nameSpan.appendChild(name);
+    addressDiv.appendChild(address);
+    cbody.appendChild(iconSpan);
+    cbody.appendChild(nameSpan);
+    cbody.appendChild(addressDiv);
     results.appendChild(cbody);
 
 }
@@ -461,25 +461,25 @@ function showInfoWindow() {
                 return;
             }
             infoWindow.open(map, marker);
-            buildIWContent(place);
+            gmapPopUp(place);
         }
     );
 }
 
 //Loads the place information into the HTML elements used by the info window.
-function buildIWContent(place) {
-    document.getElementById("iw-icon").innerHTML =
-        '<img class="tradeIcon" ' + 'src="' + place.icon + '"/>';
-    document.getElementById("iw-url").innerHTML =
-        '<b><a href="' + place.url + '">' + place.name + "</a></b>";
-    document.getElementById("iw-address").textContent = place.formatted_address;
+function gmapPopUp(place) {
+    /*    document.getElementById("popUp-icon").innerHTML =
+            '<img class="tradeIcon" ' + 'src="' + place.icon + '"/>';*/
+    document.getElementById("popUp-url-name").innerHTML =
+        '<a href="' + place.url + '">' + place.name + '</a>';
+    document.getElementById("popUp-address").textContent = place.formatted_address;
 
     if (place.formatted_phone_number) {
-        document.getElementById("iw-phone-row").style.display = "";
-        document.getElementById("iw-phone").textContent =
+        document.getElementById("popUp-phone-row").style.display = "";
+        document.getElementById("popUp-phone").textContent =
             place.formatted_phone_number;
     } else {
-        document.getElementById("iw-phone-row").style.display = "none";
+        document.getElementById("popUp-phone-row").style.display = "none";
     }
 
     // Assign a five-star rating to the tradespeople, using a black star ('&#10029;')
@@ -494,11 +494,11 @@ function buildIWContent(place) {
             } else {
                 ratingHtml += "&#10029;";
             }
-            document.getElementById("iw-rating-row").style.display = "";
-            document.getElementById("iw-rating").innerHTML = ratingHtml;
+            document.getElementById("popUp-rating-row").style.display = "";
+            document.getElementById("popUp-rating").innerHTML = ratingHtml;
         }
     } else {
-        document.getElementById("iw-rating-row").style.display = "none";
+        document.getElementById("popUp-rating-row").style.display = "none";
     }
 
     // The regexp isolates the first part of the URL (domain plus subdomain)
@@ -511,9 +511,9 @@ function buildIWContent(place) {
             website = "http://" + place.website + "/";
             fullUrl = website;
         }
-        document.getElementById("iw-website-row").style.display = "";
-        document.getElementById("iw-website").textContent = website;
+        document.getElementById("popUp-website-row").style.display = "";
+        document.getElementById("popUp-website").textContent = website;
     } else {
-        document.getElementById("iw-website-row").style.display = "none";
+        document.getElementById("popUp-website-row").style.display = "none";
     }
 }
