@@ -110,6 +110,11 @@ function initMap() {
 function onPlaceChanged() {
     if ($("#electrician").is(':checked')) {
         const place = autocomplete.getPlace();
+
+        let defaultIcon = document.getElementById("defaultIcon")
+        defaultIcon.setAttribute("class", "fas fa-bolt");
+        defaultIcon.setAttribute("className", "fas fa-bolt");
+
         if (place.geometry) {
             map.panTo(place.geometry.location);
             map.setZoom(15);
@@ -119,6 +124,11 @@ function onPlaceChanged() {
         }
     } else if ($("#plumber").is(':checked')) {
         const place = autocomplete.getPlace();
+
+        let defaultIcon = document.getElementById("defaultIcon")
+        defaultIcon.setAttribute("class", "fas fa-wrench");
+        defaultIcon.setAttribute("className", "fas fa-wrench");
+
         if (place.geometry) {
             map.panTo(place.geometry.location);
             map.setZoom(15);
@@ -127,6 +137,11 @@ function onPlaceChanged() {
             $('#city-town').attr("placeholder", "Please type a city or town");
         }
     } else if ($("#painter").is(':checked')) {
+
+        let defaultIcon = document.getElementById("defaultIcon")
+        defaultIcon.setAttribute("class", "fas fa-paint-roller");
+        defaultIcon.setAttribute("className", "fas fa-paint-roller");
+
         const place = autocomplete.getPlace();
         if (place.geometry) {
             map.panTo(place.geometry.location);
@@ -137,6 +152,12 @@ function onPlaceChanged() {
         }
     } else if ($("#car_repair").is(':checked')) {
         const place = autocomplete.getPlace();
+
+        let defaultIcon = document.getElementById("defaultIcon")
+        defaultIcon.setAttribute("class", "fas fa-car-battery");
+        defaultIcon.setAttribute("className", "fas fa-car-battery");
+
+
         if (place.geometry) {
             map.panTo(place.geometry.location);
             map.setZoom(15);
@@ -146,6 +167,11 @@ function onPlaceChanged() {
         }
     } else if ($("#locksmith").is(':checked')) {
         const place = autocomplete.getPlace();
+
+        let defaultIcon = document.getElementById("defaultIcon")
+        defaultIcon.setAttribute("class", "fas fa-key");
+        defaultIcon.setAttribute("className", "fas fa-key");
+
         if (place.geometry) {
             map.panTo(place.geometry.location);
             map.setZoom(15);
@@ -155,6 +181,11 @@ function onPlaceChanged() {
         }
     } else if ($("#hardware_store").is(':checked')) {
         const place = autocomplete.getPlace();
+
+        let defaultIcon = document.getElementById("defaultIcon")
+        defaultIcon.setAttribute("class", "fas fa-shopping-cart");
+        defaultIcon.setAttribute("className", "fas fa-shopping-cart");
+
         if (place.geometry) {
             map.panTo(place.geometry.location);
             map.setZoom(15);

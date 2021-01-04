@@ -37,6 +37,7 @@
 .popUp-table-icon {
     font-size: 40px;
     color: green;
+    padding-right: 10px;
 }
 
 .popUp-table-row {
@@ -48,7 +49,7 @@
 #popUp-url-name {
     font-weight: bold;
     margin-top: 20px;
-    margin-left: 10px;
+    margin-left: 5px;
     letter-spacing: 1px;
     color: #000000;
     text-align: left;
