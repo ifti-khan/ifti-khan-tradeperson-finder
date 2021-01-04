@@ -37,7 +37,16 @@
 .popUp-table-icon {
     font-size: 40px;
     color: green;
-    padding-right: 10px;
+    padding-right: 20px;
+    text-align: right
+}
+
+#popUp-name {
+    font-weight: bold;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    color: #000000;
+    text-align: left;
 }
 
 .popUp-table-row {
@@ -46,31 +55,24 @@
     font-size: 14px;
 }
 
-#popUp-url-name {
-    font-weight: bold;
-    margin-top: 20px;
-    margin-left: 5px;
-    letter-spacing: 1px;
-    color: #000000;
-    text-align: left;
-}
-
-#popUp-url-name a:hover {
-    color: #ffffff;
-    text-decoration: none;
-}
-
 .popUp-attrib-name {
     font-weight: bold;
     text-align: right;
 }
 
-.popUp-table-icon {
-    text-align: right;
-}
-
 #popUp-rating {
     font-size: 20px;
+    padding: 0px 0px 5px 0px;
+}
+
+#popUp-website a {
+    color: #000000;
+    font-weight: 500;
+}
+
+#popUp-website a:hover {
+    color: #ffffff;
+    text-decoration: none;
 }
 
 /*Media Queries*/

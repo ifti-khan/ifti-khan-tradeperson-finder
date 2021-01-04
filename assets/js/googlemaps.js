@@ -4,15 +4,14 @@ let places;
 let infoWindow;
 let markers = [];
 let autocomplete;
-const countryRestrict = {
+let countryRestrict = {
     country: "all"
 };
-const MARKER_PATH =
+let MARKER_PATH =
     "https://developers.google.com/maps/documentation/javascript/images/marker_green";
-const hostnameRegexp = new RegExp("^https?://.+?/");
 
 //Listing a number of countries and there coordinates on Google Maps and zoom setting for each country.
-const countries = {
+let countries = {
     all: {
         center: {
             lat: 0,
@@ -50,20 +49,6 @@ const countries = {
     },
 };
 
-//This function resets all the search input fields from all the steps divs and resets the map zoom back to default.
-function resetSearch() {
-    clearResults();
-    clearMarkers();
-    $('#country-list')[0].selectedIndex = 0;
-    $('#city-town').val("");
-    $('input[type=radio]').prop('checked', false);
-    map.setZoom(2);
-    map.setCenter(countries["all"].center);
-    map.componentRestrictions = {
-        'country': []
-    };
-}
-
 //Initiating Google map, its overall zoom and map control settings.
 function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
@@ -77,7 +62,7 @@ function initMap() {
 
     //This creates the pop up info window when a marker is clicked.
     infoWindow = new google.maps.InfoWindow({
-        content: document.getElementById("info-content"),
+        content: document.getElementById("gmaps-popup-content"),
     });
 
     //This here takes the input from the city-town input field and creates autocomplete object, which is restricted to the country that has been selected from the country list.
@@ -109,8 +94,9 @@ function initMap() {
 //When a user types and selects a city or town, they then have to selct a tradesperson using the radio button and it will then get the place details for the city and zoom the map in on the city or town.
 function onPlaceChanged() {
     if ($("#electrician").is(':checked')) {
-        const place = autocomplete.getPlace();
+        let place = autocomplete.getPlace();
 
+        //This switches to the bolt icon from the default set icon if the electrician radio button is selected.
         let defaultIcon = document.getElementById("defaultIcon")
         defaultIcon.setAttribute("class", "fas fa-bolt");
         defaultIcon.setAttribute("className", "fas fa-bolt");
@@ -123,8 +109,9 @@ function onPlaceChanged() {
             $('#city-town').attr("placeholder", "Please type a city or town");
         }
     } else if ($("#plumber").is(':checked')) {
-        const place = autocomplete.getPlace();
+        let place = autocomplete.getPlace();
 
+        //This switches to the wrench icon from the default set icon if the plumber radio button is selected.
         let defaultIcon = document.getElementById("defaultIcon")
         defaultIcon.setAttribute("class", "fas fa-wrench");
         defaultIcon.setAttribute("className", "fas fa-wrench");
@@ -137,12 +124,13 @@ function onPlaceChanged() {
             $('#city-town').attr("placeholder", "Please type a city or town");
         }
     } else if ($("#painter").is(':checked')) {
+        let place = autocomplete.getPlace();
 
+        //This switches to the paint roller icon from the default set icon if the painter radio button is selected.
         let defaultIcon = document.getElementById("defaultIcon")
         defaultIcon.setAttribute("class", "fas fa-paint-roller");
         defaultIcon.setAttribute("className", "fas fa-paint-roller");
 
-        const place = autocomplete.getPlace();
         if (place.geometry) {
             map.panTo(place.geometry.location);
             map.setZoom(15);
@@ -151,12 +139,12 @@ function onPlaceChanged() {
             $('#city-town').attr("placeholder", "Please type a city or town");
         }
     } else if ($("#car_repair").is(':checked')) {
-        const place = autocomplete.getPlace();
+        let place = autocomplete.getPlace();
 
+        //This switches to the car battery icon from the default set icon if the mechanic radio button is selected.
         let defaultIcon = document.getElementById("defaultIcon")
         defaultIcon.setAttribute("class", "fas fa-car-battery");
         defaultIcon.setAttribute("className", "fas fa-car-battery");
-
 
         if (place.geometry) {
             map.panTo(place.geometry.location);
@@ -166,8 +154,9 @@ function onPlaceChanged() {
             $('#city-town').attr("placeholder", "Please type a city or town");
         }
     } else if ($("#locksmith").is(':checked')) {
-        const place = autocomplete.getPlace();
+        let place = autocomplete.getPlace();
 
+        //This switches to the key icon from the default set icon if the locksmith radio button is selected.
         let defaultIcon = document.getElementById("defaultIcon")
         defaultIcon.setAttribute("class", "fas fa-key");
         defaultIcon.setAttribute("className", "fas fa-key");
@@ -180,8 +169,9 @@ function onPlaceChanged() {
             $('#city-town').attr("placeholder", "Please type a city or town");
         }
     } else if ($("#hardware_store").is(':checked')) {
-        const place = autocomplete.getPlace();
+        let place = autocomplete.getPlace();
 
+        //This switches to the shopping cart icon from the default set icon if the hardware store radio button is selected.
         let defaultIcon = document.getElementById("defaultIcon")
         defaultIcon.setAttribute("class", "fas fa-shopping-cart");
         defaultIcon.setAttribute("className", "fas fa-shopping-cart");
@@ -196,9 +186,9 @@ function onPlaceChanged() {
     }
 }
 
-// Searches for electricians using Google place types in the selected city or town, within the viewport of the map.
+//Searches for electricians using Google place types in the selected city or town, within the viewport of the map.
 function searchElectrician() {
-    const search = {
+    let search = {
         bounds: map.getBounds(),
         types: ["electrician"],
     };
@@ -207,19 +197,17 @@ function searchElectrician() {
             clearResults();
             clearMarkers();
 
-            // Create a marker for each electrician found, and
-            // assign a letter of the alphabetic to each marker icon.
+            //Create a marker for each electrician found, and assign a letter of the alphabetic to each marker icon.
             for (let i = 0; i < results.length; i++) {
-                const markerLetter = String.fromCharCode("A".charCodeAt(0) + (i % 26));
-                const markerIcon = MARKER_PATH + markerLetter + ".png";
+                let markerLetter = String.fromCharCode("A".charCodeAt(0) + (i % 26));
+                let markerIcon = MARKER_PATH + markerLetter + ".png";
                 // Use marker animation to drop the icons incrementally on the map.
                 markers[i] = new google.maps.Marker({
                     position: results[i].geometry.location,
                     animation: google.maps.Animation.DROP,
                     icon: markerIcon,
                 });
-                // If the user clicks a electrician marker, show the details of that hotel
-                // in an info window.
+                //If the user clicks a electrician marker, show the details of that electrician or business in the info window.
                 markers[i].placeResult = results[i];
                 google.maps.event.addListener(markers[i], "click", showInfoWindow);
                 setTimeout(dropMarker(i), i * 100);
@@ -229,9 +217,9 @@ function searchElectrician() {
     });
 }
 
-// Searches for plumber using Google place types in the selected city or town, within the viewport of the map.
+//Searches for plumber using Google place types in the selected city or town, within the viewport of the map.
 function searchPlumber() {
-    const search = {
+    let search = {
         bounds: map.getBounds(),
         types: ["plumber"],
     };
@@ -240,19 +228,17 @@ function searchPlumber() {
             clearResults();
             clearMarkers();
 
-            // Create a marker for each plumber found, and
-            // assign a letter of the alphabetic to each marker icon.
+            //Create a marker for each plumber found, and assign a letter of the alphabetic to each marker icon.
             for (let i = 0; i < results.length; i++) {
-                const markerLetter = String.fromCharCode("A".charCodeAt(0) + (i % 26));
-                const markerIcon = MARKER_PATH + markerLetter + ".png";
+                let markerLetter = String.fromCharCode("A".charCodeAt(0) + (i % 26));
+                let markerIcon = MARKER_PATH + markerLetter + ".png";
                 // Use marker animation to drop the icons incrementally on the map.
                 markers[i] = new google.maps.Marker({
                     position: results[i].geometry.location,
                     animation: google.maps.Animation.DROP,
                     icon: markerIcon,
                 });
-                // If the user clicks a plumber marker, show the details of that hotel
-                // in an info window.
+                //If the user clicks a plumber marker, show the details of that plumber or business in the info window.
                 markers[i].placeResult = results[i];
                 google.maps.event.addListener(markers[i], "click", showInfoWindow);
                 setTimeout(dropMarker(i), i * 100);
@@ -262,9 +248,9 @@ function searchPlumber() {
     });
 }
 
-// Searches for painter using Google place types in the selected city or town, within the viewport of the map.
+//Searches for painter using Google place types in the selected city or town, within the viewport of the map.
 function searchPainter() {
-    const search = {
+    let search = {
         bounds: map.getBounds(),
         types: ["painter"],
     };
@@ -273,19 +259,17 @@ function searchPainter() {
             clearResults();
             clearMarkers();
 
-            // Create a marker for each painter found, and
-            // assign a letter of the alphabetic to each marker icon.
+            //Create a marker for each painter found, and assign a letter of the alphabetic to each marker icon.
             for (let i = 0; i < results.length; i++) {
-                const markerLetter = String.fromCharCode("A".charCodeAt(0) + (i % 26));
-                const markerIcon = MARKER_PATH + markerLetter + ".png";
+                let markerLetter = String.fromCharCode("A".charCodeAt(0) + (i % 26));
+                let markerIcon = MARKER_PATH + markerLetter + ".png";
                 // Use marker animation to drop the icons incrementally on the map.
                 markers[i] = new google.maps.Marker({
                     position: results[i].geometry.location,
                     animation: google.maps.Animation.DROP,
                     icon: markerIcon,
                 });
-                // If the user clicks a painter marker, show the details of that hotel
-                // in an info window.
+                //If the user clicks a painter marker, show the details of that painter or business in the info window.
                 markers[i].placeResult = results[i];
                 google.maps.event.addListener(markers[i], "click", showInfoWindow);
                 setTimeout(dropMarker(i), i * 100);
@@ -295,9 +279,9 @@ function searchPainter() {
     });
 }
 
-/// Searches for mechanic using Google place types in the selected city or town, within the viewport of the map.
+///Searches for mechanic using Google place types in the selected city or town, within the viewport of the map.
 function searchMechanic() {
-    const search = {
+    let search = {
         bounds: map.getBounds(),
         types: ["car_repair"],
     };
@@ -306,19 +290,17 @@ function searchMechanic() {
             clearResults();
             clearMarkers();
 
-            // Create a marker for each mechanic found, and
-            // assign a letter of the alphabetic to each marker icon.
+            //Create a marker for each mechanic found, and assign a letter of the alphabetic to each marker icon.
             for (let i = 0; i < results.length; i++) {
-                const markerLetter = String.fromCharCode("A".charCodeAt(0) + (i % 26));
-                const markerIcon = MARKER_PATH + markerLetter + ".png";
+                let markerLetter = String.fromCharCode("A".charCodeAt(0) + (i % 26));
+                let markerIcon = MARKER_PATH + markerLetter + ".png";
                 // Use marker animation to drop the icons incrementally on the map.
                 markers[i] = new google.maps.Marker({
                     position: results[i].geometry.location,
                     animation: google.maps.Animation.DROP,
                     icon: markerIcon,
                 });
-                // If the user clicks a mechanic marker, show the details of that hotel
-                // in an info window.
+                //If the user clicks a mechanic marker, show the details of that mechanic or business in the info window.
                 markers[i].placeResult = results[i];
                 google.maps.event.addListener(markers[i], "click", showInfoWindow);
                 setTimeout(dropMarker(i), i * 100);
@@ -328,9 +310,9 @@ function searchMechanic() {
     });
 }
 
-// Searches for locksmith using Google place types in the selected city or town, within the viewport of the map.
+//Searches for locksmith using Google place types in the selected city or town, within the viewport of the map.
 function searchLocksmith() {
-    const search = {
+    let search = {
         bounds: map.getBounds(),
         types: ["locksmith"],
     };
@@ -339,19 +321,17 @@ function searchLocksmith() {
             clearResults();
             clearMarkers();
 
-            // Create a marker for each locksmith found, and
-            // assign a letter of the alphabetic to each marker icon.
+            //Create a marker for each locksmith found, and assign a letter of the alphabetic to each marker icon.
             for (let i = 0; i < results.length; i++) {
-                const markerLetter = String.fromCharCode("A".charCodeAt(0) + (i % 26));
-                const markerIcon = MARKER_PATH + markerLetter + ".png";
+                let markerLetter = String.fromCharCode("A".charCodeAt(0) + (i % 26));
+                let markerIcon = MARKER_PATH + markerLetter + ".png";
                 // Use marker animation to drop the icons incrementally on the map.
                 markers[i] = new google.maps.Marker({
                     position: results[i].geometry.location,
                     animation: google.maps.Animation.DROP,
                     icon: markerIcon,
                 });
-                // If the user clicks a locksmith marker, show the details of that hotel
-                // in an info window.
+                //If the user clicks a locksmith marker, show the details of that locksmith or business in the info window.
                 markers[i].placeResult = results[i];
                 google.maps.event.addListener(markers[i], "click", showInfoWindow);
                 setTimeout(dropMarker(i), i * 100);
@@ -361,9 +341,9 @@ function searchLocksmith() {
     });
 }
 
-// Searches for hardware stores using Google place types in the selected city or town, within the viewport of the map.
+//Searches for hardware stores using Google place types in the selected city or town, within the viewport of the map.
 function searchHardware() {
-    const search = {
+    let search = {
         bounds: map.getBounds(),
         types: ["hardware_store"],
     };
@@ -372,19 +352,17 @@ function searchHardware() {
             clearResults();
             clearMarkers();
 
-            // Create a marker for each hardware stores found, and
-            // assign a letter of the alphabetic to each marker icon.
+            //Create a marker for each hardware stores found, and assign a letter of the alphabetic to each marker icon.
             for (let i = 0; i < results.length; i++) {
-                const markerLetter = String.fromCharCode("A".charCodeAt(0) + (i % 26));
-                const markerIcon = MARKER_PATH + markerLetter + ".png";
+                let markerLetter = String.fromCharCode("A".charCodeAt(0) + (i % 26));
+                let markerIcon = MARKER_PATH + markerLetter + ".png";
                 // Use marker animation to drop the icons incrementally on the map.
                 markers[i] = new google.maps.Marker({
                     position: results[i].geometry.location,
                     animation: google.maps.Animation.DROP,
                     icon: markerIcon,
                 });
-                // If the user clicks a hardware stores marker, show the details of that hotel
-                // in an info window.
+                //If the user clicks a hardware store marker, show the details of that hardware store or business in the info window.
                 markers[i].placeResult = results[i];
                 google.maps.event.addListener(markers[i], "click", showInfoWindow);
                 setTimeout(dropMarker(i), i * 100);
@@ -396,7 +374,7 @@ function searchHardware() {
 
 //This sets the country restriction from the dropdown country list based on the user selection. It also centers and zoom the map on the given country.
 function setAutocompleteCountry() {
-    const country = document.getElementById("country-list").value;
+    let country = document.getElementById("country-list").value;
 
     if (country == "all") {
         autocomplete.setComponentRestrictions({
@@ -418,41 +396,43 @@ function setAutocompleteCountry() {
     clearMarkers();
 }
 
-//This function drops the marker
+//This function drops the marker.
 function dropMarker(i) {
     return function () {
         markers[i].setMap(map);
     };
 }
 
-//This function adds the found results to table below map with a bit of css styling
+//This function creates new bootstrap card-body elements and adds the found results in to bootstrap card-body below the google maps.
 function addResult(result, i) {
-    const results = document.getElementById("results");
-    const markerLetter = String.fromCharCode("A".charCodeAt(0) + (i % 26));
-    const markerIcon = MARKER_PATH + markerLetter + ".png";
+    let results = document.getElementById("results");
+    let markerLetter = String.fromCharCode("A".charCodeAt(0) + (i % 26));
+    let markerIcon = MARKER_PATH + markerLetter + ".png";
 
-    const card = document.createElement("div");
+    let card = document.createElement("div");
     card.setAttribute("class", "card-body");
     card.setAttribute("className", "card-body");
 
-    const cbody = document.createElement("div");
+    let cbody = document.createElement("div");
     cbody.setAttribute("class", "card-body");
     cbody.setAttribute("className", "card-body");
 
     cbody.onclick = function () {
         google.maps.event.trigger(markers[i], "click");
     };
-    const iconSpan = document.createElement("span");
-    const nameSpan = document.createElement("span");
-    const addressDiv = document.createElement("div");
 
-    const icon = document.createElement("img");
+    let iconSpan = document.createElement("span");
+    let nameSpan = document.createElement("span");
+    let addressDiv = document.createElement("div");
+
+    let icon = document.createElement("img");
     icon.src = markerIcon;
     icon.setAttribute("class", "gmapMarkers");
     icon.setAttribute("className", "gmapMarkers");
 
-    const name = document.createTextNode(result.name);
-    const address = document.createTextNode(result.vicinity);
+    let name = document.createTextNode(result.name);
+    let address = document.createTextNode(result.vicinity);
+
     iconSpan.appendChild(icon);
     nameSpan.appendChild(name);
     addressDiv.appendChild(address);
@@ -463,7 +443,7 @@ function addResult(result, i) {
 
 }
 
-//This function removes the markers from the map, i have used this for the reset button
+//This function removes the markers from the map, i have used this for the reset button as well by calling the function.
 function clearMarkers() {
     for (let i = 0; i < markers.length; i++) {
         if (markers[i]) {
@@ -473,17 +453,17 @@ function clearMarkers() {
     markers = [];
 }
 
-//This functions clears the results found, i have used this for the reset button
+//This functions clears the results found, i have used this for the reset button as well by calling the function.
 function clearResults() {
-    const results = document.getElementById("results");
+    let results = document.getElementById("results");
     while (results.childNodes[0]) {
         results.removeChild(results.childNodes[0]);
     }
 }
 
-//This gets the place details for all the tradespeople using the Google place types and show the information in an info window anchored on the marker for the tradepersons that the user has selected.
+//This function will show the pop up info window in the google maps if the status is ok  and all the info is provided my the gmapPopUp fuction below.
 function showInfoWindow() {
-    const marker = this;
+    let marker = this;
     places.getDetails({
             placeId: marker.placeResult.place_id
         },
@@ -497,14 +477,16 @@ function showInfoWindow() {
     );
 }
 
-//Loads the place information into the HTML elements used by the info window.
+//Loads the place information into the HTML elements used by the pop up info window.
 function gmapPopUp(place) {
-    /*    document.getElementById("popUp-icon").innerHTML =
-            '<img class="tradeIcon" ' + 'src="' + place.icon + '"/>';*/
-    document.getElementById("popUp-url-name").innerHTML =
-        '<a href="' + place.url + '">' + place.name + '</a>';
+
+    //Adds the place name results to the inner of html popup name.
+    document.getElementById("popUp-name").innerHTML = place.name;
+
+    //Adds the place formatted phone number results to the inner of html popup address.
     document.getElementById("popUp-address").textContent = place.formatted_address;
 
+    //Check to see if there is a place result formatted phone number and if there is it will be put into the inner html element, if not then display nothing.
     if (place.formatted_phone_number) {
         document.getElementById("popUp-phone-row").style.display = "";
         document.getElementById("popUp-phone").textContent =
@@ -513,17 +495,15 @@ function gmapPopUp(place) {
         document.getElementById("popUp-phone-row").style.display = "none";
     }
 
-    // Assign a five-star rating to the tradespeople, using a black star ('&#10029;')
-    // to indicate the rating the hotel has earned, and a white star ('&#10025;')
-    // for the rating points not achieved.
+    //Using a for loop to see if a tradesperson or business has a rating using the place rating result and assing them a five-star rating using a html black star code ('&#9733;'), and a html white star code ('&#9734;') for the rating points not achieved. if they have a star rating it will show in the inner of the html assigned, if not it will display nothing.
     if (place.rating) {
         let ratingHtml = "";
 
         for (let i = 0; i < 5; i++) {
             if (place.rating < i + 0.5) {
-                ratingHtml += "&#10025;";
+                ratingHtml += "&#9734;";
             } else {
-                ratingHtml += "&#10029;";
+                ratingHtml += "&#9733;";
             }
             document.getElementById("popUp-rating-row").style.display = "";
             document.getElementById("popUp-rating").innerHTML = ratingHtml;
@@ -532,19 +512,28 @@ function gmapPopUp(place) {
         document.getElementById("popUp-rating-row").style.display = "none";
     }
 
-    // The regexp isolates the first part of the URL (domain plus subdomain)
-    // to give a short URL for displaying in the info window.
+    //Check to see if there is a place result website and if there is it will set it as a href attibute of the a element, making a clickable link and if not then display nothing.
     if (place.website) {
-        let fullUrl = place.website;
-        let website = String(hostnameRegexp.exec(place.website));
+        let resultUrl = place.website;
 
-        if (!website) {
-            website = "http://" + place.website + "/";
-            fullUrl = website;
-        }
         document.getElementById("popUp-website-row").style.display = "";
-        document.getElementById("popUp-website").textContent = website;
+        document.getElementById("popUpUrl").setAttribute("href", resultUrl);
+        document.getElementById("popUpUrl").textContent = resultUrl;
     } else {
         document.getElementById("popUp-website-row").style.display = "none";
     }
+}
+
+//This function resets all the search input fields from all the steps divs and resets the map zoom back to default.
+function resetSearch() {
+    clearResults();
+    clearMarkers();
+    $('#country-list')[0].selectedIndex = 0;
+    $('#city-town').val("");
+    $('input[type=radio]').prop('checked', false);
+    map.setZoom(2);
+    map.setCenter(countries["all"].center);
+    map.componentRestrictions = {
+        'country': []
+    };
 }
