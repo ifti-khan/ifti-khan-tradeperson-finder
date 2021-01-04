@@ -149,6 +149,39 @@ a {
     height: 35px
 }
 
+/*Results Container Show and Hide*/
+.result-heading-show {
+    display: block;
+    background-color: #f0f0f0;
+    padding: 10px 5px;
+    margin-bottom: 0px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+
+.fa-chevron-down {
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.result-heading-hide {
+    display: none;
+    background-color: #f0f0f0;
+    padding: 10px 5px;
+    margin-bottom: 0px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+
+.fa-chevron-up {
+    font-size: 20px;
+    vertical-align: middle;
+}
+
 /*Footer*/
 .footer-con {
     margin-top: 1px;

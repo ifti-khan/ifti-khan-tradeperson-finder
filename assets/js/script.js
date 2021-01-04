@@ -33,4 +33,18 @@ $(document).ready(function () {
         }, '100');
     });
 
+    $(".result-heading-show").click(function () {
+        $('.result-con').slideDown();
+        $('.result-heading-show').hide();
+        $('.result-heading-hide').show();
+        $('#result').show();
+    });
+
+    $(".result-heading-hide").click(function () {
+        $('.result-con').slideUp();
+        $('.result-heading-show').show();
+        $('.result-heading-hide').hide();
+        $('#result').hide();
+    });
+
 });

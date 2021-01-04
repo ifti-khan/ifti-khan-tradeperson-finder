@@ -262,6 +262,23 @@
         padding: 0px 0px;
     }
 
+    /*Results Container Show and Hide*/
+    .result-heading-show {
+        font-size: 20px
+    }
+
+    .fa-chevron-down {
+        font-size: 15px;
+    }
+
+    .result-heading-hide {
+        font-size: 20px
+    }
+
+    .fa-chevron-up {
+        font-size: 15px;
+    }
+
     /*Footer*/
     .social-logos {
         margin-bottom: 5px
