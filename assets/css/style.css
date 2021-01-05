@@ -151,7 +151,7 @@ a {
 
 /*Results Container Show and Hide*/
 .result-heading-show {
-    display: block;
+    display: none;
     background-color: #f0f0f0;
     padding: 10px 5px;
     margin-bottom: 0px;
@@ -167,7 +167,7 @@ a {
 }
 
 .result-heading-hide {
-    display: none;
+    display: block;
     background-color: #f0f0f0;
     padding: 10px 5px;
     margin-bottom: 0px;

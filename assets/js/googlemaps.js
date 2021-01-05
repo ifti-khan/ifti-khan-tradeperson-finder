@@ -105,8 +105,10 @@ function onPlaceChanged() {
             map.panTo(place.geometry.location);
             map.setZoom(15);
             searchElectrician();
+            changeCenterElec();
         } else {
             $('#city-town').attr("placeholder", "Please type a city or town");
+
         }
     } else if ($("#plumber").is(':checked')) {
         let place = autocomplete.getPlace();
@@ -120,6 +122,7 @@ function onPlaceChanged() {
             map.panTo(place.geometry.location);
             map.setZoom(15);
             searchPlumber();
+            changeCenterPlumber();
         } else {
             $('#city-town').attr("placeholder", "Please type a city or town");
         }
@@ -135,6 +138,7 @@ function onPlaceChanged() {
             map.panTo(place.geometry.location);
             map.setZoom(15);
             searchPainter();
+            changeCenterPainter();
         } else {
             $('#city-town').attr("placeholder", "Please type a city or town");
         }
@@ -150,6 +154,7 @@ function onPlaceChanged() {
             map.panTo(place.geometry.location);
             map.setZoom(15);
             searchMechanic();
+            changeCenterMechanic();
         } else {
             $('#city-town').attr("placeholder", "Please type a city or town");
         }
@@ -165,6 +170,7 @@ function onPlaceChanged() {
             map.panTo(place.geometry.location);
             map.setZoom(15);
             searchLocksmith();
+            changeCenterLocksmith();
         } else {
             $('#city-town').attr("placeholder", "Please type a city or town");
         }
@@ -180,6 +186,7 @@ function onPlaceChanged() {
             map.panTo(place.geometry.location);
             map.setZoom(15);
             searchHardware();
+            changeCenterHardware();
         } else {
             $('#city-town').attr("placeholder", "Please type a city or town");
         }
@@ -536,4 +543,54 @@ function resetSearch() {
     map.componentRestrictions = {
         'country': []
     };
+    location.reload();
+}
+
+function changeCenterElec() {
+    map.addListener("center_changed", function () {
+        map.addListener("dragend", function () {
+            searchElectrician();
+        });
+    });
+}
+
+function changeCenterPlumber() {
+    map.addListener("center_changed", function () {
+        map.addListener("dragend", function () {
+            searchPlumber();
+        });
+    });
+}
+
+function changeCenterPainter() {
+    map.addListener("center_changed", function () {
+        map.addListener("dragend", function () {
+            searchPainter();
+        });
+    });
+}
+
+function changeCenterMechanic() {
+    map.addListener("center_changed", function () {
+        map.addListener("dragend", function () {
+            searchMechanic();
+        });
+    });
+}
+
+function changeCenterLocksmith() {
+    map.addListener("center_changed", function () {
+        map.addListener("dragend", function () {
+            searchLocksmith();
+
+        });
+    });
+}
+
+function changeCenterHardware() {
+    map.addListener("center_changed", function () {
+        map.addListener("dragend", function () {
+            searchHardware();
+        });
+    });
 }
