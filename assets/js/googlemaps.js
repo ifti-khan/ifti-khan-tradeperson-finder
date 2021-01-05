@@ -75,6 +75,7 @@ function initMap() {
 
     places = new google.maps.places.PlacesService(map);
     autocomplete.addListener("place_changed", onPlaceChanged);
+    changeCenterSearch();
 
     //This is a event listener for the radio buttons fo when the users selcets one
     document.getElementById('electrician').addEventListener('change', onPlaceChanged);
@@ -105,10 +106,8 @@ function onPlaceChanged() {
             map.panTo(place.geometry.location);
             map.setZoom(15);
             searchElectrician();
-            changeCenterElec();
         } else {
             $('#city-town').attr("placeholder", "Please type a city or town");
-
         }
     } else if ($("#plumber").is(':checked')) {
         let place = autocomplete.getPlace();
@@ -122,7 +121,6 @@ function onPlaceChanged() {
             map.panTo(place.geometry.location);
             map.setZoom(15);
             searchPlumber();
-            changeCenterPlumber();
         } else {
             $('#city-town').attr("placeholder", "Please type a city or town");
         }
@@ -138,7 +136,6 @@ function onPlaceChanged() {
             map.panTo(place.geometry.location);
             map.setZoom(15);
             searchPainter();
-            changeCenterPainter();
         } else {
             $('#city-town').attr("placeholder", "Please type a city or town");
         }
@@ -154,7 +151,6 @@ function onPlaceChanged() {
             map.panTo(place.geometry.location);
             map.setZoom(15);
             searchMechanic();
-            changeCenterMechanic();
         } else {
             $('#city-town').attr("placeholder", "Please type a city or town");
         }
@@ -170,7 +166,6 @@ function onPlaceChanged() {
             map.panTo(place.geometry.location);
             map.setZoom(15);
             searchLocksmith();
-            changeCenterLocksmith();
         } else {
             $('#city-town').attr("placeholder", "Please type a city or town");
         }
@@ -186,11 +181,34 @@ function onPlaceChanged() {
             map.panTo(place.geometry.location);
             map.setZoom(15);
             searchHardware();
-            changeCenterHardware();
         } else {
             $('#city-town').attr("placeholder", "Please type a city or town");
         }
     }
+}
+
+//This function here changed the search area from the default center set. It has two event listeners from googl, one looks out for the center map being changed and the other is for when the user stops dragging the map it will execute the search function if the if statement is true.
+function changeCenterSearch() {
+    map.addListener("center_changed", function () {
+        map.addListener("dragend", function () {
+            if ($("#electrician").is(':checked')) {
+                searchElectrician();
+            } else if ($("#plumber").is(':checked')) {
+                searchPlumber();
+            } else if ($("#painter").is(':checked')) {
+                searchPainter();
+            } else if ($("#car_repair").is(':checked')) {
+                searchMechanic();
+            } else if ($("#locksmith").is(':checked')) {
+                searchLocksmith();
+            } else if ($("#hardware_store").is(':checked')) {
+                searchHardware();
+            } else {
+                clearResults();
+                clearMarkers();
+            }
+        });
+    });
 }
 
 //Searches for electricians using Google place types in the selected city or town, within the viewport of the map.
@@ -531,7 +549,7 @@ function gmapPopUp(place) {
     }
 }
 
-//This function resets all the search input fields from all the steps divs and resets the map zoom back to default.
+//This function resets all the search input fields from all the steps divs and resets the map zoom back to default and a page refresh delay of one second.
 function resetSearch() {
     clearResults();
     clearMarkers();
@@ -543,54 +561,5 @@ function resetSearch() {
     map.componentRestrictions = {
         'country': []
     };
-    location.reload();
-}
-
-function changeCenterElec() {
-    map.addListener("center_changed", function () {
-        map.addListener("dragend", function () {
-            searchElectrician();
-        });
-    });
-}
-
-function changeCenterPlumber() {
-    map.addListener("center_changed", function () {
-        map.addListener("dragend", function () {
-            searchPlumber();
-        });
-    });
-}
-
-function changeCenterPainter() {
-    map.addListener("center_changed", function () {
-        map.addListener("dragend", function () {
-            searchPainter();
-        });
-    });
-}
-
-function changeCenterMechanic() {
-    map.addListener("center_changed", function () {
-        map.addListener("dragend", function () {
-            searchMechanic();
-        });
-    });
-}
-
-function changeCenterLocksmith() {
-    map.addListener("center_changed", function () {
-        map.addListener("dragend", function () {
-            searchLocksmith();
-
-        });
-    });
-}
-
-function changeCenterHardware() {
-    map.addListener("center_changed", function () {
-        map.addListener("dragend", function () {
-            searchHardware();
-        });
-    });
+    setTimeout(location.reload.bind(location), 1000);
 }
