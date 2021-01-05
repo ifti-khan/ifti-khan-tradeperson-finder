@@ -34,14 +34,14 @@ $(document).ready(function () {
     });
 
     $(".result-heading-show").click(function () {
-        $('.result-con').slideDown();
+        $('.result-con').slideDown(750);
         $('.result-heading-show').hide();
         $('.result-heading-hide').show();
         $('#result').show();
     });
 
     $(".result-heading-hide").click(function () {
-        $('.result-con').slideUp();
+        $('.result-con').slideUp(750);
         $('.result-heading-show').show();
         $('.result-heading-hide').hide();
         $('#result').hide();

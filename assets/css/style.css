@@ -107,7 +107,8 @@ a {
     text-transform: uppercase;
     letter-spacing: 5px;
     text-align: center;
-    border-bottom: 2px solid #808080
+    border-bottom: 2px solid #808080;
+    border-top: 2px solid #808080;
 }
 
 .step-one,
@@ -159,7 +160,8 @@ a {
     text-transform: uppercase;
     letter-spacing: 5px;
     cursor: pointer;
-}
+    border-top: 2px solid #808080;
+    border-bottom: 2px solid #808080;}
 
 .fa-chevron-down {
     font-size: 20px;
@@ -175,6 +177,8 @@ a {
     text-transform: uppercase;
     letter-spacing: 5px;
     cursor: pointer;
+    border-top: 2px solid #808080;
+    border-bottom: 2px solid #808080;
 }
 
 .fa-chevron-up {
