@@ -20,7 +20,8 @@
 
 .card-body {
     background-color: #f0f0f0;
-    margin: 2px 2px;
+    border: 1px solid #808080;
+    margin: .5px;
 }
 
 .pop-up-con {
@@ -31,6 +32,10 @@
     width: 20px;
     height: 34px;
     margin: 10px;
+}
+
+#gmaps-popup-content {
+    font-weight: normal;
 }
 
 .popUp-table-icon {
@@ -64,14 +69,13 @@
     padding: 0px 0px 5px 0px;
 }
 
-#popUp-website a {
+.popUp-website a {
     color: #000000;
-    font-weight: 500;
 }
 
 #popUp-website a:hover {
-    color: #ffffff;
-    text-decoration: none;
+    color: #000000;
+    text-decoration: underline;
 }
 
 /*Media Queries*/
@@ -119,4 +123,29 @@
         display: block;
     }
 
-}
+    .popUp-table-icon {
+        font-size: 30px;
+    }
+
+    #popUp-name {
+        font-size: 12px;
+    }
+
+    .popUp-table-row {
+        font-size: 12px;
+    }
+
+    .popUp-attrib-name {
+        font-size: 12px;
+    }
+
+    #popUp-rating {
+        font-size: 16px;
+    }
+
+
+
+    /*I used !important here to overide the gmap class inline style for the infow window*/
+    .gm-style .gm-style-iw-c {
+        max-width: 275px !important;
+    }

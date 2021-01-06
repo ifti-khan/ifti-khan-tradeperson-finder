@@ -37,14 +37,14 @@ $(document).ready(function () {
         $('.result-con').slideDown(750);
         $('.result-heading-show').hide();
         $('.result-heading-hide').show();
-        $('#result').show();
+        $('#result').hide(750, "linear");
     });
 
     $(".result-heading-hide").click(function () {
         $('.result-con').slideUp(750);
         $('.result-heading-show').show();
         $('.result-heading-hide').hide();
-        $('#result').hide();
+        $('#result').show(750, "linear");
     });
 
 });

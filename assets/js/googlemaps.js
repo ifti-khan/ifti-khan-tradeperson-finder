@@ -543,7 +543,6 @@ function gmapPopUp(place) {
 
         document.getElementById("popUp-website-row").style.display = "";
         document.getElementById("popUpUrl").setAttribute("href", resultUrl);
-        document.getElementById("popUpUrl").textContent = resultUrl;
     } else {
         document.getElementById("popUp-website-row").style.display = "none";
     }

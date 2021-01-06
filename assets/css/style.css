@@ -35,7 +35,7 @@ a {
 
 /*********************************************************************************/
 /*Nav Bar*/
-/*Had to use important to overide the original bg color*/
+/*Had to use important to overide the original bg color on the inline style*/
 .bg-light {
     background-color: #f0f0f0 !important;
 }
@@ -108,7 +108,7 @@ a {
     letter-spacing: 5px;
     text-align: center;
     border-bottom: 2px solid #808080;
-    border-top: 2px solid #808080;
+
 }
 
 .step-one,
@@ -161,11 +161,13 @@ a {
     letter-spacing: 5px;
     cursor: pointer;
     border-top: 2px solid #808080;
-    border-bottom: 2px solid #808080;}
+    border-bottom: 2px solid #808080;
+}
 
 .fa-chevron-down {
-    font-size: 20px;
-    vertical-align: middle;
+    font-size: 15px;
+    vertical-align: text-top;
+    margin-top: 4px
 }
 
 .result-heading-hide {
@@ -182,8 +184,9 @@ a {
 }
 
 .fa-chevron-up {
-    font-size: 20px;
-    vertical-align: middle;
+    font-size: 15px;
+    vertical-align: text-top;
+    margin-top: 4px
 }
 
 /*Footer*/
