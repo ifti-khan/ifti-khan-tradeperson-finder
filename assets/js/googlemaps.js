@@ -1,3 +1,15 @@
+//The code below has been studied, broken down and modified to the needs of my project here is a list of websites that i used to help me create this google maps JS file for my project.
+
+//https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-hotelsearch
+//https://developers.google.com/places/supported_types
+//https://developers.google.com/maps/documentation/javascript/places#place_details_requests
+//https://developers.google.com/places/web-service/place-data-fields
+//https://developers.google.com/maps/documentation/javascript/reference/map
+//https://developers.google.com/maps/documentation/javascript/infowindows
+//https://developers.google.com/maps/documentation/javascript/events
+//https://www.youtube.com/watch?v=zVU_MQyKFGg&ab_channel=FrameworkTelevision
+//https://www.youtube.com/watch?v=k1_sUMw8kwg&ab_channel=FrameworkTelevision
+
 // Declaring global variables and setting default zoom.
 let map;
 let places;
@@ -10,7 +22,7 @@ let countryRestrict = {
 let MARKER_PATH =
     "https://developers.google.com/maps/documentation/javascript/images/marker_green";
 
-//Listing a number of countries and there coordinates on Google Maps and zoom setting for each country.
+//Listing a number of countries and there cordinates on Google Maps and zoom setting for each country.
 let countries = {
     all: {
         center: {
@@ -86,7 +98,7 @@ function initMap() {
     document.getElementById('hardware_store').addEventListener('change', onPlaceChanged);
 
 
-    //Add a DOM event listener to react when the user selects a country.
+    //Adds a DOM event listener to react when the user selects a country.
     document
         .getElementById("country-list")
         .addEventListener("change", setAutocompleteCountry);
@@ -428,7 +440,7 @@ function dropMarker(i) {
     };
 }
 
-//This function creates new bootstrap card-body elements and adds the found results in to bootstrap card-body below the google maps.
+//This function creates a new bootstrap card-body element and adds the found results into the bootstrap card-body below the google maps in the results container.
 function addResult(result, i) {
     let results = document.getElementById("results");
     let markerLetter = String.fromCharCode("A".charCodeAt(0) + (i % 26));

@@ -59,13 +59,15 @@
     <main class="google-search">
         <div class="container-fluid main-con">
             <div class="row">
+
+                <!--Here is the first column i created for the first of the google map search, i created a drop down list of countries so a user can select a country that they want to search a tradesperson in-->
                 <div class="col-12 col-lg-4 step-one">
                     <h2>step one</h2>
                     <h6>select a country</h6>
 
                     <div id="controls">
-                        <select id="country-list" required>
-                            <option value="all" selected>All</option>
+                        <select id="country-list">
+                            <option value="all">Please select a country</option>
                             <option value="au">Australia</option>
                             <option value="ca">Canada</option>
                             <option value="us">U.S.A.</option>
@@ -74,16 +76,18 @@
                     </div>
                 </div>
 
+                <!--Here i have created the second column for the second step of the google map search and in the column the user has to type in a city or town with the country they have selected-->
                 <div class="col-12 col-lg-4 step-two">
                     <h2>step two</h2>
                     <h6>type a city or town</h6>
 
                     <div id="city-town-field">
-                        <input id="city-town" placeholder="Type a city or town" type="text" required />
+                        <input id="city-town" placeholder="Please type a city or town" type="text" required />
                     </div>
                     <input type="reset" onclick="resetSearch()" id="reset-btn">
                 </div>
 
+                <!--Here i have created the third column for the thrid and final step of the google map search and in this column the user has to select a tradesperson radio button to complete the search and for the result to display in the google map below and in the results container-->
                 <div class="col-12 col-lg-4 step-three">
                     <h2>step three</h2>
                     <h6>choose a trade</h6>
@@ -98,7 +102,6 @@
 
                             <input type="radio" id="painter" name="tradesperson" value="painter">
                             <label for="painter">Painter</label><br>
-
                         </div>
 
                         <div class="col-6 col-lg-6 right-options">
@@ -118,6 +121,7 @@
         </div>
     </main>
 
+    <!--Here i created another bootstrap fluid container, then a row and then a column to contain the embedded google map for the marker results and info window to display on-->
     <div class="container-fluid gmaps-con">
         <div class="row no-gutters gmaps-row">
             <div class="col-12 col-lg-12 gmaps-column">
@@ -128,6 +132,7 @@
         </div>
     </div>
 
+    <!--Here i created another bootstrap fluid container, then a row and then a column to contain search results from the users search and have displayed the result in a bootstrap card for a good visual look. A show and hide result heading has been also created, so if a users clicks on either it will show and hide the results-->
     <div class="container-fluid gmaps-res-con">
         <div class="row no-gutters gmaps-res-row">
             <div class="col-12 col-lg-12 gmaps-res-column">
@@ -139,6 +144,7 @@
         </div>
     </div>
 
+    <!--Here i have created a the popup info window container and table, so when a users clicks on a marker on the google maps or one of the search results card, it will open up a info window above the marker containing the information below-->
     <div class="pop-up-con">
         <div id="gmaps-popup-content">
             <table>
