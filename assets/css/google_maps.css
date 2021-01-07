@@ -97,6 +97,18 @@
 
 }
 
+@media (max-width: 991px) {
+
+    #city-town {
+        width: 50%;
+    }
+
+    #country-list {
+        width: 50%;
+    }
+
+}
+
 @media (max-width: 768px) {
 
     #city-town {
@@ -142,8 +154,6 @@
     #popUp-rating {
         font-size: 16px;
     }
-
-
 
     /*I used !important here to overide the gmap class inline style for the infow window*/
     .gm-style .gm-style-iw-c {
