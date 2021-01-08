@@ -47,4 +47,18 @@ $(document).ready(function () {
         $('#result').hide(750, "linear");
     });
 
+    $("#gen-question").click(function () {
+        if ($("#gen-question").is(':checked')) {
+            $(".gen-question-form").show();
+            $(".add-business-form").hide();
+        }
+    });
+
+    $("#add-business").click(function () {
+        if ($("#add-business").is(':checked')) {
+            $(".add-business-form").show();
+            $(".gen-question-form").hide();
+        }
+    });
+
 });

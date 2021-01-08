@@ -275,3 +275,27 @@ a {
     opacity: 1;
     visibility: visible;
 }
+
+/*Contact Modal Box*/
+.modal-header {
+    padding-bottom: 5px;
+}
+
+.modal-title {
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.message-subject {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.gen-question-form {
+    display: none;
+}
+
+.add-business-form {
+    display: none;
+}

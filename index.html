@@ -43,7 +43,7 @@
                     <a class="nav-link hvr-sweep-to-bottom hvr-pulse" href="locals.html">Locals</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link hvr-sweep-to-bottom hvr-pulse" href="contact.html">Contact</a>
+                    <a class="nav-link hvr-sweep-to-bottom hvr-pulse" href="#" data-toggle="modal" data-target="#contact-modal">Contact</a>
                 </li>
 
                 <!--This list item is for my dark theme mode and is linked to my JS file. So if a user clicks on the list item it will change the body colour to a darker colour and also change the button from default to dark mode on and off if clicked again-->
@@ -93,15 +93,18 @@
                     <h6>choose a trade</h6>
 
                     <div class="row">
-                        <div class="col-5 col-lg-4 left-options">
+                        <div class="col-5 col-lg-5 left-options">
+                            <label for="electrician">electrician</label>
                             <input type="radio" id="electrician" name="tradesperson" value="electrician">
-                            <label for="electrician">electrician</label><br>
+                            <br>
 
+                            <label for="plumber">plumber</label>
                             <input type="radio" id="plumber" name="tradesperson" value="plumber">
-                            <label for="plumber">plumber</label><br>
+                            <br>
 
+                            <label for="painter">Painter</label>
                             <input type="radio" id="painter" name="tradesperson" value="painter">
-                            <label for="painter">Painter</label><br>
+                            <br>
                         </div>
 
                         <div class="col-6 col-lg-6 right-options">
@@ -214,6 +217,45 @@
 
     <!--Back to top button-->
     <a id="to-top-btn" class="hvr-sweep-to-bottom hvr-pulse"><i class="fas fa-angle-double-up" aria-hidden="true"></i></a>
+
+    <!-- The Modal -->
+    <div class="modal fade" id="contact-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Contact Me</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="message-subject">
+                    <h6>Please make a selection</h6>
+
+                    <input type="radio" id="gen-question" name="messagesubject" value="gen-question">
+                    <label for="gen-question">General Question</label>&nbsp;&nbsp;
+
+                    <input type="radio" id="add-business" name="messagesubject" value="add-business">
+                    <label for="add-business">Add A Business</label>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+
+                    <div class="gen-question-form">this is the general question form</div>
+
+                    <div class="add-business-form">this is the add business form</div>
+
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <!--Here below you will find all of my Javascript files, here i have linked the most recent JQuery via URL, Bootstrap JS via URL and my own Javascript file which is stored in my js directory in the assets folder-->
 
