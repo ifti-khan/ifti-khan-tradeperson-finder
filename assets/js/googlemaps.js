@@ -1,4 +1,4 @@
-//The code below has been studied, broken down and modified to the needs of my project here is a list of websites that i used to help me create this google maps JS file for my project.
+//The code below has been studied, broken down and modified to the needs of my project, here is a list of websites that i used to help me create this google maps JS file for my project.
 
 //https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-hotelsearch
 //https://developers.google.com/places/supported_types
@@ -86,16 +86,18 @@ function initMap() {
     );
 
     places = new google.maps.places.PlacesService(map);
-    autocomplete.addListener("place_changed", onPlaceChanged);
+    autocomplete.addListener("place_changed", getTradeDetails);
+
+    //This function call allows the user to move the map around in a city or town and it will find tradespeople in different areas instead of a fixed location.
     changeCenterSearch();
 
-    //This is a event listener for the radio buttons fo when the users selcets one
-    document.getElementById('electrician').addEventListener('change', onPlaceChanged);
-    document.getElementById('plumber').addEventListener('change', onPlaceChanged);
-    document.getElementById('painter').addEventListener('change', onPlaceChanged);
-    document.getElementById('car_repair').addEventListener('change', onPlaceChanged);
-    document.getElementById('locksmith').addEventListener('change', onPlaceChanged);
-    document.getElementById('hardware_store').addEventListener('change', onPlaceChanged);
+    //This is a event listener is for the radio buttons, so when the users selcets one of the radio buttons it will then take its ID which is the same as the google place API place type and look for that specific tradesperson and get the place details as well.
+    document.getElementById('electrician').addEventListener('change', getTradeDetails);
+    document.getElementById('plumber').addEventListener('change', getTradeDetails);
+    document.getElementById('painter').addEventListener('change', getTradeDetails);
+    document.getElementById('car_repair').addEventListener('change', getTradeDetails);
+    document.getElementById('locksmith').addEventListener('change', getTradeDetails);
+    document.getElementById('hardware_store').addEventListener('change', getTradeDetails);
 
 
     //Adds a DOM event listener to react when the user selects a country.
@@ -104,8 +106,8 @@ function initMap() {
         .addEventListener("change", setAutocompleteCountry);
 }
 
-//When a user types and selects a city or town, they then have to selct a tradesperson using the radio button and it will then get the place details for the city and zoom the map in on the city or town.
-function onPlaceChanged() {
+//When a user types and selects a city or town, they then have to selct a tradesperson using the radio buttons, once all search steps are done. It will then get the details of the tradesperson in the city or town the user has chosen and zoom the map in on the city or town.
+function getTradeDetails() {
     if ($("#electrician").is(':checked')) {
         let place = autocomplete.getPlace();
 
@@ -199,7 +201,7 @@ function onPlaceChanged() {
     }
 }
 
-//This function here changed the search area from the default center set. It has two event listeners from googl, one looks out for the center map being changed and the other is for when the user stops dragging the map it will execute the search function if the if statement is true.
+//This function here changes the search area from the default center set. It has two event listeners from googl, one looks out for the center map being changed and the other is for when the user stops dragging the map it will execute the search function if the if statement is true.
 function changeCenterSearch() {
     map.addListener("center_changed", function () {
         map.addListener("dragend", function () {
@@ -229,7 +231,7 @@ function searchElectrician() {
         bounds: map.getBounds(),
         types: ["electrician"],
     };
-    places.nearbySearch(search, (results, status, pagination) => {
+    places.nearbySearch(search, (results, status) => {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
             clearResults();
             clearMarkers();
@@ -260,7 +262,7 @@ function searchPlumber() {
         bounds: map.getBounds(),
         types: ["plumber"],
     };
-    places.nearbySearch(search, (results, status, pagination) => {
+    places.nearbySearch(search, (results, status) => {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
             clearResults();
             clearMarkers();
@@ -291,7 +293,7 @@ function searchPainter() {
         bounds: map.getBounds(),
         types: ["painter"],
     };
-    places.nearbySearch(search, (results, status, pagination) => {
+    places.nearbySearch(search, (results, status) => {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
             clearResults();
             clearMarkers();
@@ -322,7 +324,7 @@ function searchMechanic() {
         bounds: map.getBounds(),
         types: ["car_repair"],
     };
-    places.nearbySearch(search, (results, status, pagination) => {
+    places.nearbySearch(search, (results, status) => {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
             clearResults();
             clearMarkers();
@@ -353,7 +355,7 @@ function searchLocksmith() {
         bounds: map.getBounds(),
         types: ["locksmith"],
     };
-    places.nearbySearch(search, (results, status, pagination) => {
+    places.nearbySearch(search, (results, status) => {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
             clearResults();
             clearMarkers();
@@ -384,7 +386,7 @@ function searchHardware() {
         bounds: map.getBounds(),
         types: ["hardware_store"],
     };
-    places.nearbySearch(search, (results, status, pagination) => {
+    places.nearbySearch(search, (results, status) => {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
             clearResults();
             clearMarkers();
@@ -440,7 +442,7 @@ function dropMarker(i) {
     };
 }
 
-//This function creates a new bootstrap card-body element and adds the found results into the bootstrap card-body below the google maps in the results container.
+//This function creates a new bootstrap card-body element and adds the found results into the bootstrap card-body below the google maps in the results container and if a user click on the card body it will open up the pop up info window for that tradesperson or business.
 function addResult(result, i) {
     let results = document.getElementById("results");
     let markerLetter = String.fromCharCode("A".charCodeAt(0) + (i % 26));
@@ -560,7 +562,7 @@ function gmapPopUp(place) {
     }
 }
 
-//This function resets all the search input fields from all the steps divs and resets the map zoom back to default and a page refresh delay of one second.
+//This function resets all the search input fields from all the steps divs and resets the map zoom back to default and a page refresh delay of one second, the reason for page refresh sometimes the api does not fully reset.
 function resetSearch() {
     clearResults();
     clearMarkers();
