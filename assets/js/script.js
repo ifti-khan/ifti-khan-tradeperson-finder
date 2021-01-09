@@ -62,15 +62,15 @@ $(document).ready(function () {
         location.reload()
     });
 
-    $("#gen-question").click(function () {
-        if ($("#gen-question").is(':checked')) {
+    $("#gen_question").click(function () {
+        if ($("#gen_question").is(':checked')) {
             $(".gen-question-form").slideDown();
             $(".add-business-form").slideUp(200);
         }
     });
 
-    $("#add-business").click(function () {
-        if ($("#add-business").is(':checked')) {
+    $("#add_business").click(function () {
+        if ($("#add_business").is(':checked')) {
             $(".add-business-form").slideDown();
             $(".gen-question-form").slideUp(200);
         }
