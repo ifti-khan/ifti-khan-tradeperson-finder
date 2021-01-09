@@ -65,14 +65,14 @@ $(document).ready(function () {
     $("#gen-question").click(function () {
         if ($("#gen-question").is(':checked')) {
             $(".gen-question-form").slideDown();
-            $(".add-business-form").slideUp(100);
+            $(".add-business-form").slideUp(200);
         }
     });
 
     $("#add-business").click(function () {
         if ($("#add-business").is(':checked')) {
             $(".add-business-form").slideDown();
-            $(".gen-question-form").slideUp(100);
+            $(".gen-question-form").slideUp(200);
         }
     });
 
