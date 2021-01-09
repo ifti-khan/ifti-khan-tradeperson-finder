@@ -132,14 +132,24 @@ a {
 }
 
 .left-options {
-    text-align: left;
+    text-align: right;
+    text-transform: capitalize;
     font-size: 13px;
+    border-right: 2px solid #808080;
+    padding: 0px 10px;
     margin-left: auto;
 }
 
 .right-options {
     text-align: left;
+    text-transform: capitalize;
     font-size: 13px;
+    padding: 0px 10px;
+}
+
+.left-options label,
+.right-options label {
+    margin: 3px 0px;
 }
 
 #reset-btn {

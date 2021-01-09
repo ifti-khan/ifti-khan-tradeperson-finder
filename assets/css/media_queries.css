@@ -50,14 +50,14 @@
 
     .left-options {
         margin-left: auto;
-        padding: 0 0;
+        padding: 0 10px;
         font-size: 12px;
         letter-spacing: 4px;
     }
 
     .right-options {
-        margin-left: auto;
-        padding: 0 0;
+        margin-left: 0;
+        padding: 0 10px;
         font-size: 12px;
         letter-spacing: 4px;
     }
@@ -95,8 +95,7 @@
         font-size: 12px;
         letter-spacing: 0px;
         margin-top: 5px;
-        text-transform: uppercase;
-        padding: 0px 0px;
+        padding: 0px 10px;
         margin-left: auto;
     }
 
@@ -104,8 +103,8 @@
         font-size: 12px;
         letter-spacing: 0px;
         margin-top: 5px;
-        text-transform: uppercase;
-        padding: 0px 0px;
+        padding: 0px 10px;
+        margin-left: 0px;
     }
 
 }
@@ -140,19 +139,21 @@
     }
 
     .left-options {
-        text-align: center;
+        text-align: right;
         font-size: 15px;
-        letter-spacing: 5px;
-        margin-left: 35px;
+        letter-spacing: 3px;
+        padding: 0px 20px;
+        border-right: 1px solid #808080;
     }
 
     .right-options {
-        text-align: center;
+        text-align: left;
         font-size: 15px;
-        letter-spacing: 5px;
+        letter-spacing: 3px;
         margin-left: 0px;
+        padding: 0px 20px;
+        border-left: 1px solid #808080;
     }
-
 
     /*Results Container Show and Hide*/
     #results {
@@ -281,13 +282,13 @@
     }
 
     .left-options {
-        text-align: left;
+        text-align: right;
         font-size: 14px;
         letter-spacing: 1px;
         margin-top: 10px;
-        text-transform: uppercase;
-        padding: 0px 0px;
-        margin-left: 30px;
+        text-transform: capitalize;
+        padding: 0px 10px;
+        margin-left: 20px;
     }
 
     .right-options {
@@ -295,8 +296,8 @@
         font-size: 14px;
         letter-spacing: 1px;
         margin-top: 10px;
-        text-transform: uppercase;
-        padding: 0px 0px;
+        text-transform: capitalize;
+        padding: 0px 10px;
     }
 
     /*Results Container Show and Hide*/
@@ -306,20 +307,20 @@
 
     .result-heading-show {
         display: block;
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .fa-chevron-down {
-        font-size: 15px;
+        font-size: 10px;
     }
 
     .result-heading-hide {
         display: none;
-        font-size: 20px
+        font-size: 16px
     }
 
     .fa-chevron-up {
-        font-size: 15px;
+        font-size: 10px;
     }
 
     /*Footer*/
@@ -361,25 +362,6 @@
         padding-top: 20px;
     }
 
-    .left-options {
-        text-align: left;
-        font-size: 14px;
-        letter-spacing: 0px;
-        margin-top: 5px;
-        text-transform: capitalize;
-        padding: 0px 0px;
-        margin-left: 20px;
-    }
-
-    .right-options {
-        text-align: left;
-        font-size: 14px;
-        letter-spacing: 0px;
-        margin-top: 5px;
-        text-transform: capitalize;
-        padding: 0px 0px;
-    }
-
 }
 
 /*Small Mobile*/
@@ -401,19 +383,42 @@
     }
 
     .left-options {
+        text-align: right;
         font-size: 12px;
         letter-spacing: 0px;
+        margin-top: 10px;
         text-transform: capitalize;
-        padding: 0px 0px;
+        padding: 0px 10px;
+        margin-left: 20px;
     }
 
     .right-options {
+        text-align: left;
         font-size: 12px;
         letter-spacing: 0px;
+        margin-top: 10px;
         text-transform: capitalize;
-        padding: 0px 0px;
+        padding: 0px 10px;
     }
 
+    /*Results Container Show and Hide*/
+    .result-heading-show {
+        display: block;
+        font-size: 15px;
+    }
 
+    .fa-chevron-down {
+        font-size: 10px;
+        margin-top: 5px;
+    }
 
+    .result-heading-hide {
+        display: none;
+        font-size: 15px
+    }
+
+    .fa-chevron-up {
+        font-size: 10px;
+        margin-top: 5px;
+    }
 }
