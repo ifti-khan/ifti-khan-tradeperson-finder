@@ -43,7 +43,7 @@
                     <a class="nav-link hvr-sweep-to-bottom hvr-pulse" href="locals.html">Locals</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link hvr-sweep-to-bottom hvr-pulse" href="#" data-toggle="modal" data-target="#contact-modal">Contact</a>
+                    <a class="nav-link hvr-sweep-to-bottom hvr-pulse contact-me" href="#" data-toggle="modal" data-target="#contact-modal">Contact</a>
                 </li>
 
                 <!--This list item is for my dark theme mode and is linked to my JS file. So if a user clicks on the list item it will change the body colour to a darker colour and also change the button from default to dark mode on and off if clicked again-->
@@ -242,15 +242,22 @@
                 <!-- Modal body -->
                 <div class="modal-body">
 
-                    <div class="gen-question-form">this is the general question form</div>
+                    <div class="gen-question-form">
+                        <form id="gen-form">
+                            <input type="text" name="gen-fullname" id="gen-fullname" placeholder="Name" class="gen-input-fields" required><br>
+
+                            <input type="email" name="gen-emailaddress" id="gen-email" placeholder="Email" class="gen-input-fields" required><br>
+
+                            <input type="text" name="gen-subject" id="gen-subject" placeholder="Subject" class="gen-input-fields" required><br>
+
+                            <textarea id="gen-message" name="gen-message" placeholder="Message" rows="7" class="gen-input-fields" required></textarea><br>
+
+                            <button type="submit" id="sendbutton" class="btn btn-outline-secondary hvr-sweep-to-bottom send-btn">send</button>
+                        </form>
+                    </div>
 
                     <div class="add-business-form">this is the add business form</div>
 
-                </div>
-
-                <!-- Modal footer -->
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                 </div>
 
             </div>

@@ -134,17 +134,19 @@ a {
 .left-options {
     text-align: right;
     text-transform: capitalize;
-    font-size: 13px;
+    font-size: 16px;
     border-right: 2px solid #808080;
     padding: 0px 10px;
     margin-left: auto;
+    letter-spacing: 4px;
 }
 
 .right-options {
     text-align: left;
     text-transform: capitalize;
-    font-size: 13px;
+    font-size: 16px;
     padding: 0px 10px;
+    letter-spacing: 4px;
 }
 
 .left-options label,
@@ -289,6 +291,25 @@ a {
 /*Contact Modal Box*/
 .modal-header {
     padding-bottom: 5px;
+    border-bottom: 2px solid #808080;
+    display: block;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 35px;
+}
+
+.modal-header .close {
+    padding: 0 0;
+}
+
+*:focus,
+button:focus {
+    outline: none;
 }
 
 .modal-title {
@@ -298,7 +319,17 @@ a {
 }
 
 .message-subject {
-    margin-top: 10px;
+    text-align: center;
+}
+
+.message-subject h6 {
+    margin-top: 15px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.modal-body {
     text-align: center;
 }
 
@@ -306,6 +337,47 @@ a {
     display: none;
 }
 
+.gen-input-fields {
+    width: 80%;
+    margin-bottom: 10px;
+    border: 1px solid #808080;
+    border-radius: 5px;
+    padding: 10px 5px
+}
+
 .add-business-form {
     display: none;
+}
+
+.send-btn {
+    width: 165px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 500;
+    border: 1px solid #000000;
+    color: #000000;
+    letter-spacing: 4px;
+}
+
+.send-btn:hover {
+    color: #ffffff;
+    background-color: #ffffff;
+}
+
+.modal-footer {
+    border-top: 2px solid #808080;
+}
+
+.close-btn {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid #000000;
+    color: #000000;
+    letter-spacing: 4px;
+}
+
+.close-btn:hover {
+    color: #ffffff;
+    background-color: #ffffff;
 }

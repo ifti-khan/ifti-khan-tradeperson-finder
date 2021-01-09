@@ -14,10 +14,17 @@ function darkTheme() {
     }
 }
 
+// When the user clicks anywhere outside of the modal box when it is open, it will refresh the page
+var myModal = document.getElementById("contact-modal");
+window.onclick = function (event) {
+    if (event.target == myModal) {
+        location.reload();
+    }
+}
+
 $(document).ready(function () {
 
     var topButton = $('#to-top-btn');
-
     $(window).scroll(function () {
         if ($(window).scrollTop() > 100) {
             topButton.addClass('visible');
@@ -47,17 +54,25 @@ $(document).ready(function () {
         $('#result').hide(750, "linear");
     });
 
+    $(".contact-me").click(function () {
+        $(".contact-me").addClass("active-nav").removeClass("hvr-pulse");
+    });
+
+    $(".close").click(function () {
+        location.reload()
+    });
+
     $("#gen-question").click(function () {
         if ($("#gen-question").is(':checked')) {
-            $(".gen-question-form").show();
-            $(".add-business-form").hide();
+            $(".gen-question-form").slideDown();
+            $(".add-business-form").slideUp(100);
         }
     });
 
     $("#add-business").click(function () {
         if ($("#add-business").is(':checked')) {
-            $(".add-business-form").show();
-            $(".gen-question-form").hide();
+            $(".add-business-form").slideDown();
+            $(".gen-question-form").slideUp(100);
         }
     });
 
