@@ -7,14 +7,15 @@ document.getElementById('gen-form')
         btn1.textContent = 'Sending...';
 
         const serviceID = 'ifti-khan-portfolio';
-        const templateID = 'ms2-gen-template';
+        const templateID = 'ms2-trade-template';
 
         emailjs.send(serviceID, templateID, {
-                "message_type": $("#gen_question").val(),
-                "from_name": this.gen_fullname.value,
-                "message": this.gen_message.value,
-                "subject": this.gen_subject.value,
-                "from_email": this.gen_email.value,
+                "gen_message_type": $("#gen_question").val(),
+                "gen_from_name": this.gen_fullname.value,
+                "gen_from_email": this.gen_email.value,
+                "gen_subject": this.gen_subject.value,
+                "gen_message": this.gen_message.value,
+
             })
             .then((response) => {
                 btn1.textContent = 'Sent';
@@ -37,16 +38,16 @@ document.getElementById('add-form')
         btn2.textContent = 'Sending...';
 
         const serviceID = 'ifti-khan-portfolio';
-        const templateID = 'ms2-gen-template';
+        const templateID = 'ms2-trade-template';
 
         emailjs.send(serviceID, templateID, {
-                "message_type": $("#add_business").val(),
-                "from_name": this.add_fullname.value,
-                "contact_number": this.add_number.value,
-                "from_email": this.add_email.value,
-                "business_name": this.add_business_name.value,
-                "business_address": this.add_business_address.value,
-                "message": this.add_message.value,
+                "add_message_type": $("#add_business").val(),
+                "add_from_name": this.add_fullname.value,
+                "add_contact_number": this.add_number.value,
+                "add_from_email": this.add_email.value,
+                "add_business_name": this.add_business_name.value,
+                "add_business_address": this.add_business_address.value,
+                "add_message": this.add_message.value,
             })
             .then((response) => {
                 btn2.textContent = 'Sent';
