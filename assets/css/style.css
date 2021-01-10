@@ -34,13 +34,22 @@ a {
     color: #ffffff;
 }
 
+/*This gets rid of all focus outline within the browser on all elements*/
+*:focus,
+button:focus {
+    outline: none;
+}
+
 /*********************************************************************************/
 /*Nav Bar*/
-/*Had to use important to overide the original bg color on the inline style*/
+/*I used the original boostrap collapsable nav bar classes and have manipulated them within the CSS below*/
+
+/*Had to use important to overide the original bg color of the hover.css*/
 .bg-light {
     background-color: #f0f0f0 !important;
 }
 
+/*This is for the website left header*/
 .navbar-light .navbar-brand {
     color: #000000;
     text-decoration: none;
@@ -50,10 +59,12 @@ a {
     font-size: 30px;
 }
 
+/*When a user hovers over the left header the text color will change*/
 .navbar-light .navbar-brand:hover {
     color: #ffffff;
 }
 
+/*This is for the navigation links on the right*/
 .navbar-light .navbar-nav .nav-link {
     color: #000000;
     font-size: 16px;
@@ -61,33 +72,40 @@ a {
     letter-spacing: 5px;
 }
 
+/*When a user hovers over the right navigation links the text color will change*/
 .navbar-light .navbar-nav .nav-link:hover {
     color: #ffffff;
 }
 
+/*This is for the spacing between each of the nav links*/
 .nav-link {
     margin-left: 15px;
 }
 
+/*This is for the active class for the nav links*/
 .navbar-light .navbar-nav .nav-link.active-nav {
     color: #ffffff;
     background-color: #808080;
 }
 
+/*This styles the dark mode button in navigation bar*/
 #dark-btn {
     font-size: 10px;
     text-align: center;
     line-height: normal;
 }
 
+/*This if for the collapsable nav icon border*/
 .navbar-light .navbar-toggler {
     border-color: #f0f0f0;
 }
 
+/*This if for the collapsable nav icon, i removed the original and set my own in the html*/
 .navbar-light .navbar-toggler-icon {
     background-image: none;
 }
 
+/*This is for my menu icon in the html that i set for the collapsable nav*/
 .menu-icon {
     font-size: 22px;
     color: #000000;
@@ -95,119 +113,14 @@ a {
     margin-top: 4px;
 }
 
-/*Main Section index.html*/
-.main-con {
-    margin-top: 20px;
-}
-
-.step-one,
-.step-two,
-.step-three {
-    background-color: #f0f0f0;
-    height: 200px;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    text-align: center;
-    border-bottom: 2px solid #808080;
-
-}
-
-.step-one,
-.step-two {
-    padding-top: 45px;
-}
-
-.step-two {
-    border-left: 2px solid #808080;
-    border-right: 2px solid #808080;
-}
-
-.step-three {
-    padding-top: 25px
-}
-
-.step-one h6,
-.step-two h6,
-.step-three h6 {
-    margin-bottom: 10px;
-}
-
-.left-options {
-    text-align: right;
-    text-transform: capitalize;
-    font-size: 15px;
-    border-right: 2px solid #808080;
-    padding: 0px 10px;
-    margin-left: auto;
-    letter-spacing: 3px;
-}
-
-.right-options {
-    text-align: left;
-    text-transform: capitalize;
-    font-size: 15px;
-    padding: 0px 10px;
-    letter-spacing: 3px;
-}
-
-.left-options label,
-.right-options label {
-    margin: 2px 0px;
-}
-
-#reset-btn {
-    margin-top: 6px;
-    border-radius: px;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    height: 35px
-}
-
-/*Results Container Show and Hide*/
-.result-heading-show {
-    display: none;
-    background-color: #f0f0f0;
-    padding: 10px 5px;
-    margin-bottom: 0px;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    cursor: pointer;
-    border-top: 2px solid #808080;
-    border-bottom: 2px solid #808080;
-}
-
-.fa-chevron-down {
-    font-size: 15px;
-    vertical-align: text-top;
-    margin-top: 4px
-}
-
-.result-heading-hide {
-    display: block;
-    background-color: #f0f0f0;
-    padding: 10px 5px;
-    margin-bottom: 0px;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    cursor: pointer;
-    border-top: 2px solid #808080;
-    border-bottom: 2px solid #808080;
-}
-
-.fa-chevron-up {
-    font-size: 15px;
-    vertical-align: text-top;
-    margin-top: 4px
-}
-
 /*Footer*/
+/*This entire block of code is for the footer element of my html page*/
 .footer-con {
     margin-top: 1px;
     background-color: #f0f0f0;
 }
 
+/*This block of code styles my quick links in the footer element*/
 .quick-links {
     text-align: center;
 }
@@ -230,6 +143,7 @@ a {
     color: #ffffff;
 }
 
+/*This block of code styles my the socail logos in the footer element*/
 .social-logos {
     font-size: 35px;
     letter-spacing: 10px;
@@ -242,6 +156,7 @@ a {
     color: #808080;
 }
 
+/*This block of code styles my the copyright column in the footer element*/
 .copyright {
     text-align: center;
     text-transform: uppercase;
@@ -257,7 +172,123 @@ a {
     font-size: 14px;
 }
 
-/*Back To Top Button*/
+/*index.html*/
+/*This block of code is for the main element for the google search*/
+.google-search {
+    margin-top: 20px;
+}
+
+/*This styles the three steps divs within the google search section*/
+.step-one,
+.step-two,
+.step-three {
+    background-color: #f0f0f0;
+    height: 200px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-align: center;
+    border-bottom: 2px solid #808080;
+}
+
+.step-one,
+.step-two {
+    padding-top: 45px;
+}
+
+.step-two {
+    border-left: 2px solid #808080;
+    border-right: 2px solid #808080;
+}
+
+.step-three {
+    padding-top: 25px
+}
+
+.step-one h6,
+.step-two h6,
+.step-three h6 {
+    margin-bottom: 10px;
+}
+
+/*This styles the left radio buttons in step three*/
+.left-options {
+    text-align: right;
+    text-transform: capitalize;
+    font-size: 15px;
+    border-right: 2px solid #808080;
+    padding: 0px 10px;
+    margin-left: auto;
+    letter-spacing: 3px;
+}
+
+/*This styles the right radio buttons in step three*/
+.right-options {
+    text-align: left;
+    text-transform: capitalize;
+    font-size: 15px;
+    padding: 0px 10px;
+    letter-spacing: 3px;
+}
+
+/*This styles the gaps for the radio buttons labels*/
+.left-options label,
+.right-options label {
+    margin: 2px 0px;
+}
+
+/*This styles the reset button for the google maps search*/
+#reset-btn {
+    margin-top: 6px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    height: 35px
+}
+
+/*Show and Hide Results*/
+/*This styles the show heading for the google search results*/
+.result-heading-show {
+    display: none;
+    background-color: #f0f0f0;
+    padding: 10px 5px;
+    margin-bottom: 0px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    cursor: pointer;
+    border-top: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+}
+
+/*This styles the fontawesome chevron up icon*/
+.fa-chevron-down {
+    font-size: 15px;
+    vertical-align: text-top;
+    margin-top: 4px
+}
+
+/*This styles the hide heading for the google search results*/
+.result-heading-hide {
+    display: block;
+    background-color: #f0f0f0;
+    padding: 10px 5px;
+    margin-bottom: 0px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    cursor: pointer;
+    border-top: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+}
+
+/*This styles the fontawesome chevron down icon*/
+.fa-chevron-up {
+    font-size: 15px;
+    vertical-align: text-top;
+    margin-top: 4px
+}
+
+/*Back to top button*/
+/*This styles the back to top button*/
 #to-top-btn {
     background-color: #f5f5f5;
     font-size: 30px;
@@ -275,21 +306,26 @@ a {
     border: 1px solid #808080;
 }
 
-.fa-angle-double-up {
-    margin-top: 10px;
-}
-
-#to-top-btn:hover {
-    cursor: pointer;
-    color: #ffffff;
-}
-
+/*This is used by the Script JS, so when a user scrolls down a certain amount it will make the back to top button visible*/
 #to-top-btn.visible {
     opacity: 1;
     visibility: visible;
 }
 
-/*Contact Modal Box*/
+/*This styles the fontawesome angle double up icon*/
+.fa-angle-double-up {
+    margin-top: 10px;
+}
+
+/*This style the back to top button and add a hover style*/
+#to-top-btn:hover {
+    cursor: pointer;
+    color: #ffffff;
+}
+
+/*Contact Modal Boxes*/
+/*I used the bootstrap default class names*/
+/*This block styles the modal header and title*/
 .modal-header {
     padding-bottom: 5px;
     border-bottom: 2px solid #808080;
@@ -297,6 +333,13 @@ a {
     text-align: center;
 }
 
+.modal-title {
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+/*This block styles the modal close button within the modal*/
 .close {
     position: absolute;
     top: 20px;
@@ -308,17 +351,7 @@ a {
     padding: 0 0;
 }
 
-*:focus,
-button:focus {
-    outline: none;
-}
-
-.modal-title {
-    font-size: 25px;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-}
-
+/*This block styles the radio button for the message subject type*/
 .message-subject {
     text-align: center;
 }
@@ -330,10 +363,12 @@ button:focus {
     margin-bottom: 15px;
 }
 
+/*This styles the modal body which contains both forms*/
 .modal-body {
     text-align: center;
 }
 
+/*This block styles the general question form in the modal*/
 .gen-question-form {
     display: none;
 }
@@ -346,6 +381,7 @@ button:focus {
     padding: 10px 5px
 }
 
+/*This block styles the add a business form in the modal*/
 .add-business-form {
     display: none;
 }
@@ -358,6 +394,7 @@ button:focus {
     padding: 10px 5px
 }
 
+/*This block styles the send form buttons in the two contact modal forms*/
 .send-btn {
     width: 145px;
     text-transform: uppercase;
@@ -373,6 +410,7 @@ button:focus {
     background-color: #ffffff;
 }
 
+/*This block styles the reset form buttons in the two contact modal forms*/
 .reset-btn {
     width: 145px;
     text-transform: uppercase;
