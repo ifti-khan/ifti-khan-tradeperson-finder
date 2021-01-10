@@ -372,3 +372,18 @@ button:focus {
     color: #ffffff;
     background-color: #ffffff;
 }
+
+.reset-btn {
+    width: 145px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 500;
+    border: 1px solid #808080;
+    color: #000000;
+    letter-spacing: 4px;
+}
+
+.reset-btn:hover {
+    color: #ffffff;
+    background-color: #ffffff;
+}
