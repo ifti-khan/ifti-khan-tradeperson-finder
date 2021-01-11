@@ -70,6 +70,7 @@ button:focus {
     font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 5px;
+    text-align: center;
 }
 
 /*When a user hovers over the right navigation links the text color will change*/
@@ -172,7 +173,7 @@ button:focus {
     font-size: 14px;
 }
 
-/*index.html*/
+/*Google Search Main Element*/
 /*This block of code is for the main element for the google search*/
 .google-search {
     margin-top: 20px;
@@ -285,6 +286,12 @@ button:focus {
     font-size: 15px;
     vertical-align: text-top;
     margin-top: 4px
+}
+
+/*Local Search Search Main Element*/
+.local-search {
+    display: none;
+    margin-top: 20px;
 }
 
 /*Back to top button*/

@@ -47,11 +47,11 @@
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <!--Nav links with hover.css class of hvr-sweep-to-bottom and hv-pulse-->
-                    <a class="nav-link active-nav hvr-sweep-to-bottom hvr-pulse" href="index.html">Home</a>
+                    <a class="nav-link active-nav hvr-sweep-to-bottom hvr-pulse" href="#" id="google-search">Google</a>
                 </li>
                 <li class="nav-item">
                     <!--Nav links with hover.css class of hvr-sweep-to-bottom and hv-pulse-->
-                    <a class="nav-link hvr-sweep-to-bottom hvr-pulse" href="locals.html">Locals</a>
+                    <a class="nav-link hvr-sweep-to-bottom hvr-pulse" href="#" id="local-search">Local</a>
                 </li>
                 <li class="nav-item">
                     <!--Nav links with hover.css class of hvr-sweep-to-bottom and hv-pulse-->
@@ -134,58 +134,66 @@
                 </div>
             </div>
         </div>
+
+
+        <!--Here i created another bootstrap fluid container, then a row and then a column to contain the embedded google map for the marker results and info window to display on-->
+        <div class="container-fluid gmaps-con">
+            <div class="row no-gutters gmaps-row">
+                <div class="col-12 col-lg-12 gmaps-column">
+
+                    <div id="map"></div>
+
+                </div>
+            </div>
+        </div>
+
+        <!--Here i created another bootstrap fluid container, then a row and then a column to contain search results from the users search and have displayed the result in a bootstrap card for a good visual look. A show and hide result heading has been also created, so if a users clicks on either it will show and hide the results-->
+        <div class="container-fluid gmaps-res-con">
+            <div class="row no-gutters gmaps-res-row">
+                <div class="col-12 col-lg-12 gmaps-res-column">
+                    <h5 class="col-lg-12 result-heading-show hvr-sweep-to-bottom">Show Results <i class="fas fa-chevron-down"></i></h5>
+                    <h5 class="col-lg-12 result-heading-hide hvr-sweep-to-bottom">Hide Results <i class="fas fa-chevron-up"></i></h5>
+                    <div class="result-con" id="results"></div>
+
+                </div>
+            </div>
+        </div>
+
+        <!--Here i have created a the popup info window container and table, so when a users clicks on a marker on the google maps or one of the search results card, it will open up a info window above the marker containing the information below-->
+        <div class="pop-up-con">
+            <div id="gmaps-popup-content">
+                <table>
+                    <tr class="popUp-table-row">
+                        <td id="popUp-icon" class="popUp-table-icon"><i id="defaultIcon" class="fas fa-tools"></i></td>
+                        <td id="popUp-name"></td>
+                    </tr>
+                    <tr id="popUp-address-row" class="popUp-table-row">
+                        <td class="popUp-attrib-name">Address:&nbsp;</td>
+                        <td id="popUp-address"></td>
+                    </tr>
+                    <tr id="popUp-phone-row" class="popUp-table-row">
+                        <td class="popUp-attrib-name">Telephone:&nbsp;</td>
+                        <td id="popUp-phone"></td>
+                    </tr>
+                    <tr id="popUp-rating-row" class="popUp-table-row">
+                        <td class="popUp-attrib-name">Rating:&nbsp;</td>
+                        <td id="popUp-rating"></td>
+                    </tr>
+                    <tr id="popUp-website-row" class="popUp-table-row">
+                        <td class="popUp-attrib-name">Website:&nbsp;</td>
+                        <td id="popUp-website"><a href="" id="popUpUrl" target="_blank">Click To Visit Website</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
     </main>
 
-    <!--Here i created another bootstrap fluid container, then a row and then a column to contain the embedded google map for the marker results and info window to display on-->
-    <div class="container-fluid gmaps-con">
-        <div class="row no-gutters gmaps-row">
-            <div class="col-12 col-lg-12 gmaps-column">
+    <main class="local-search">
 
-                <div id="map"></div>
+        <h1>Local Search</h1>
 
-            </div>
-        </div>
-    </div>
-
-    <!--Here i created another bootstrap fluid container, then a row and then a column to contain search results from the users search and have displayed the result in a bootstrap card for a good visual look. A show and hide result heading has been also created, so if a users clicks on either it will show and hide the results-->
-    <div class="container-fluid gmaps-res-con">
-        <div class="row no-gutters gmaps-res-row">
-            <div class="col-12 col-lg-12 gmaps-res-column">
-                <h5 class="col-lg-12 result-heading-show hvr-sweep-to-bottom">Show Results <i class="fas fa-chevron-down"></i></h5>
-                <h5 class="col-lg-12 result-heading-hide hvr-sweep-to-bottom">Hide Results <i class="fas fa-chevron-up"></i></h5>
-                <div class="result-con" id="results"></div>
-
-            </div>
-        </div>
-    </div>
-
-    <!--Here i have created a the popup info window container and table, so when a users clicks on a marker on the google maps or one of the search results card, it will open up a info window above the marker containing the information below-->
-    <div class="pop-up-con">
-        <div id="gmaps-popup-content">
-            <table>
-                <tr class="popUp-table-row">
-                    <td id="popUp-icon" class="popUp-table-icon"><i id="defaultIcon" class="fas fa-tools"></i></td>
-                    <td id="popUp-name"></td>
-                </tr>
-                <tr id="popUp-address-row" class="popUp-table-row">
-                    <td class="popUp-attrib-name">Address:&nbsp;</td>
-                    <td id="popUp-address"></td>
-                </tr>
-                <tr id="popUp-phone-row" class="popUp-table-row">
-                    <td class="popUp-attrib-name">Telephone:&nbsp;</td>
-                    <td id="popUp-phone"></td>
-                </tr>
-                <tr id="popUp-rating-row" class="popUp-table-row">
-                    <td class="popUp-attrib-name">Rating:&nbsp;</td>
-                    <td id="popUp-rating"></td>
-                </tr>
-                <tr id="popUp-website-row" class="popUp-table-row">
-                    <td class="popUp-attrib-name">Website:&nbsp;</td>
-                    <td id="popUp-website"><a href="" id="popUpUrl" target="_blank">Click To Visit Website</a></td>
-                </tr>
-            </table>
-        </div>
-    </div>
+    </main>
 
     <!--This block of code is for the footer section of my html file, i used the bootstrap grid system to help create a rown then the columns i needed. They contains quick link to other pages, social icons linked to there websites and a copyright to me which is also a link to my personal portfolio and two empty columns to help with spacing and positioning-->
     <footer>

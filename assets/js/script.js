@@ -4,6 +4,7 @@ function darkTheme() {
 
     let darkButton = document.getElementById("dark-btn");
     darkButton.classList.toggle("active-nav");
+    darkButton.classList.toggle("hvr-sweep-to-bottom");
 
     if (darkButton.innerHTML === "Dark Mode<br> On") {
         darkButton.innerHTML = "Dark Mode<br> Off";
@@ -12,19 +13,19 @@ function darkTheme() {
     } else {
         darkButton.innerHTML = "Dark Mode<br> Off";
     }
-}
+};
 
 // When the user clicks anywhere outside of the modal box when it is open, it will refresh the page
-var myModal = document.getElementById("contact-modal");
+let myModal = document.getElementById("contact-modal");
 window.onclick = function (event) {
     if (event.target == myModal) {
         location.reload();
     }
-}
+};
 
 $(document).ready(function () {
 
-    var topButton = $('#to-top-btn');
+    let topButton = $('#to-top-btn');
     $(window).scroll(function () {
         if ($(window).scrollTop() > 100) {
             topButton.addClass('visible');
@@ -59,7 +60,7 @@ $(document).ready(function () {
     });
 
     $(".close").click(function () {
-        location.reload()
+        location.reload();
     });
 
     $("#gen_question").click(function () {
@@ -75,5 +76,24 @@ $(document).ready(function () {
             $(".gen-question-form").slideUp(200);
         }
     });
+
+    $("#google-search").click(function () {
+        $(".google-search").fadeIn();
+        $("#google-search").addClass("active-nav");
+        $("#local-search").removeClass("active-nav");
+        $("#google-search").removeClass("hvr-pulse");
+        $("#local-search").addClass("hvr-pulse");
+        $(".local-search").fadeOut("fast");
+    });
+
+    $("#local-search").click(function () {
+        $(".local-search").fadeIn();
+        $("#local-search").addClass("active-nav")
+        $("#google-search").removeClass("active-nav");
+        $("#local-search").removeClass("hvr-pulse");
+        $("#google-search").addClass("hvr-pulse");
+        $(".google-search").fadeOut("fast");
+    });
+
 
 });
