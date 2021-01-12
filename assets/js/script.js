@@ -23,6 +23,25 @@ window.onclick = function (event) {
     }
 };
 
+// Constructor function for business objects
+function business(address, number, email, website, social) {
+    this.address = address;
+    this.number = number;
+    this.email = email;
+    this.website = website;
+    this.social = social;
+}
+
+// Create a business object
+let electrician1 = new business("123 Fake Street, St Albans", "0123456789", "1@1.com", "www.website.com", "www.facebook.com");
+
+// Display all information in the right table element
+document.getElementById("elec1-add").innerHTML = electrician1.address;
+document.getElementById("elec1-num").innerHTML = electrician1.number;
+document.getElementById("elec1-email").innerHTML = electrician1.email;
+document.getElementById("elec1-url").innerHTML = electrician1.website;
+document.getElementById("elec1-social").innerHTML = electrician1.social;
+
 function resetLocalSearch() {
     $('#countries-list')[0].selectedIndex = 0;
     $('#city-town-list')[0].selectedIndex = 0;
