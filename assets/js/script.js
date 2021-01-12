@@ -23,6 +23,12 @@ window.onclick = function (event) {
     }
 };
 
+function resetLocalSearch() {
+    $('#countries-list')[0].selectedIndex = 0;
+    $('#city-town-list')[0].selectedIndex = 0;
+    $('input[type=radio]').prop('checked', false);
+}
+
 $(document).ready(function () {
 
     let topButton = $('#to-top-btn');
@@ -93,6 +99,80 @@ $(document).ready(function () {
         $("#local-search").removeClass("hvr-pulse");
         $("#google-search").addClass("hvr-pulse");
         $(".google-search").fadeOut("fast");
+    });
+
+
+    //More and Less buttons
+    $("#more-button-1").click(function () {
+        $('#electrician-info-1').slideDown();
+        $('#more-button-1').hide();
+        $('#less-button-1').show();
+    });
+
+    $("#less-button-1").click(function () {
+        $('#electrician-info-1').slideUp();
+        $('#more-button-1').show();
+        $('#less-button-1').hide();
+    });
+
+    $("#more-button-2").click(function () {
+        $('#plumber-info-1').slideDown();
+        $('#more-button-2').hide();
+        $('#less-button-2').show();
+    });
+
+    $("#less-button-2").click(function () {
+        $('#plumber-info-1').slideUp();
+        $('#more-button-2').show();
+        $('#less-button-2').hide();
+    });
+
+    $("#more-button-3").click(function () {
+        $('#carpenter-info-1').slideDown();
+        $('#more-button-3').hide();
+        $('#less-button-3').show();
+    });
+
+    $("#less-button-3").click(function () {
+        $('#carpenter-info-1').slideUp();
+        $('#more-button-3').show();
+        $('#less-button-3').hide();
+    });
+
+    $("#more-button-4").click(function () {
+        $('#mechanic-info-1').slideDown();
+        $('#more-button-4').hide();
+        $('#less-button-4').show();
+    });
+
+    $("#less-button-4").click(function () {
+        $('#mechanic-info-1').slideUp();
+        $('#more-button-4').show();
+        $('#less-button-4').hide();
+    });
+
+    $("#more-button-5").click(function () {
+        $('#plasterer-info-1').slideDown();
+        $('#more-button-5').hide();
+        $('#less-button-5').show();
+    });
+
+    $("#less-button-5").click(function () {
+        $('#plasterer-info-1').slideUp();
+        $('#more-button-5').show();
+        $('#less-button-5').hide();
+    });
+
+    $("#more-button-6").click(function () {
+        $('#decorator-info-1').slideDown();
+        $('#more-button-6').hide();
+        $('#less-button-6').show();
+    });
+
+    $("#less-button-6").click(function () {
+        $('#decorator-info-1').slideUp();
+        $('#more-button-6').show();
+        $('#less-button-6').hide();
     });
 
 

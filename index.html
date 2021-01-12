@@ -190,8 +190,126 @@
     </main>
 
     <main class="local-search">
+        <div class="row no-gutters">
+            <div class="col-12 col-lg-12 notice-banner">
+                <h4 class="notice-message">Important Notice: Limited Search Options Avaliable</h4>
+            </div>
+        </div>
 
-        <h1>Local Search</h1>
+        <div class="container-fluid">
+            <div class="row">
+                <!--Step one for find a local business, fixed to UK only-->
+                <div class="col-12 col-lg-4 step-one-local">
+                    <h2>step one</h2>
+                    <h6>select a country</h6>
+                    <div id="countries-dropdown">
+                        <select id="countries-list">
+                            <option value="uk" selected>United Kingdom</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!--Step two select a city or town for local search-->
+                <div class="col-12 col-lg-4 step-two-local">
+                    <h2>step two</h2>
+                    <h6>Select a city or town</h6>
+                    <div id="city-town-dropdown">
+                        <select id="city-town-list">
+                            <option value="all" selected>All</option>
+                            <option value="st_albans">St Albans</option>
+                            <option value="st_albans">Hatfield</option>
+                        </select>
+                    </div>
+                    <input type="reset" onclick="resetLocalSearch()" id="reset-btn-local">
+                </div>
+
+                <!--Step three select a tradesperson-->
+                <div class="col-12 col-lg-4 step-three-local">
+                    <h2>step three</h2>
+                    <h6>choose a trade</h6>
+                    <div class="row">
+                        <div class="col-5 col-lg-5 left-options-local">
+                            <label for="electrician">electrician</label>
+                            <input type="radio" id="electrician" name="tradesperson" value="electrician">
+                            <br>
+
+                            <label for="plumber">plumber</label>
+                            <input type="radio" id="plumber" name="tradesperson" value="plumber">
+                            <br>
+
+                            <label for="carpenter">Carpenter</label>
+                            <input type="radio" id="carpenter" name="tradesperson" value="carpenter">
+                            <br>
+                        </div>
+
+                        <div class="col-6 col-lg-6 right-options-local">
+                            <input type="radio" id="car_repair" name="tradesperson" value="car_repair">
+                            <label for="car_repair">Mechanic</label><br>
+
+                            <input type="radio" id="plasterer" name="tradesperson" value="plasterer">
+                            <label for="plasterer">Plasterer</label><br>
+
+                            <input type="radio" id="decorator" name="tradesperson" value="decorator">
+                            <label for="decorator">Decorator</label><br>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4 card electrician-1 category_electric city-stalbans">
+                    <h2 id="business_heading">Electrician St Albans</h2>
+                    <div class="business_icon"><i class="fas fa-bolt"></i></div>
+                    <p id="electrician-info-1">Business Info Here</p>
+                    <button id="more-button-1" class="btn btn-outline-dark hvr-sweep-to-bottom">More Info...</button>
+                    <button id="less-button-1" class="btn btn-outline-dark hvr-sweep-to-bottom">Less Info...</button>
+                </div>
+
+                <div class="col-lg-4 card plumber-1 category_plumber city-stalbans">
+                    <h2 id="business_heading">Plumber St Albans</h2>
+                    <div class="business_icon"><i class="fas fa-wrench"></i></div>
+                    <p id="plumber-info-1">Business Info Here</p>
+                    <button id="more-button-2" class="btn btn-outline-dark hvr-sweep-to-bottom">More Info...</button>
+                    <button id="less-button-2" class="btn btn-outline-dark hvr-sweep-to-bottom">Less Info...</button>
+                </div>
+
+                <div class="col-lg-4 card carpenter-1 category_carpenter city-stalbans">
+                    <h2 id="business_heading">Carpenter St Albans</h2>
+                    <div class="business_icon"><i class="fas fa-screwdriver"></i></div>
+                    <p id="carpenter-info-1">Business Info Here</p>
+                    <button id="more-button-3" class="btn btn-outline-dark hvr-sweep-to-bottom">More Info...</button>
+                    <button id="less-button-3" class="btn btn-outline-dark hvr-sweep-to-bottom">Less Info...</button>
+                </div>
+
+                <div class="col-lg-4 card mechanic-1 category_mechanic city-stalbans">
+                    <h2 id="business_heading">Mechanic St Albans</h2>
+                    <div class="business_icon"><i class="fas fa-car-battery"></i></div>
+                    <p id="mechanic-info-1">Business Info Here</p>
+                    <button id="more-button-4" class="btn btn-outline-dark hvr-sweep-to-bottom">More Info...</button>
+                    <button id="less-button-4" class="btn btn-outline-dark hvr-sweep-to-bottom">Less Info...</button>
+                </div>
+
+                <div class="col-lg-4 card plasterer-1 category_plasterer city-stalbans">
+                    <h2 id="business_heading">Plasterer St Albans</h2>
+                    <div class="business_icon"><i class="fas fa-toolbox"></i></div>
+                    <p id="plasterer-info-1">Business Info Here</p>
+                    <button id="more-button-5" class="btn btn-outline-dark hvr-sweep-to-bottom">More Info...</button>
+                    <button id="less-button-5" class="btn btn-outline-dark hvr-sweep-to-bottom">Less Info...</button>
+                </div>
+
+                <div class="col-lg-4 card decorator-1 category_decorator city-stalbans">
+                    <h2 id="business_heading">Decorator St Albans</h2>
+                    <div class="business_icon"><i class="fas fa-paint-roller"></i></div>
+                    <p id="decorator-info-1">Business Info Here</p>
+                    <button id="more-button-6" class="btn btn-outline-dark hvr-sweep-to-bottom">More Info...</button>
+                    <button id="less-button-6" class="btn btn-outline-dark hvr-sweep-to-bottom">Less Info...</button>
+                </div>
+
+            </div>
+        </div>
 
     </main>
 
@@ -226,7 +344,7 @@
             <!--Copyright Column-->
             <div class="row">
                 <div class="col-lg-12 copyright">
-                    <h6 id="copy"><a href="https://ifti-khan.github.io/ifti-khan-milestone-project-1/" class="hvr-sweep-to-bottom hvr-pulse" target="_blank">&copy;ifti khan 2020</a></h6>
+                    <h6 id="copy"><a href="https://ifti-khan.github.io/ifti-khan-milestone-project-1/" class="hvr-sweep-to-bottom hvr-pulse" target="_blank">&copy;ifti khan 2021</a></h6>
                 </div>
             </div>
         </div>
