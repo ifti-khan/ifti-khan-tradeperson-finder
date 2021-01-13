@@ -45,8 +45,66 @@ document.getElementById("elec1-social").innerHTML = electrician1.social;
 function resetLocalSearch() {
     $('#countries-list')[0].selectedIndex = 0;
     $('#city-town-list')[0].selectedIndex = 0;
-    $('input[type=radio]').prop('checked', false);
+    $('input[type=checkbox]').prop('checked', false);
+    $('.card').hide();
 }
+
+$("#city-town-list").change(function () {
+    let selectedCity = this.options[this.selectedIndex].value;
+    if (selectedCity == "st_albans") {
+        $('.card').hide();
+    }
+});
+
+
+$("#electrician-local").click(function () {
+    if ($("#electrician-local").is(':checked')) {
+        $('.card[data-trade="electrician"]').show();
+    } else {
+        $('.card[data-trade="electrician"]').hide();
+    }
+});
+
+$("#plumber-local").click(function () {
+    if ($("#plumber-local").is(':checked')) {
+        $('.card[data-trade="plumber"]').show();
+    } else {
+        $('.card[data-trade="plumber"]').hide();
+    }
+});
+
+$("#carpenter-local").click(function () {
+    if ($("#carpenter-local").is(':checked')) {
+        $('.card[data-trade="carpenter"]').show();
+    } else {
+        $('.card[data-trade="carpenter"]').hide();
+    }
+});
+
+$("#mechanic-local").click(function () {
+    if ($("#mechanic-local").is(':checked')) {
+        $('.card[data-trade="mechanic"]').show();
+    } else {
+        $('.card[data-trade="mechanic"]').hide();
+    }
+});
+
+$("#plasterer-local").click(function () {
+    if ($("#plasterer-local").is(':checked')) {
+        $('.card[data-trade="plasterer"]').show();
+    } else {
+        $('.card[data-trade="plasterer"]').hide();
+    }
+});
+
+$("#decorator-local").click(function () {
+    if ($("#decorator-local").is(':checked')) {
+        $('.card[data-trade="decorator"]').show();
+    } else {
+        $('.card[data-trade="decorator"]').hide();
+    }
+});
+
 
 $(document).ready(function () {
 

@@ -215,9 +215,8 @@
                     <h6>Select a city or town</h6>
                     <div id="city-town-dropdown">
                         <select id="city-town-list">
-                            <option value="all" selected>All</option>
+                            <option value="all" selected>Please choose a city or town</option>
                             <option value="st_albans">St Albans</option>
-                            <option value="st_albans">Hatfield</option>
                         </select>
                     </div>
                     <input type="reset" onclick="resetLocalSearch()" id="reset-btn-local">
@@ -226,33 +225,32 @@
                 <!--Step three select a tradesperson-->
                 <div class="col-12 col-lg-4 step-three-local">
                     <h2>step three</h2>
-                    <h6>choose a trade</h6>
+                    <h6>select a trade</h6>
                     <div class="row">
                         <div class="col-5 col-lg-5 left-options-local">
                             <label for="electrician">electrician</label>
-                            <input type="radio" id="electrician" name="tradesperson" value="electrician">
+                            <input type="checkbox" id="electrician-local" name="tradesperson" value="electrician">
                             <br>
 
                             <label for="plumber">plumber</label>
-                            <input type="radio" id="plumber" name="tradesperson" value="plumber">
+                            <input type="checkbox" id="plumber-local" name="tradesperson" value="plumber">
                             <br>
 
                             <label for="carpenter">Carpenter</label>
-                            <input type="radio" id="carpenter" name="tradesperson" value="carpenter">
+                            <input type="checkbox" id="carpenter-local" name="tradesperson" value="carpenter">
                             <br>
                         </div>
 
                         <div class="col-6 col-lg-6 right-options-local">
-                            <input type="radio" id="car_repair" name="tradesperson" value="car_repair">
+                            <input type="checkbox" id="mechanic-local" name="tradesperson" value="car_repair">
                             <label for="car_repair">Mechanic</label><br>
 
-                            <input type="radio" id="plasterer" name="tradesperson" value="plasterer">
+                            <input type="checkbox" id="plasterer-local" name="tradesperson" value="plasterer">
                             <label for="plasterer">Plasterer</label><br>
 
-                            <input type="radio" id="decorator" name="tradesperson" value="decorator">
+                            <input type="checkbox" id="decorator-local" name="tradesperson" value="decorator">
                             <label for="decorator">Decorator</label><br>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -260,7 +258,7 @@
 
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-4 card electrician-1 category_electric city-stalbans">
+                <div class="col-lg-4 card electrician-1" data-trade="electrician" data-city="st_albans">
                     <h2 id="business_heading">Electrician St Albans</h2>
                     <div class="business_icon"><i class="fas fa-bolt"></i></div>
                     <div id="electrician-info-1">
@@ -268,42 +266,42 @@
                         <table class="elec-tb1">
                             <tr>
                                 <td class="attrib-col1">
-                                    <h5>Address:</h5>
+                                    <h6>Address:</h6>
                                 </td>
                                 <td class="attrib-col2">
-                                    <h5 id="elec1-add"></h5>
+                                    <h6 id="elec1-add"></h6>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="attrib-col1">
-                                    <h5>Number:</h5>
+                                    <h6>Number:</h6>
                                 </td>
                                 <td class="attrib-col2">
-                                    <h5 id="elec1-num"></h5>
+                                    <h6 id="elec1-num"></h6>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="attrib-col1">
-                                    <h5>Email:</h5>
+                                    <h6>Email:</h6>
                                 </td>
                                 <td class="attrib-col2">
-                                    <h5 id="elec1-email"></h5>
+                                    <h6 id="elec1-email"></h6>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="attrib-col1">
-                                    <h5>Website:</h5>
+                                    <h6>Website:</h6>
                                 </td>
                                 <td class="attrib-col2">
-                                    <h5 id="elec1-url"></h5>
+                                    <h6 id="elec1-url"></h6>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="attrib-col1">
-                                    <h5>Social:</h5>
+                                    <h6>Social:</h6>
                                 </td>
                                 <td class="attrib-col2">
-                                    <h5 id="elec1-social"></h5>
+                                    <h6 id="elec1-social"></h6>
                                 </td>
                             </tr>
                         </table>
@@ -313,7 +311,7 @@
                     <button id="less-button-1" class="btn btn-outline-dark hvr-sweep-to-bottom">Less Info...</button>
                 </div>
 
-                <div class="col-lg-4 card plumber-1 category_plumber city-stalbans">
+                <div class="col-lg-4 card plumber-1" data-trade="plumber" data-city="st_albans">
                     <h2 id="business_heading">Plumber St Albans</h2>
                     <div class="business_icon"><i class="fas fa-wrench"></i></div>
                     <p id="plumber-info-1">Business Info Here</p>
@@ -321,7 +319,7 @@
                     <button id="less-button-2" class="btn btn-outline-dark hvr-sweep-to-bottom">Less Info...</button>
                 </div>
 
-                <div class="col-lg-4 card carpenter-1 category_carpenter city-stalbans">
+                <div class="col-lg-4 card carpenter-1" data-trade="carpenter" data-city="st_albans">
                     <h2 id="business_heading">Carpenter St Albans</h2>
                     <div class="business_icon"><i class="fas fa-screwdriver"></i></div>
                     <p id="carpenter-info-1">Business Info Here</p>
@@ -329,7 +327,7 @@
                     <button id="less-button-3" class="btn btn-outline-dark hvr-sweep-to-bottom">Less Info...</button>
                 </div>
 
-                <div class="col-lg-4 card mechanic-1 category_mechanic city-stalbans">
+                <div class="col-lg-4 card mechanic-1" data-trade="mechanic" data-city="st_albans">
                     <h2 id="business_heading">Mechanic St Albans</h2>
                     <div class="business_icon"><i class="fas fa-car-battery"></i></div>
                     <p id="mechanic-info-1">Business Info Here</p>
@@ -337,7 +335,7 @@
                     <button id="less-button-4" class="btn btn-outline-dark hvr-sweep-to-bottom">Less Info...</button>
                 </div>
 
-                <div class="col-lg-4 card plasterer-1 category_plasterer city-stalbans">
+                <div class="col-lg-4 card plasterer-1" data-trade="plasterer" data-city="st_albans">
                     <h2 id="business_heading">Plasterer St Albans</h2>
                     <div class="business_icon"><i class="fas fa-toolbox"></i></div>
                     <p id="plasterer-info-1">Business Info Here</p>
@@ -345,7 +343,7 @@
                     <button id="less-button-5" class="btn btn-outline-dark hvr-sweep-to-bottom">Less Info...</button>
                 </div>
 
-                <div class="col-lg-4 card decorator-1 category_decorator city-stalbans">
+                <div class="col-lg-4 card decorator-1" data-trade="decorator" data-city="st_albans">
                     <h2 id="business_heading">Decorator St Albans</h2>
                     <div class="business_icon"><i class="fas fa-paint-roller"></i></div>
                     <p id="decorator-info-1">Business Info Here</p>

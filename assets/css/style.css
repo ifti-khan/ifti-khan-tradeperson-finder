@@ -395,6 +395,15 @@ button:focus {
     margin-top: 10px;
 }
 
+.electrician-1,
+.plumber-1,
+.carpenter-1,
+.mechanic-1,
+.plasterer-1,
+.decorator-1 {
+    display: none;
+}
+
 .plumber-1,
 .plasterer-1 {
     border-left: 2px solid #808080;
@@ -468,7 +477,6 @@ button {
     color: #ffffff;
     background-color: #ffffff;
 }
-
 
 /*Back to top button*/
 /*This styles the back to top button*/
