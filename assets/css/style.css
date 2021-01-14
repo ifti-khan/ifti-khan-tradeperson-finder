@@ -99,6 +99,9 @@ button:focus {
 /*This if for the collapsable nav icon border*/
 .navbar-light .navbar-toggler {
     border-color: #f0f0f0;
+    width: 40px;
+    margin: 0px;
+    padding: 0px;
 }
 
 /*This if for the collapsable nav icon, i removed the original and set my own in the html*/
@@ -173,6 +176,7 @@ button:focus {
     font-size: 14px;
 }
 
+/*Google Search DIV*/
 /*Google Search Main Element*/
 /*This block of code is for the main element for the google search*/
 .google-search {
@@ -288,6 +292,7 @@ button:focus {
     margin-top: 4px
 }
 
+/*Local Search DIV*/
 /*Local Search Search Main Element*/
 .local-search {
     display: none;
@@ -323,23 +328,9 @@ button:focus {
     }
 }
 
-#countries-list,
-#city-town-list {
-    width: 75%
-}
-
-/*This styles the reset button for the locals search*/
-#reset-btn-local {
-    margin-top: 6px;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    height: 35px
-}
-
 /*This styles the three steps divs within the google search section*/
-.step-one-local,
-.step-two-local,
-.step-three-local {
+.empty-space-local,
+.choose-trade-local {
     background-color: #f0f0f0;
     height: 200px;
     text-transform: uppercase;
@@ -347,44 +338,57 @@ button:focus {
     text-align: center;
 }
 
-.step-one-local,
-.step-two-local {
-    padding-top: 40px;
-}
-
-.step-two-local {
+.choose-trade-local {
     border-left: 2px solid #808080;
     border-right: 2px solid #808080;
 }
 
-.step-three-local {
-    padding-top: 25px
+.choose-trade-local h3 {
+    padding-top: 15px;
+    padding-bottom: 10px;
+
 }
 
-.step-one-local h6,
-.step-two-local h6,
-.step-three-local h6 {
-    margin-bottom: 10px;
+.choose-trade-local label {
+    margin-bottom: 10px
 }
 
-/*This styles the left radio buttons in step three*/
+/*This styles the left radio buttons in select a trade*/
 .left-options-local {
-    text-align: right;
-    text-transform: capitalize;
-    font-size: 15px;
-    border-right: 2px solid #808080;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
     padding: 0px 10px;
-    margin-left: auto;
-    letter-spacing: 3px;
+    letter-spacing: 5px;
 }
 
-/*This styles the right radio buttons in step three*/
-.right-options-local {
-    text-align: left;
-    text-transform: capitalize;
-    font-size: 15px;
+/*This styles the middle radio buttons in select a trade*/
+.middle-options-local {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
     padding: 0px 10px;
-    letter-spacing: 3px;
+    letter-spacing: 5px;
+    border-left: 2px solid #808080;
+    border-right: 2px solid #808080;
+}
+
+/*This styles the middle radio buttons in select a trade*/
+.right-options-local {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 0px 10px;
+    letter-spacing: 5px;
+}
+
+
+/*This styles the reset button for the locals search*/
+#reset-btn-local {
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    height: 35px
 }
 
 /*bootstrap card class*/

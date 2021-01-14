@@ -262,8 +262,12 @@
 @media (max-width: 425px) {
 
     /*Nav Bar Section*/
+    .navbar {
+        padding: 10px
+    }
+
     .navbar-light .navbar-brand {
-        font-size: 22px;
+        font-size: 23px;
         margin-right: 0px;
         letter-spacing: 2px
     }
@@ -275,11 +279,6 @@
         margin-top: 5px;
         font-size: 14px;
         letter-spacing: 4px;
-    }
-
-    /*Nav bar collapsable icon*/
-    .navbar-light .navbar-toggler {
-        padding: 1px 6px;
     }
 
     /*Google search step section*/
@@ -360,8 +359,37 @@
     }
 
     /*Bootstrap empty column in footer*/
-    .empty-space {
+    .empty-space,
+    .empty-space-local {
         display: none;
+    }
+
+    /*This styles the three steps divs within the google search section*/
+    .choose-trade-local {
+        height: 320px;
+        border: none;
+    }
+
+    /*This styles the left radio buttons in select a trade*/
+    .left-options-local {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    /*This styles the middle radio buttons in select a trade*/
+    .middle-options-local {
+        font-size: 15px;
+        border: none;
+    }
+
+    /*This styles the middle radio buttons in select a trade*/
+    .right-options-local {
+        font-size: 15px;
+    }
+
+    .plumber-1,
+    .plasterer-1 {
+        border: none;
     }
 
     /*Back To Top Button*/
@@ -376,8 +404,12 @@
 @media (max-width: 375px) {
 
     /*Nav Bar Section*/
+    .navbar {
+        padding: 5px
+    }
+
     .navbar-light .navbar-brand {
-        font-size: 19px;
+        font-size: 21px;
         margin-right: 0px;
         letter-spacing: 2px
     }
@@ -397,8 +429,12 @@
 @media (max-width: 320px) {
 
     /*Nav Bar Section*/
+    .navbar {
+        padding: 5px
+    }
+
     .navbar-light .navbar-brand {
-        font-size: 15px;
+        font-size: 17px;
         margin-right: 0px;
         letter-spacing: 2px
     }

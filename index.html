@@ -192,167 +192,155 @@
     <main class="local-search">
         <div class="row no-gutters">
             <div class="col-12 col-lg-12 notice-banner">
-                <h4 class="notice-message">Important Notice: Limited Search Options Avaliable</h4>
+                <h5 class="notice-message">Important Notice: Limited Search And Dummy Data Avaliable</h5>
             </div>
         </div>
 
         <div class="container-fluid">
             <div class="row">
                 <!--Step one for find a local business, fixed to UK only-->
-                <div class="col-12 col-lg-4 step-one-local">
-                    <h2>step one</h2>
-                    <h6>select a country</h6>
-                    <div id="countries-dropdown">
-                        <select id="countries-list">
-                            <option value="uk" selected>United Kingdom</option>
-                        </select>
-                    </div>
+                <div class="col-12 col-lg-2 empty-space-local">
+
                 </div>
 
                 <!--Step two select a city or town for local search-->
-                <div class="col-12 col-lg-4 step-two-local">
-                    <h2>step two</h2>
-                    <h6>Select a city or town</h6>
-                    <div id="city-town-dropdown">
-                        <select id="city-town-list">
-                            <option value="all" selected>Please choose a city or town</option>
-                            <option value="st_albans">St Albans</option>
-                        </select>
+                <div class="col-12 col-lg-8 choose-trade-local">
+                    <h3>select a trade</h3>
+                    <div class="row">
+                        <div class="col-12 col-lg-4 left-options-local">
+                            <input type="checkbox" id="electrician-local" name="tradesperson" value="electrician">
+                            <label for="electrician-local">electrician</label><br>
+
+                            <input type="checkbox" id="plumber-local" name="tradesperson" value="plumber">
+                            <label for="plumber-local">plumber</label><br>
+                        </div>
+
+                        <div class="col-12 col-lg-4 middle-options-local">
+                            <input type="checkbox" id="carpenter-local" name="tradesperson" value="carpenter">
+                            <label for="carpenter-local">Carpenter</label><br>
+
+                            <input type="checkbox" id="mechanic-local" name="tradesperson" value="car_repair">
+                            <label for="mechanic-local">Mechanic</label><br>
+                        </div>
+
+                        <div class="col-12 col-lg-4 right-options-local">
+                            <input type="checkbox" id="plasterer-local" name="tradesperson" value="plasterer">
+                            <label for="plasterer-local">Plasterer</label><br>
+
+                            <input type="checkbox" id="decorator-local" name="tradesperson" value="decorator">
+                            <label for="decorator-local">Decorator</label><br>
+                        </div>
                     </div>
                     <input type="reset" onclick="resetLocalSearch()" id="reset-btn-local">
                 </div>
 
                 <!--Step three select a tradesperson-->
-                <div class="col-12 col-lg-4 step-three-local">
-                    <h2>step three</h2>
-                    <h6>select a trade</h6>
-                    <div class="row">
-                        <div class="col-5 col-lg-5 left-options-local">
-                            <label for="electrician">electrician</label>
-                            <input type="checkbox" id="electrician-local" name="tradesperson" value="electrician">
-                            <br>
+                <div class="col-12 col-lg-2 empty-space-local">
 
-                            <label for="plumber">plumber</label>
-                            <input type="checkbox" id="plumber-local" name="tradesperson" value="plumber">
-                            <br>
-
-                            <label for="carpenter">Carpenter</label>
-                            <input type="checkbox" id="carpenter-local" name="tradesperson" value="carpenter">
-                            <br>
-                        </div>
-
-                        <div class="col-6 col-lg-6 right-options-local">
-                            <input type="checkbox" id="mechanic-local" name="tradesperson" value="car_repair">
-                            <label for="car_repair">Mechanic</label><br>
-
-                            <input type="checkbox" id="plasterer-local" name="tradesperson" value="plasterer">
-                            <label for="plasterer">Plasterer</label><br>
-
-                            <input type="checkbox" id="decorator-local" name="tradesperson" value="decorator">
-                            <label for="decorator">Decorator</label><br>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-4 card electrician-1" data-trade="electrician" data-city="st_albans">
-                    <h2 id="business_heading">Electrician St Albans</h2>
-                    <div class="business_icon"><i class="fas fa-bolt"></i></div>
-                    <div id="electrician-info-1">
+        <section>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4 card electrician-1" data-trade="electrician">
+                        <h2 id="business_heading">Electrician St Albans</h2>
+                        <div class="business_icon"><i class="fas fa-bolt"></i></div>
+                        <div id="electrician-info-1">
 
-                        <table class="elec-tb1">
-                            <tr>
-                                <td class="attrib-col1">
-                                    <h6>Address:</h6>
-                                </td>
-                                <td class="attrib-col2">
-                                    <h6 id="elec1-add"></h6>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="attrib-col1">
-                                    <h6>Number:</h6>
-                                </td>
-                                <td class="attrib-col2">
-                                    <h6 id="elec1-num"></h6>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="attrib-col1">
-                                    <h6>Email:</h6>
-                                </td>
-                                <td class="attrib-col2">
-                                    <h6 id="elec1-email"></h6>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="attrib-col1">
-                                    <h6>Website:</h6>
-                                </td>
-                                <td class="attrib-col2">
-                                    <h6 id="elec1-url"></h6>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="attrib-col1">
-                                    <h6>Social:</h6>
-                                </td>
-                                <td class="attrib-col2">
-                                    <h6 id="elec1-social"></h6>
-                                </td>
-                            </tr>
-                        </table>
+                            <table class="elec-tb1">
+                                <tr>
+                                    <td class="attrib-col1">
+                                        <h6>Address:</h6>
+                                    </td>
+                                    <td class="attrib-col2">
+                                        <h6 id="elec1-add"></h6>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="attrib-col1">
+                                        <h6>Number:</h6>
+                                    </td>
+                                    <td class="attrib-col2">
+                                        <h6 id="elec1-num"></h6>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="attrib-col1">
+                                        <h6>Email:</h6>
+                                    </td>
+                                    <td class="attrib-col2">
+                                        <h6 id="elec1-email"></h6>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="attrib-col1">
+                                        <h6>Website:</h6>
+                                    </td>
+                                    <td class="attrib-col2">
+                                        <h6 id="elec1-url"></h6>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="attrib-col1">
+                                        <h6>Social:</h6>
+                                    </td>
+                                    <td class="attrib-col2">
+                                        <h6 id="elec1-social"></h6>
+                                    </td>
+                                </tr>
+                            </table>
 
+                        </div>
+                        <button id="more-button-1" class="btn btn-outline-dark hvr-sweep-to-bottom">More Info...</button>
+                        <button id="less-button-1" class="btn btn-outline-dark hvr-sweep-to-bottom">Less Info...</button>
                     </div>
-                    <button id="more-button-1" class="btn btn-outline-dark hvr-sweep-to-bottom">More Info...</button>
-                    <button id="less-button-1" class="btn btn-outline-dark hvr-sweep-to-bottom">Less Info...</button>
-                </div>
 
-                <div class="col-lg-4 card plumber-1" data-trade="plumber" data-city="st_albans">
-                    <h2 id="business_heading">Plumber St Albans</h2>
-                    <div class="business_icon"><i class="fas fa-wrench"></i></div>
-                    <p id="plumber-info-1">Business Info Here</p>
-                    <button id="more-button-2" class="btn btn-outline-dark hvr-sweep-to-bottom">More Info...</button>
-                    <button id="less-button-2" class="btn btn-outline-dark hvr-sweep-to-bottom">Less Info...</button>
-                </div>
+                    <div class="col-lg-4 card plumber-1" data-trade="plumber">
+                        <h2 id="business_heading">Plumber St Albans</h2>
+                        <div class="business_icon"><i class="fas fa-wrench"></i></div>
+                        <p id="plumber-info-1">Business Info Here</p>
+                        <button id="more-button-2" class="btn btn-outline-dark hvr-sweep-to-bottom">More Info...</button>
+                        <button id="less-button-2" class="btn btn-outline-dark hvr-sweep-to-bottom">Less Info...</button>
+                    </div>
 
-                <div class="col-lg-4 card carpenter-1" data-trade="carpenter" data-city="st_albans">
-                    <h2 id="business_heading">Carpenter St Albans</h2>
-                    <div class="business_icon"><i class="fas fa-screwdriver"></i></div>
-                    <p id="carpenter-info-1">Business Info Here</p>
-                    <button id="more-button-3" class="btn btn-outline-dark hvr-sweep-to-bottom">More Info...</button>
-                    <button id="less-button-3" class="btn btn-outline-dark hvr-sweep-to-bottom">Less Info...</button>
-                </div>
+                    <div class="col-lg-4 card carpenter-1" data-trade="carpenter">
+                        <h2 id="business_heading">Carpenter St Albans</h2>
+                        <div class="business_icon"><i class="fas fa-screwdriver"></i></div>
+                        <p id="carpenter-info-1">Business Info Here</p>
+                        <button id="more-button-3" class="btn btn-outline-dark hvr-sweep-to-bottom">More Info...</button>
+                        <button id="less-button-3" class="btn btn-outline-dark hvr-sweep-to-bottom">Less Info...</button>
+                    </div>
 
-                <div class="col-lg-4 card mechanic-1" data-trade="mechanic" data-city="st_albans">
-                    <h2 id="business_heading">Mechanic St Albans</h2>
-                    <div class="business_icon"><i class="fas fa-car-battery"></i></div>
-                    <p id="mechanic-info-1">Business Info Here</p>
-                    <button id="more-button-4" class="btn btn-outline-dark hvr-sweep-to-bottom">More Info...</button>
-                    <button id="less-button-4" class="btn btn-outline-dark hvr-sweep-to-bottom">Less Info...</button>
-                </div>
+                    <div class="col-lg-4 card mechanic-1" data-trade="mechanic">
+                        <h2 id="business_heading">Mechanic St Albans</h2>
+                        <div class="business_icon"><i class="fas fa-car-battery"></i></div>
+                        <p id="mechanic-info-1">Business Info Here</p>
+                        <button id="more-button-4" class="btn btn-outline-dark hvr-sweep-to-bottom">More Info...</button>
+                        <button id="less-button-4" class="btn btn-outline-dark hvr-sweep-to-bottom">Less Info...</button>
+                    </div>
 
-                <div class="col-lg-4 card plasterer-1" data-trade="plasterer" data-city="st_albans">
-                    <h2 id="business_heading">Plasterer St Albans</h2>
-                    <div class="business_icon"><i class="fas fa-toolbox"></i></div>
-                    <p id="plasterer-info-1">Business Info Here</p>
-                    <button id="more-button-5" class="btn btn-outline-dark hvr-sweep-to-bottom">More Info...</button>
-                    <button id="less-button-5" class="btn btn-outline-dark hvr-sweep-to-bottom">Less Info...</button>
-                </div>
+                    <div class="col-lg-4 card plasterer-1" data-trade="plasterer">
+                        <h2 id="business_heading">Plasterer St Albans</h2>
+                        <div class="business_icon"><i class="fas fa-toolbox"></i></div>
+                        <p id="plasterer-info-1">Business Info Here</p>
+                        <button id="more-button-5" class="btn btn-outline-dark hvr-sweep-to-bottom">More Info...</button>
+                        <button id="less-button-5" class="btn btn-outline-dark hvr-sweep-to-bottom">Less Info...</button>
+                    </div>
 
-                <div class="col-lg-4 card decorator-1" data-trade="decorator" data-city="st_albans">
-                    <h2 id="business_heading">Decorator St Albans</h2>
-                    <div class="business_icon"><i class="fas fa-paint-roller"></i></div>
-                    <p id="decorator-info-1">Business Info Here</p>
-                    <button id="more-button-6" class="btn btn-outline-dark hvr-sweep-to-bottom">More Info...</button>
-                    <button id="less-button-6" class="btn btn-outline-dark hvr-sweep-to-bottom">Less Info...</button>
-                </div>
+                    <div class="col-lg-4 card decorator-1" data-trade="decorator">
+                        <h2 id="business_heading">Decorator St Albans</h2>
+                        <div class="business_icon"><i class="fas fa-paint-roller"></i></div>
+                        <p id="decorator-info-1">Business Info Here</p>
+                        <button id="more-button-6" class="btn btn-outline-dark hvr-sweep-to-bottom">More Info...</button>
+                        <button id="less-button-6" class="btn btn-outline-dark hvr-sweep-to-bottom">Less Info...</button>
+                    </div>
 
+                </div>
             </div>
-        </div>
+        </section>
+
 
     </main>
 
@@ -493,6 +481,8 @@
     <script src="assets/js/googlemaps.js"></script>
     <!--My JS Script for my contact modal forms-->
     <script src="assets/js/sendemail.js"></script>
+    <!--My JS Script for my local search section-->
+    <script src="assets/js/localsearch.js"></script>
 
 </body>
 
