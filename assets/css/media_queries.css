@@ -392,6 +392,12 @@
         border: none;
     }
 
+    .close {
+        position: absolute;
+        top: 20px;
+        left: 335px;
+    }
+
     /*Back To Top Button*/
     #to-top-btn {
         bottom: 180px;
@@ -421,6 +427,12 @@
 
     .step-three {
         padding-top: 20px;
+    }
+
+    .close {
+        position: absolute;
+        top: 20px;
+        left: 290px;
     }
 
 }
@@ -491,5 +503,16 @@
     .fa-chevron-up {
         font-size: 10px;
         margin-top: 5px;
+    }
+
+    .close {
+        position: absolute;
+        top: 20px;
+        left: 247px;
+        font-size: 30px;
+    }
+
+    .message-subject label {
+        font-size: 14px;
     }
 }
