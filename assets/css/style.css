@@ -299,6 +299,7 @@ button:focus {
     display: none;
     margin-top: 10px;
     margin-bottom: 10px;
+    overflow: auto;
 }
 
 /*This block of code is for the Important notice banner for the text scrolling across*/
@@ -374,96 +375,61 @@ button:focus {
     height: 35px
 }
 
-/*bootstrap card class*/
+.dynamic-business-divs {
+    padding: 15px;
+    width: 100%;
+}
+
 .card {
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 0px;
-    margin-top: 10px;
-}
-
-.electrician-1,
-.plumber-1,
-.carpenter-1,
-.mechanic-1,
-.plasterer-1,
-.decorator-1 {
+    background-color: #f0f0f0;
+    border-radius: 0;
     display: none;
 }
 
-.plumber-1,
-.plasterer-1 {
-    border-left: 2px solid #808080;
-    border-right: 2px solid #808080;
-}
-
-#business_heading {
-    font-size: 30px;
-    letter-spacing: 5px;
+.heading-card {
     text-align: center;
 }
 
-.business_icon {
+.icon-card {
     text-align: center;
-    font-size: 50px
+    font-size: 60px;
 }
 
-#electrician-info-1,
-#plumber-info-1,
-#carpenter-info-1,
-#mechanic-info-1,
-#plasterer-info-1,
-#decorator-info-1 {
+.info-card {
+    background-color: #f0f0f0;
+    border: none !important;
     display: none;
-    font-size: 16px;
     text-align: center;
 }
 
-table.elec-tb1 {
-    margin-left: auto;
-    margin-right: auto;
+.table-card {
+    margin: 0 auto;
 }
 
-table .attrib-col1 {
+.attrib-col1 {
     text-align: right;
     padding-right: 10px;
-    padding-bottom: 5px;
 }
 
-table .attrib-col2 {
+.attrib-col2 {
     text-align: left;
 }
 
-#less-button-1,
-#less-button-2,
-#less-button-3,
-#less-button-4,
-#less-button-5,
-#less-button-6 {
-    display: none;
-}
-
-button {
-    font-size: 16px;
-    border-radius: 5px;
+.more-btn {
+    width: 125px;
     display: block;
     margin: 0 auto;
-    width: 25%;
-    text-align: center;
-    padding: 10px 10px;
-    text-decoration: none;
-    color: #fff;
+    margin-bottom: 10px;
 }
 
-.btn-outline-dark {
+.less-btn {
     display: block;
     margin: 0 auto;
+    width: 125px;
+    margin-bottom: 10px;
 }
 
-.btn-outline-dark:hover {
-    color: #ffffff;
-    background-color: #ffffff;
-}
+
 
 /*Back to top button*/
 /*This styles the back to top button*/
