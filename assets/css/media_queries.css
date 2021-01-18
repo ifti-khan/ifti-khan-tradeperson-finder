@@ -24,6 +24,70 @@
     .step-two {
         padding-top: 30px;
     }
+
+    /*Local Search*/
+    /*This block of code is for the Important notice banner for the text scrolling across*/
+    .notice-message {
+        font-size: 30px;
+    }
+
+    .choose-trade-local {
+        height: 100%;
+    }
+
+    .choose-trade-local h3 {
+        font-size: 30px;
+    }
+
+    .choose-trade-local label {
+        margin-bottom: 10px
+    }
+
+    /*This styles the left radio buttons in select a trade*/
+    .left-options-local,
+    .middle-options-local,
+    .right-options-local {
+        font-size: 18px;
+    }
+
+    /*This styles the reset button for the google maps search*/
+    #reset-btn-local {
+        font-size: 25px;
+        height: 45px;
+        margin-bottom: 10px;
+    }
+
+    .card {
+        margin-bottom: 5px;
+    }
+
+    .card-body {
+        padding: 5px;
+    }
+
+    .table-card h6 {
+        font-size: 22px;
+    }
+
+    .heading-card {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 50px;
+    }
+
+    .icon-card {
+        font-size: 70px;
+    }
+
+    .more-btn,
+    .less-btn {
+        width: 150px;
+        font-size: 22px;
+    }
+
+    .close {
+        left: 470px;
+    }
 }
 
 /*Large Laptop*/
@@ -65,6 +129,10 @@
         padding: 0 10px;
         font-size: 12px;
         letter-spacing: 4px;
+    }
+
+    .close {
+        left: 470px;
     }
 }
 
@@ -113,6 +181,47 @@
         margin-top: 5px;
         padding: 0px 10px;
         margin-left: 0px;
+    }
+
+    /*Local Search*/
+    .choose-trade-local label {
+        margin-bottom: 10px
+    }
+
+    /*This styles the left radio buttons in select a trade*/
+    .left-options-local,
+    .middle-options-local,
+    .right-options-local {
+        font-size: 15px;
+    }
+
+    .card-body {
+        padding: 5px;
+    }
+
+    /*This styles the reset button for the google maps search*/
+    #reset-btn-local {
+        margin-top: 25px;
+    }
+
+    .table-card h6 {
+        font-size: 14px;
+    }
+
+    .heading-card {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 35px;
+    }
+
+    .icon-card {
+        font-size: 45px;
+    }
+
+    .more-btn,
+    .less-btn {
+        width: 105px;
+        font-size: 14px;
     }
 }
 
@@ -191,9 +300,73 @@
     .fa-chevron-up {
         font-size: 15px;
     }
-}
+
+    /*Local Search*/
+    /*This block of code is for the Important notice banner for the text scrolling across*/
+    .notice-message {
+        font-size: 16px;
+    }
+
+    /*This styles the three steps divs within the google search section*/
+    .empty-space-local {
+        display: none;
+    }
+
+    .choose-trade-local {
+        border: none;
+        height: 100%;
+    }
+
+    .choose-trade-local h3 {
+        font-size: 24px
+    }
+
+    .choose-trade-local label {
+        margin-bottom: 10px
+    }
+
+    /*This styles the reset button for the locals search*/
+    #reset-btn-local {
+        margin-bottom: 10px;
+    }
+
+    /*This styles the left radio buttons in select a trade*/
+    .left-options-local,
+    .middle-options-local,
+    .right-options-local {
+        font-size: 15px;
+        border: none;
+    }
+
+    .card {
+        margin-bottom: 5px;
+    }
+
+    .card-body {
+        padding: 5px;
+    }
+
+    .table-card h6 {
+        font-size: 16px;
+    }
+
+    .heading-card {
+        text-align: center;
+        margin-top: 10px
+    }
+
+    .icon-card {
+        font-size: 50px;
+    }
+
+    .more-btn,
+    .less-btn {
+        width: 115px;
+        font-size: 16px;
+    }
 
 }
+
 
 /*Tablet*/
 @media (max-width: 768px) {
@@ -393,9 +566,79 @@
     }
 
     .close {
-        position: absolute;
-        top: 20px;
-        left: 335px;
+        left: 380px;
+    }
+
+    /*Local Search*/
+    /*This block of code is for the Important notice banner for the text scrolling across*/
+    .notice-message {
+        font-size: 16px;
+    }
+
+    /*This styles the three steps divs within the google search section*/
+    .empty-space-local {
+        display: none;
+    }
+
+    .choose-trade-local {
+        border: none;
+        height: 100%;
+    }
+
+    .choose-trade-local h3 {
+        font-size: 24px
+    }
+
+    .choose-trade-local label {
+        margin-bottom: 10px
+    }
+
+    /*This styles the reset button for the locals search*/
+    #reset-btn-local {
+        margin-bottom: 10px;
+    }
+
+    /*This styles the left radio buttons in select a trade*/
+    .left-options-local {
+        font-size: 15px;
+    }
+
+    /*This styles the middle radio buttons in select a trade*/
+    .middle-options-local {
+        font-size: 15px;
+        border: none;
+    }
+
+    /*This styles the middle radio buttons in select a trade*/
+    .right-options-local {
+        font-size: 15px;
+    }
+
+    .card {
+        margin-bottom: 5px;
+    }
+
+    .card-body {
+        padding: 5px;
+    }
+
+    .table-card h6 {
+        font-size: 15px;
+    }
+
+    .heading-card {
+        text-align: center;
+        margin-top: 10px
+    }
+
+    .icon-card {
+        font-size: 50px;
+    }
+
+    .more-btn,
+    .less-btn {
+        width: 115px;
+        font-size: 16px;
     }
 
     /*Back To Top Button*/
@@ -430,9 +673,7 @@
     }
 
     .close {
-        position: absolute;
-        top: 20px;
-        left: 290px;
+        left: 330px;
     }
 
 }
@@ -505,10 +746,56 @@
         margin-top: 5px;
     }
 
+    /*Local Search*/
+    .choose-trade-local {
+        border: none;
+    }
+
+    .choose-trade-local h3 {
+        font-size: 18px
+    }
+
+    .choose-trade-local label {
+        margin-bottom: 10px
+    }
+
+    /*This styles the left radio buttons in select a trade*/
+    .left-options-local {
+        font-size: 13px;
+    }
+
+    /*This styles the middle radio buttons in select a trade*/
+    .middle-options-local {
+        font-size: 13px;
+    }
+
+    /*This styles the middle radio buttons in select a trade*/
+    .right-options-local {
+        font-size: 13px;
+    }
+
+    .table-card h6 {
+        font-size: 12px;
+    }
+
+    .heading-card {
+        text-align: center;
+        font-size: 32px;
+        margin-top: 10px
+    }
+
+    .icon-card {
+        font-size: 40px;
+    }
+
+    .more-btn,
+    .less-btn {
+        width: 100px;
+        font-size: 13px;
+    }
+
     .close {
-        position: absolute;
-        top: 20px;
-        left: 247px;
+        left: 280px;
         font-size: 30px;
     }
 

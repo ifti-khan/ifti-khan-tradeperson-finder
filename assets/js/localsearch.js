@@ -10,7 +10,7 @@ for (let i = 1; i <= loopDivs; i++) {
 
     let dyDiv = document.createElement('div');
     dyDiv.id = 'businessCard' + i;
-    dyDiv.className = 'card col-lg-4';
+    dyDiv.className = 'card col-12 col-md-6 col-lg-4 col-xl-3';
 
     let busHeading = document.createElement('h1');
     busHeading.id = 'businessHead' + i;
@@ -18,7 +18,7 @@ for (let i = 1; i <= loopDivs; i++) {
     busHeading.innerHTML = 'Business ' + i;
 
     let busIcon = document.createElement('h1');
-    busIcon.id = 'businessIcon';
+    busIcon.id = 'businessIcon' + i;
     busIcon.className = 'icon-card';
     busIcon.innerHTML = '<i class="fas fa-toolbox"></i>';
 
@@ -27,6 +27,22 @@ for (let i = 1; i <= loopDivs; i++) {
     innerDiv.id = 'business-info' + i;
     innerDiv.className = 'card-body info-card';
     innerDiv.innerHTML = '<table class="table-card">\
+<tr>\
+<td class="attrib-col1">\
+<h6>Location:</h6>\
+</td>\
+<td class="attrib-col2">\
+<h6 id="bus-location' + i + '"></h6>\
+</td>\
+</tr>\
+<tr>\
+<td class="attrib-col1">\
+<h6>Trade Type:</h6>\
+</td>\
+<td class="attrib-col2">\
+<h6 id="bus-trade' + i + '"></h6>\
+</td>\
+</tr>\
 <tr>\
 <td class="attrib-col1">\
 <h6>Address:</h6>\
@@ -53,14 +69,6 @@ for (let i = 1; i <= loopDivs; i++) {
 </tr>\
 <tr>\
 <td class="attrib-col1">\
-<h6>Website:</h6>\
-</td>\
-<td class="attrib-col2">\
-<h6 id="bus-url' + i + '"></h6>\
-</td>\
-</tr>\
-<tr>\
-<td class="attrib-col1">\
 <h6>Social:</h6>\
 </td>\
 <td class="attrib-col2">\
@@ -72,12 +80,12 @@ for (let i = 1; i <= loopDivs; i++) {
 
     let busButtonMore = document.createElement('button');
     busButtonMore.id = 'businessButtonMore' + i;
-    busButtonMore.className = 'btn btn-outline-dark more-btn';
+    busButtonMore.className = 'btn btn-outline-dark more-btn hvr-sweep-to-bottom';
     busButtonMore.innerHTML = 'More Info...';
 
     let busButtonLess = document.createElement('button');
     busButtonLess.id = 'businessButtonLess' + i;
-    busButtonLess.className = 'btn btn-outline-dark less-btn';
+    busButtonLess.className = 'btn btn-outline-dark less-btn hvr-sweep-to-bottom';
     busButtonLess.innerHTML = 'Less Info...';
     busButtonLess.style.display = "none";
 
@@ -102,82 +110,106 @@ for (let i = 1; i <= loopDivs; i++) {
         $(busButtonMore).show();
         $(busButtonLess).hide();
     });
-
 }
 
+//Trade Icon Variables
+let elecIcon = '<i class="fas fa-bolt"></i>';
+let plumIcon = '<i class="fas fa-wrench"></i>';
+let carpIcon = '<i class="fas fa-screwdriver"></i>';
+let mechIcon = '<i class="fas fa-car-battery"></i>';
+let plastIcon = '<i class="fas fa-toolbox"></i>';
+let decoIcon = '<i class="fas fa-paint-roller"></i>';
+
 // Constructor function for business objects
-function business(businessName, address, number, email, website, social, location, trade) {
-    this.businessName = businessName;
+function business(name, location, trade, address, number, email, social) {
+    this.name = name;
+    this.location = location;
+    this.trade = trade;
     this.address = address;
     this.number = number;
     this.email = email;
-    this.website = website;
     this.social = social;
-    this.location = location;
-    this.trade = trade;
 }
 
 // Create a business object
-let electrician1 = new business("Ifti Electric", "123 Fake Street, St Albans", "0123456789", "1@1.com", "www.website.com", "www.facebook.com", "St Albans", "Electrician");
+let electrician1 = new business("Ifti Electric", "St Albans", "Electrician", "123 Unkown Street", "0123456789", "ifti-electrician@elec.com", "www.facebook.com");
 
-let plumber1 = new business("Ifti Plumbing", "123 Fake Street, St Albans", "0123456789", "1@1.com", "www.website.com", "www.facebook.com", "St Albans", "Plumber");
+let plumber1 = new business("Ifti Plumber", "St Albans", "Plumber", "123 Unkown Street", "0123456789", "ifti-plumber@plumb.com", "www.facebook.com");
 
-let carpenter1 = new business("Ifti Carpenter", "123 Fake Street, St Albans", "0123456789", "1@1.com", "www.website.com", "www.facebook.com", "St Albans", "Carpenter");
+let carpenter1 = new business("Ifti Carpenter", "St Albans", "Carpenter", "123 Unkown Street", "0123456789", "ifti-carpenter@carp.com", "www.facebook.com");
 
-let mechanic1 = new business("Ifti Mechanic", "123 Fake Street, St Albans", "0123456789", "1@1.com", "www.website.com", "www.facebook.com", "St Albans", "Mechanic");
+let mechanic1 = new business("Ifti Mechanic", "St Albans", "Mechanic", "123 Unkown Street", "0123456789", "ifti-mechanic@mech.com", "www.facebook.com");
 
-let plasterer1 = new business("Ifti Plasterer", "123 Fake Street, St Albans", "0123456789", "1@1.com", "www.website.com", "www.facebook.com", "St Albans", "Plasterer");
+let plasterer1 = new business("Ifti Plasterer", "St Albans", "Plasterer", "123 Unkown Street", "0123456789", "ifti-plasterer@plast.com", "www.facebook.com");
 
-let decorator1 = new business("Ifti Decorator", "123 Fake Street, St Albans", "0123456789", "1@1.com", "www.website.com", "www.facebook.com", "St Albans", "Decorator");
+let decorator1 = new business("Ifti Decorator", "St Albans", "Decorator", "123 Unkown Street", "0123456789", "ifti-decorator@deco.com", "www.facebook.com");
 
 // Display all information in the right table element
-document.getElementById("businessHead1").innerHTML = electrician1.businessName;
+document.getElementById("businessHead1").innerHTML = electrician1.name;
+document.getElementById("businessIcon1").innerHTML = elecIcon;
+document.getElementById("bus-location1").innerHTML = electrician1.location;
+document.getElementById("bus-trade1").innerHTML = electrician1.trade;
+document.getElementById("businessCard1").setAttribute("data-trade", electrician1.trade);
 document.getElementById("bus-add1").innerHTML = electrician1.address;
 document.getElementById("bus-num1").innerHTML = electrician1.number;
 document.getElementById("bus-email1").innerHTML = electrician1.email;
-document.getElementById("bus-url1").innerHTML = electrician1.website;
 document.getElementById("bus-social1").innerHTML = electrician1.social;
-document.getElementById("businessCard1").setAttribute("data-trade", electrician1.trade);
 
-document.getElementById("businessHead2").innerHTML = plumber1.businessName;
+
+document.getElementById("businessHead2").innerHTML = plumber1.name;
+document.getElementById("businessIcon2").innerHTML = plumIcon;
+document.getElementById("bus-location2").innerHTML = plumber1.location;
+document.getElementById("bus-trade2").innerHTML = plumber1.trade;
+document.getElementById("businessCard2").setAttribute("data-trade", plumber1.trade);
 document.getElementById("bus-add2").innerHTML = plumber1.address;
 document.getElementById("bus-num2").innerHTML = plumber1.number;
 document.getElementById("bus-email2").innerHTML = plumber1.email;
-document.getElementById("bus-url2").innerHTML = plumber1.website;
 document.getElementById("bus-social2").innerHTML = plumber1.social;
-document.getElementById("businessCard2").setAttribute("data-trade", plumber1.trade);
 
-document.getElementById("businessHead3").innerHTML = carpenter1.businessName;
+
+document.getElementById("businessHead3").innerHTML = carpenter1.name;
+document.getElementById("businessIcon3").innerHTML = carpIcon;
+document.getElementById("bus-location3").innerHTML = carpenter1.location;
+document.getElementById("bus-trade3").innerHTML = carpenter1.trade;
+document.getElementById("businessCard3").setAttribute("data-trade", carpenter1.trade);
 document.getElementById("bus-add3").innerHTML = carpenter1.address;
 document.getElementById("bus-num3").innerHTML = carpenter1.number;
 document.getElementById("bus-email3").innerHTML = carpenter1.email;
-document.getElementById("bus-url3").innerHTML = carpenter1.website;
 document.getElementById("bus-social3").innerHTML = carpenter1.social;
-document.getElementById("businessCard3").setAttribute("data-trade", carpenter1.trade);
 
-document.getElementById("businessHead4").innerHTML = mechanic1.businessName;
+
+document.getElementById("businessHead4").innerHTML = mechanic1.name;
+document.getElementById("businessIcon4").innerHTML = mechIcon;
+document.getElementById("bus-location4").innerHTML = mechanic1.location;
+document.getElementById("bus-trade4").innerHTML = mechanic1.trade;
+document.getElementById("businessCard4").setAttribute("data-trade", mechanic1.trade);
 document.getElementById("bus-add4").innerHTML = mechanic1.address;
 document.getElementById("bus-num4").innerHTML = mechanic1.number;
 document.getElementById("bus-email4").innerHTML = mechanic1.email;
-document.getElementById("bus-url4").innerHTML = mechanic1.website;
 document.getElementById("bus-social4").innerHTML = mechanic1.social;
-document.getElementById("businessCard4").setAttribute("data-trade", mechanic1.trade);
 
-document.getElementById("businessHead5").innerHTML = plasterer1.businessName;
+
+document.getElementById("businessHead5").innerHTML = plasterer1.name;
+document.getElementById("businessIcon5").innerHTML = plastIcon;
+document.getElementById("bus-location5").innerHTML = plasterer1.location;
+document.getElementById("bus-trade5").innerHTML = plasterer1.trade;
+document.getElementById("businessCard5").setAttribute("data-trade", plasterer1.trade);
 document.getElementById("bus-add5").innerHTML = plasterer1.address;
 document.getElementById("bus-num5").innerHTML = plasterer1.number;
 document.getElementById("bus-email5").innerHTML = plasterer1.email;
-document.getElementById("bus-url5").innerHTML = plasterer1.website;
 document.getElementById("bus-social5").innerHTML = plasterer1.social;
-document.getElementById("businessCard5").setAttribute("data-trade", plasterer1.trade);
 
-document.getElementById("businessHead6").innerHTML = decorator1.businessName;
+
+document.getElementById("businessHead6").innerHTML = decorator1.name;
+document.getElementById("businessIcon6").innerHTML = decoIcon;
+document.getElementById("bus-location6").innerHTML = decorator1.location;
+document.getElementById("bus-trade6").innerHTML = decorator1.trade;
+document.getElementById("businessCard6").setAttribute("data-trade", decorator1.trade);
 document.getElementById("bus-add6").innerHTML = decorator1.address;
 document.getElementById("bus-num6").innerHTML = decorator1.number;
 document.getElementById("bus-email6").innerHTML = decorator1.email;
-document.getElementById("bus-url6").innerHTML = decorator1.website;
 document.getElementById("bus-social6").innerHTML = decorator1.social;
-document.getElementById("businessCard6").setAttribute("data-trade", decorator1.trade);
+
 
 $(document).ready(function () {
     console.log("ready!");
@@ -228,6 +260,15 @@ $(document).ready(function () {
         } else {
             $('.card[data-trade="Decorator"]').hide();
         }
+    });
+
+    //Looks for empty cell
+    $('tr').each(function () {
+        $(this).find('td').each(function () {
+            if ($(this).text().trim() == "") {
+                $(this).closest("tr").remove();
+            };
+        });
     });
 
 });

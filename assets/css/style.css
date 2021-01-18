@@ -299,7 +299,6 @@ button:focus {
     display: none;
     margin-top: 10px;
     margin-bottom: 10px;
-    overflow: auto;
 }
 
 /*This block of code is for the Important notice banner for the text scrolling across*/
@@ -309,7 +308,6 @@ button:focus {
     padding: 10px;
     text-align: center;
     letter-spacing: 2px;
-
 }
 
 /*This styles the three steps divs within the google search section*/
@@ -330,7 +328,6 @@ button:focus {
 .choose-trade-local h3 {
     padding-top: 15px;
     padding-bottom: 10px;
-
 }
 
 .choose-trade-local label {
@@ -388,6 +385,7 @@ button:focus {
 
 .heading-card {
     text-align: center;
+    margin-top: 10px
 }
 
 .icon-card {
@@ -415,21 +413,18 @@ button:focus {
     text-align: left;
 }
 
-.more-btn {
-    width: 125px;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 10px;
-}
-
+.more-btn,
 .less-btn {
+    width: 125px;
     display: block;
     margin: 0 auto;
-    width: 125px;
     margin-bottom: 10px;
 }
 
-
+.more-btn:hover,
+.less-btn:hover {
+    background-color: transparent;
+}
 
 /*Back to top button*/
 /*This styles the back to top button*/
