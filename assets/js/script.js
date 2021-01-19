@@ -1,6 +1,6 @@
 function darkTheme() {
-    let element = document.body;
-    element.classList.toggle("dark-mode");
+    let elementBody = document.body;
+    elementBody.classList.toggle("dark-mode");
 
     let darkButton = document.getElementById("dark-btn");
     darkButton.classList.toggle("active-nav");
@@ -13,7 +13,7 @@ function darkTheme() {
     } else {
         darkButton.innerHTML = "Dark Mode<br> Off";
     }
-};
+}
 
 // When the user clicks anywhere outside of the modal box when it is open, it will refresh the page
 let myModal = document.getElementById("contact-modal");
@@ -21,7 +21,7 @@ window.onclick = function (event) {
     if (event.target == myModal) {
         location.reload();
     }
-};
+}
 
 
 $(document).ready(function () {
