@@ -298,7 +298,7 @@ button:focus {
 .local-search {
     display: none;
     margin-top: 10px;
-    margin-bottom: 10px;
+    min-height: calc(100vh - 280px);
 }
 
 /*This block of code is for the Important notice banner for the text scrolling across*/
