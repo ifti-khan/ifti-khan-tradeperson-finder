@@ -10,7 +10,7 @@ for (let i = 1; i <= loopDivs; i++) {
 
     let dyDiv = document.createElement('div');
     dyDiv.id = 'businessCard' + i;
-    dyDiv.className = 'card col-12 col-md-6 col-lg-4 col-xl-3';
+    dyDiv.className = 'card col-12 col-md-6 col-lg-3';
 
     let busHeading = document.createElement('h1');
     busHeading.id = 'businessHead' + i;

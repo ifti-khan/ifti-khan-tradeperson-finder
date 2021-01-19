@@ -468,33 +468,24 @@ button:focus {
 .modal-header {
     padding-bottom: 5px;
     border-bottom: 2px solid #808080;
-    display: block;
     text-align: center;
 }
 
 .modal-title {
     font-size: 25px;
+    text-align: center;
     text-transform: uppercase;
     letter-spacing: 5px;
 }
 
 /*This block styles the modal close button within the modal*/
 .close {
-    position: absolute;
-    top: 20px;
-    left: 415px;
-    font-size: 35px;
-    padding: 0px;
-    margin: 0px;
-    float: none;
-    font-weight: 700;
-    line-height: 0px;
-    opacity: .5;
+    font-size: 30px;
 }
 
 .modal-header .close {
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
 }
 
 /*This block styles the radio button for the message subject type*/

@@ -84,10 +84,6 @@
         width: 150px;
         font-size: 22px;
     }
-
-    .close {
-        left: 470px;
-    }
 }
 
 /*Large Laptop*/
@@ -129,10 +125,6 @@
         padding: 0 10px;
         font-size: 12px;
         letter-spacing: 4px;
-    }
-
-    .close {
-        left: 470px;
     }
 }
 
@@ -364,7 +356,6 @@
         width: 115px;
         font-size: 16px;
     }
-
 }
 
 
@@ -565,10 +556,6 @@
         border: none;
     }
 
-    .close {
-        left: 380px;
-    }
-
     /*Local Search*/
     /*This block of code is for the Important notice banner for the text scrolling across*/
     .notice-message {
@@ -671,11 +658,6 @@
     .step-three {
         padding-top: 20px;
     }
-
-    .close {
-        left: 330px;
-    }
-
 }
 
 /*Small Mobile*/
@@ -794,9 +776,8 @@
         font-size: 13px;
     }
 
-    .close {
-        left: 280px;
-        font-size: 30px;
+    .modal-title {
+        font-size: 22px;
     }
 
     .message-subject label {
