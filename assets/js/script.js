@@ -78,22 +78,4 @@ $(document).ready(function () {
         }
     });
 
-    $("#google-search").click(function () {
-        $(".google-search").fadeIn();
-        $("#google-search").addClass("active-nav");
-        $("#local-search").removeClass("active-nav");
-        $("#google-search").removeClass("hvr-pulse");
-        $("#local-search").addClass("hvr-pulse");
-        $(".local-search").fadeOut("fast");
-    });
-
-    $("#local-search").click(function () {
-        $(".local-search").fadeIn();
-        $("#local-search").addClass("active-nav")
-        $("#google-search").removeClass("active-nav");
-        $("#local-search").removeClass("hvr-pulse");
-        $("#google-search").addClass("hvr-pulse");
-        $(".google-search").fadeOut("fast");
-    });
-
 });

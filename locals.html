@@ -15,7 +15,7 @@
     <!--My CSS Files-->
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/media_queries.css" type="text/css" />
-    <link rel="stylesheet" href="assets/css/google_maps.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/local_search.css" type="text/css" />
 
     <!--This is for the EmailJS API browser integration for my modal contact forms-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
@@ -26,7 +26,7 @@
 
     </script>
 
-    <title>HIKS Homepage</title>
+    <title>HIKS Local Search</title>
 </head>
 
 <body>
@@ -47,11 +47,11 @@
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <!--Nav links with hover.css class of hvr-sweep-to-bottom and hv-pulse-->
-                    <a class="nav-link active-nav hvr-sweep-to-bottom hvr-pulse" href="index.html" id="google-search">Google</a>
+                    <a class="nav-link hvr-sweep-to-bottom hvr-pulse" href="index.html" id="google-search">Google</a>
                 </li>
                 <li class="nav-item">
                     <!--Nav links with hover.css class of hvr-sweep-to-bottom and hv-pulse-->
-                    <a class="nav-link hvr-sweep-to-bottom hvr-pulse" href="locals.html" id="local-search">Local</a>
+                    <a class="nav-link active-nav hvr-sweep-to-bottom hvr-pulse" href="locals.html" id="local-search">Local</a>
                 </li>
                 <li class="nav-item">
                     <!--Nav links with hover.css class of hvr-sweep-to-bottom and hv-pulse-->
@@ -67,125 +67,59 @@
         </div>
     </nav>
 
-    <!--This block of code below is for the main section of my html and i used the bootstrap grid sytem to create a fluid container, then a row and last the columns that i needed-->
-    <main class="google-search">
+    <main class="local-search">
+        <div class="row no-gutters">
+            <div class="col-12 col-lg-12 notice-banner">
+                <h5 class="notice-message">Important Notice: Limited Search Availability And Dummy Data Provided</h5>
+            </div>
+        </div>
+
         <div class="container-fluid">
             <div class="row">
+                <!--Step one for find a local business, fixed to UK only-->
+                <div class="col-12 col-lg-2 empty-space-local">
 
-                <!--Here is the first column i created for the first of the google map search, i created a drop down list of countries so a user can select a country that they want to search a tradesperson in-->
-                <div class="col-12 col-lg-4 step-one">
-                    <h2>step one</h2>
-                    <h6>select a country</h6>
-
-                    <div id="controls">
-                        <select id="country-list">
-                            <option value="all">Please select a country</option>
-                            <option value="au">Australia</option>
-                            <option value="ca">Canada</option>
-                            <option value="us">U.S.A.</option>
-                            <option value="uk">United Kingdom</option>
-                        </select>
-                    </div>
                 </div>
 
-                <!--Here i have created the second column for the second step of the google map search and in the column the user has to type in a city or town with the country they have selected-->
-                <div class="col-12 col-lg-4 step-two">
-                    <h2>step two</h2>
-                    <h6>type a city or town</h6>
-
-                    <div id="city-town-field">
-                        <input id="city-town" placeholder="Please type a city or town" type="text" required />
-                    </div>
-                    <input type="reset" onclick="resetSearch()" id="reset-btn">
-                </div>
-
-                <!--Here i have created the third column for the thrid and final step of the google map search and in this column the user has to select a tradesperson radio button to complete the search and for the result to display in the google map below and in the results container-->
-                <div class="col-12 col-lg-4 step-three">
-                    <h2>step three</h2>
-                    <h6>choose a trade</h6>
-
+                <!--Step two select a city or town for local search-->
+                <div class="col-12 col-lg-8 choose-trade-local">
+                    <h3>select a trade</h3>
                     <div class="row">
-                        <div class="col-5 col-lg-5 left-options">
-                            <label for="electrician">electrician</label>
-                            <input type="radio" id="electrician" name="tradesperson" value="electrician">
-                            <br>
+                        <div class="col-12 col-md-4 col-lg-4 left-options-local">
+                            <input type="checkbox" id="electrician-local" name="tradesperson-local" value="electrician-local">
+                            <label for="electrician-local">electrician</label><br>
 
-                            <label for="plumber">plumber</label>
-                            <input type="radio" id="plumber" name="tradesperson" value="plumber">
-                            <br>
-
-                            <label for="painter">Painter</label>
-                            <input type="radio" id="painter" name="tradesperson" value="painter">
-                            <br>
+                            <input type="checkbox" id="plumber-local" name="tradesperson-local" value="plumber-local">
+                            <label for="plumber-local">plumber</label><br>
                         </div>
 
-                        <div class="col-6 col-lg-6 right-options">
-                            <input type="radio" id="car_repair" name="tradesperson" value="car_repair">
-                            <label for="car_repair">Mechanic</label><br>
+                        <div class="col-12 col-md-4 col-lg-4 middle-options-local">
+                            <input type="checkbox" id="carpenter-local" name="tradesperson-local" value="carpenter-local">
+                            <label for="carpenter-local">Carpenter</label><br>
 
-                            <input type="radio" id="locksmith" name="tradesperson" value="locksmith">
-                            <label for="locksmith">locksmith</label><br>
-
-                            <input type="radio" id="hardware_store" name="tradesperson" value="hardware_store">
-                            <label for="hardware_store">Hardware Store</label><br>
+                            <input type="checkbox" id="mechanic-local" name="tradesperson-local" value="car_repair-local">
+                            <label for="mechanic-local">Mechanic</label><br>
                         </div>
 
+                        <div class="col-12 col-md-4 col-lg-4 right-options-local">
+                            <input type="checkbox" id="plasterer-local" name="tradesperson-local" value="plasterer-local">
+                            <label for="plasterer-local">Plasterer</label><br>
+
+                            <input type="checkbox" id="decorator-local" name="tradesperson-local" value="decorator-local">
+                            <label for="decorator-local">Decorator</label><br>
+                        </div>
                     </div>
+                    <input type="reset" onclick="resetLocalSearch()" id="reset-btn-local">
                 </div>
-            </div>
-        </div>
 
-
-        <!--Here i created another bootstrap fluid container, then a row and then a column to contain the embedded google map for the marker results and info window to display on-->
-        <div class="container-fluid gmaps-con">
-            <div class="row no-gutters gmaps-row">
-                <div class="col-12 col-lg-12 gmaps-column">
-
-                    <div id="map"></div>
+                <!--Step three select a tradesperson-->
+                <div class="col-12 col-lg-2 empty-space-local">
 
                 </div>
             </div>
         </div>
 
-        <!--Here i created another bootstrap fluid container, then a row and then a column to contain search results from the users search and have displayed the result in a bootstrap card for a good visual look. A show and hide result heading has been also created, so if a users clicks on either it will show and hide the results-->
-        <div class="container-fluid gmaps-res-con">
-            <div class="row no-gutters gmaps-res-row">
-                <div class="col-12 col-lg-12 gmaps-res-column">
-                    <h5 class="col-lg-12 result-heading-show hvr-sweep-to-bottom">Show Results <i class="fas fa-chevron-down"></i></h5>
-                    <h5 class="col-lg-12 result-heading-hide hvr-sweep-to-bottom">Hide Results <i class="fas fa-chevron-up"></i></h5>
-                    <div class="result-con" id="results"></div>
-
-                </div>
-            </div>
-        </div>
-
-        <!--Here i have created a the popup info window container and table, so when a users clicks on a marker on the google maps or one of the search results card, it will open up a info window above the marker containing the information below-->
-        <div class="pop-up-con">
-            <div id="gmaps-popup-content">
-                <table>
-                    <tr class="popUp-table-row">
-                        <td id="popUp-icon" class="popUp-table-icon"><i id="defaultIcon" class="fas fa-tools"></i></td>
-                        <td id="popUp-name"></td>
-                    </tr>
-                    <tr id="popUp-address-row" class="popUp-table-row">
-                        <td class="popUp-attrib-name">Address:&nbsp;</td>
-                        <td id="popUp-address"></td>
-                    </tr>
-                    <tr id="popUp-phone-row" class="popUp-table-row">
-                        <td class="popUp-attrib-name">Telephone:&nbsp;</td>
-                        <td id="popUp-phone"></td>
-                    </tr>
-                    <tr id="popUp-rating-row" class="popUp-table-row">
-                        <td class="popUp-attrib-name">Rating:&nbsp;</td>
-                        <td id="popUp-rating"></td>
-                    </tr>
-                    <tr id="popUp-website-row" class="popUp-table-row">
-                        <td class="popUp-attrib-name">Website:&nbsp;</td>
-                        <td id="popUp-website"><a href="" id="popUpUrl" target="_blank">Click To Visit Website</a></td>
-                    </tr>
-                </table>
-            </div>
-        </div>
+        <div class="row dynamic-business-divs"></div>
 
     </main>
 
@@ -197,7 +131,7 @@
                 <!--Quick Links Column-->
                 <div class="col-lg-3 quick-links">
                     <h5 id="quick-links-heading">quick links</h5>
-                    <h6 id="localsearch-link"><a href="locals.html" class="hvr-sweep-to-bottom hvr-pulse">Local Search <i class="fas fa-search" aria-hidden="true"></i></a></h6>
+                    <h6 id="googlesearch-link"><a href="index.html" class="hvr-sweep-to-bottom hvr-pulse">Google Search <i class="fas fa-search" aria-hidden="true"></i></a></h6>
                     <h6 id="contactme-link"><a href="#" class="hvr-sweep-to-bottom hvr-pulse" data-toggle="modal" data-target="#contact-modal">Contact Me <i class="fas fa-envelope" aria-hidden="true"></i></a></h6>
                 </div>
 
@@ -322,8 +256,8 @@
     <!--My JS Files-->
     <!--My General JS Script-->
     <script src="assets/js/script.js"></script>
-    <!--My JS Script for the Google Maps/Places API-->
-    <script src="assets/js/googlemaps.js"></script>
+    <!--My JS Script for my local search section-->
+    <script src="assets/js/localsearch.js"></script>
     <!--My JS Script for my contact modal forms-->
     <script src="assets/js/sendemail.js"></script>
 
