@@ -112,7 +112,7 @@ function getTradeDetails() {
         let place = autocomplete.getPlace();
 
         //This switches to the bolt icon from the default set icon if the electrician radio button is selected.
-        let defaultIcon = document.getElementById("defaultIcon")
+        let defaultIcon = document.getElementById("defaultIcon");
         defaultIcon.setAttribute("class", "fas fa-bolt");
         defaultIcon.setAttribute("className", "fas fa-bolt");
 
@@ -127,7 +127,7 @@ function getTradeDetails() {
         let place = autocomplete.getPlace();
 
         //This switches to the wrench icon from the default set icon if the plumber radio button is selected.
-        let defaultIcon = document.getElementById("defaultIcon")
+        let defaultIcon = document.getElementById("defaultIcon");
         defaultIcon.setAttribute("class", "fas fa-wrench");
         defaultIcon.setAttribute("className", "fas fa-wrench");
 
@@ -142,7 +142,7 @@ function getTradeDetails() {
         let place = autocomplete.getPlace();
 
         //This switches to the paint roller icon from the default set icon if the painter radio button is selected.
-        let defaultIcon = document.getElementById("defaultIcon")
+        let defaultIcon = document.getElementById("defaultIcon");
         defaultIcon.setAttribute("class", "fas fa-paint-roller");
         defaultIcon.setAttribute("className", "fas fa-paint-roller");
 
@@ -157,7 +157,7 @@ function getTradeDetails() {
         let place = autocomplete.getPlace();
 
         //This switches to the car battery icon from the default set icon if the mechanic radio button is selected.
-        let defaultIcon = document.getElementById("defaultIcon")
+        let defaultIcon = document.getElementById("defaultIcon");
         defaultIcon.setAttribute("class", "fas fa-car-battery");
         defaultIcon.setAttribute("className", "fas fa-car-battery");
 
@@ -172,7 +172,7 @@ function getTradeDetails() {
         let place = autocomplete.getPlace();
 
         //This switches to the key icon from the default set icon if the locksmith radio button is selected.
-        let defaultIcon = document.getElementById("defaultIcon")
+        let defaultIcon = document.getElementById("defaultIcon");
         defaultIcon.setAttribute("class", "fas fa-key");
         defaultIcon.setAttribute("className", "fas fa-key");
 
@@ -187,7 +187,7 @@ function getTradeDetails() {
         let place = autocomplete.getPlace();
 
         //This switches to the shopping cart icon from the default set icon if the hardware store radio button is selected.
-        let defaultIcon = document.getElementById("defaultIcon")
+        let defaultIcon = document.getElementById("defaultIcon");
         defaultIcon.setAttribute("class", "fas fa-shopping-cart");
         defaultIcon.setAttribute("className", "fas fa-shopping-cart");
 

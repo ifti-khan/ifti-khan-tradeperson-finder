@@ -1,7 +1,7 @@
 function resetLocalSearch() {
     $('input[type=checkbox]').prop('checked', false);
     $('.card').fadeOut('fast');
-};
+}
 
 let loopDivs = 6;
 for (let i = 1; i <= loopDivs; i++) {
@@ -26,56 +26,56 @@ for (let i = 1; i <= loopDivs; i++) {
     let innerDiv = document.createElement('div');
     innerDiv.id = 'business-info' + i;
     innerDiv.className = 'card-body info-card';
-    innerDiv.innerHTML = '<table class="table-card">\
-<tr>\
-<td class="attrib-col1">\
-<h6>Location:</h6>\
-</td>\
-<td class="attrib-col2">\
-<h6 id="bus-location' + i + '"></h6>\
-</td>\
-</tr>\
-<tr>\
-<td class="attrib-col1">\
-<h6>Trade Type:</h6>\
-</td>\
-<td class="attrib-col2">\
-<h6 id="bus-trade' + i + '"></h6>\
-</td>\
-</tr>\
-<tr>\
-<td class="attrib-col1">\
-<h6>Address:</h6>\
-</td>\
-<td class="attrib-col2">\
-<h6 id="bus-add' + i + '"></h6>\
-</td>\
-</tr>\
-<tr>\
-<td class="attrib-col1">\
-<h6>Number:</h6>\
-</td>\
-<td class="attrib-col2">\
-<h6 id="bus-num' + i + '"></h6>\
-</td>\
-</tr>\
-<tr>\
-<td class="attrib-col1">\
-<h6>Email:</h6>\
-</td>\
-<td class="attrib-col2">\
-<h6 id="bus-email' + i + '"></h6>\
-</td>\
-</tr>\
-<tr>\
-<td class="attrib-col1">\
-<h6>Social:</h6>\
-</td>\
-<td class="attrib-col2">\
-<h6 id="bus-social' + i + '"></h6>\
-</td>\
-</tr>\
-</table>'
+    innerDiv.innerHTML = `<table class="table-card">
+<tr>
+<td class="attrib-col1">
+<h6>Location:</h6>
+</td>
+<td class="attrib-col2">
+<h6 id="bus-location${i}"></h6>
+</td>
+</tr>
+<tr>
+<td class="attrib-col1">
+<h6>Trade Type:</h6>
+</td>
+<td class="attrib-col2">
+<h6 id="bus-trade${i}"></h6>
+</td>
+</tr>
+<tr>
+<td class="attrib-col1">
+<h6>Address:</h6>
+</td>
+<td class="attrib-col2">
+<h6 id="bus-add${i}"></h6>
+</td>
+</tr>
+<tr>
+<td class="attrib-col1">
+<h6>Number:</h6>
+</td>
+<td class="attrib-col2">
+<h6 id="bus-num${i}"></h6>
+</td>
+</tr>
+<tr>
+<td class="attrib-col1">
+<h6>Email:</h6>
+</td>
+<td class="attrib-col2">
+<h6 id="bus-email${i}"></h6>
+</td>
+</tr>
+<tr>
+<td class="attrib-col1">
+<h6>Social:</h6>
+</td>
+<td class="attrib-col2">
+<h6 id="bus-social${i}"></h6>
+</td>
+</tr>
+</table>`;
 
 
     let busButtonMore = document.createElement('button');
@@ -90,7 +90,7 @@ for (let i = 1; i <= loopDivs; i++) {
     busButtonLess.style.display = "none";
 
     // The variable iDiv is still good... Just append to it.
-    parentElement.appendChild(dyDiv)
+    parentElement.appendChild(dyDiv);
     dyDiv.appendChild(busHeading);
     dyDiv.appendChild(busIcon);
     dyDiv.appendChild(innerDiv);
@@ -265,9 +265,9 @@ $(document).ready(function () {
     //Looks for empty cell
     $('tr').each(function () {
         $(this).find('td').each(function () {
-            if ($(this).text().trim() == "") {
+            if ($(this).text().trim() === "") {
                 $(this).closest("tr").remove();
-            };
+            }
         });
     });
 

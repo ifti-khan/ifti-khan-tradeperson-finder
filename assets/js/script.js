@@ -21,7 +21,7 @@ window.onclick = function (event) {
     if (event.target == myModal) {
         location.reload();
     }
-}
+};
 
 
 $(document).ready(function () {
@@ -56,26 +56,15 @@ $(document).ready(function () {
         $('#result').hide(750, "linear");
     });
 
-    $(".contact-me").click(function () {
-        $(".contact-me").addClass("active-nav").removeClass("hvr-pulse");
+    $('.contact_modal').on('click', function (e) {
+        e.preventDefault();
+        $('#contact-modal').modal('show').find('.modal-content').load($(this).attr('href'));
     });
 
-    $(".close").click(function () {
-        location.reload();
+
+    $(".contact_modal").click(function () {
+        $(".contact_modal").addClass("active-nav").removeClass("hvr-pulse");
     });
 
-    $("#gen_question").click(function () {
-        if ($("#gen_question").is(':checked')) {
-            $(".gen-question-form").slideDown();
-            $(".add-business-form").slideUp(200);
-        }
-    });
-
-    $("#add_business").click(function () {
-        if ($("#add_business").is(':checked')) {
-            $(".add-business-form").slideDown();
-            $(".gen-question-form").slideUp(200);
-        }
-    });
 
 });
