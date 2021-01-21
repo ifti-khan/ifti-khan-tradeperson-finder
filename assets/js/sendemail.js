@@ -13,6 +13,11 @@ function changeSendBtn1Text() {
     btn1.textContent = 'Send';
 }
 
+//This function here is for the timing event below and is used to reset the general question form.
+function resetFormGen() {
+    document.getElementById('gen-form').reset();
+}
+
 //This block of code here is for the overall EmailJS and was taken from the testing playround of EmailJS and then modified to my needs. The top section adds an event listener to the forms submit button and once clicked it will change the button text to sending.
 document.getElementById('gen-form')
     .addEventListener('submit', function (event) {
@@ -33,19 +38,21 @@ document.getElementById('gen-form')
                 "gen_message": this.gen_message.value,
 
             })
-            //Here is the response object which contains the status and text properties and this will show in the console of the browser as 200 for status and OK for text. I have also added a button text change to sent once the message has been send and for an alert window to open informing users that the message has been sent. The timing event uses the function above and changes the text back to send.
+            //Here is the response object which contains the status and text properties and this will show in the console of the browser as 200 for status and OK for text. I have also added a button text change to sent once the message has been send and for an alert window to open informing users that the message has been sent. The timing event uses the function above and changes the text back to send and resets the form.
             .then((response) => {
                 btn1.textContent = 'Sent';
                 console.log("Message Has Been Sent", response.status, response.text);
                 alert('Your message has been sent!');
-                setTimeout(changeSendBtn1Text, 5000)
+                setTimeout(changeSendBtn1Text, 5000);
+                setTimeout(resetFormGen, 5000);
 
-                //Here is the error object and if there is an error it will display that in the console of the browser informing of the error. As well as changing the button text to error and opening an alert window to the user infroming them that there was an error. The timing event uses the function above and changes the text back to send.
+                //Here is the error object and if there is an error it will display that in the console of the browser informing of the error. As well as changing the button text to error and opening an alert window to the user infroming them that there was an error. The timing event uses the function above and changes the text back to send and resets the form.
             }, (error) => {
                 btn1.textContent = 'Error';
                 console.log("Message Failed To Send", error);
                 alert(`Oops something went wrong!`);
                 setTimeout(changeSendBtn1Text, 5000)
+                setTimeout(resetFormGen, 5000);
 
             });
     });
@@ -59,6 +66,11 @@ let btn2 = document.getElementById('sendbutton-add');
 //This function is for the timing event used below and it is used to change btn2 text to Send.
 function changeSendBtn2Text() {
     btn2.textContent = 'Send';
+}
+
+//This function here is for the timing event below and is used to reset the add a business form.
+function resetFormAdd() {
+    document.getElementById('add-form').reset();
 }
 
 document.getElementById('add-form')
@@ -84,13 +96,15 @@ document.getElementById('add-form')
                 btn2.textContent = 'Sent';
                 console.log("Message Has Been Sent", response.status, response.text);
                 alert('Your message has been sent!');
-                setTimeout(changeSendBtn2Text, 5000)
+                setTimeout(changeSendBtn2Text, 5000);
+                setTimeout(resetFormAdd, 5000);
 
             }, (error) => {
                 btn2.textContent = 'Error';
                 console.log("Message Failed To Send", error);
                 alert(`Oops something went wrong!`);
-                setTimeout(changeSendBtn2Text, 5000)
+                setTimeout(changeSendBtn2Text, 5000);
+                setTimeout(resetFormAdd, 5000);
 
             });
     });
