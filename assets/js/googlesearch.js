@@ -251,6 +251,9 @@ function searchElectrician() {
                 google.maps.event.addListener(markers[i], "click", showInfoWindow);
                 setTimeout(dropMarker(i), i * 100);
                 addResult(results[i], i);
+
+                //This is a map event listner, so when a user starts to drage the map it will close the popup info window.
+                google.maps.event.addListener(map, 'dragstart', closeInfoWindow);
             }
         }
     });
@@ -282,6 +285,9 @@ function searchPlumber() {
                 google.maps.event.addListener(markers[i], "click", showInfoWindow);
                 setTimeout(dropMarker(i), i * 100);
                 addResult(results[i], i);
+
+                //This is a map event listner, so when a user starts to drage the map it will close the popup info window.
+                google.maps.event.addListener(map, 'dragstart', closeInfoWindow);
             }
         }
     });
@@ -313,6 +319,9 @@ function searchPainter() {
                 google.maps.event.addListener(markers[i], "click", showInfoWindow);
                 setTimeout(dropMarker(i), i * 100);
                 addResult(results[i], i);
+
+                //This is a map event listner, so when a user starts to drage the map it will close the popup info window.
+                google.maps.event.addListener(map, 'dragstart', closeInfoWindow);
             }
         }
     });
@@ -344,6 +353,9 @@ function searchMechanic() {
                 google.maps.event.addListener(markers[i], "click", showInfoWindow);
                 setTimeout(dropMarker(i), i * 100);
                 addResult(results[i], i);
+
+                //This is a map event listner, so when a user starts to drage the map it will close the popup info window.
+                google.maps.event.addListener(map, 'dragstart', closeInfoWindow);
             }
         }
     });
@@ -375,6 +387,9 @@ function searchLocksmith() {
                 google.maps.event.addListener(markers[i], "click", showInfoWindow);
                 setTimeout(dropMarker(i), i * 100);
                 addResult(results[i], i);
+
+                //This is a map event listner, so when a user starts to drage the map it will close the popup info window.
+                google.maps.event.addListener(map, 'dragstart', closeInfoWindow);
             }
         }
     });
@@ -406,6 +421,9 @@ function searchHardware() {
                 google.maps.event.addListener(markers[i], "click", showInfoWindow);
                 setTimeout(dropMarker(i), i * 100);
                 addResult(results[i], i);
+
+                //This is a map event listner, so when a user starts to drage the map it will close the popup info window.
+                google.maps.event.addListener(map, 'dragstart', closeInfoWindow);
             }
         }
     });
@@ -514,6 +532,11 @@ function showInfoWindow() {
             gmapPopUp(place);
         }
     );
+}
+
+//This function here closes the popup info window that appears on the top of map markers when clicked
+function closeInfoWindow() {
+    infoWindow.close();
 }
 
 //Loads the place information into the HTML elements used by the pop up info window.
