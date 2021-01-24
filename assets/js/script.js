@@ -1,3 +1,4 @@
+//This function is to toggle the dark mode class which changes the default background colour to black. this function also changes the dark button text from off to on when the button is clicked.
 function darkTheme() {
     let elementBody = document.body;
     elementBody.classList.toggle("dark-mode");
@@ -15,7 +16,7 @@ function darkTheme() {
     }
 }
 
-// When the user clicks anywhere outside of the modal box when it is open, it will refresh the page
+//This is for the modal, so when the user clicks anywhere outside of the modal box when it is open, it will refresh the page.
 let myModal = document.getElementById("contact-modal");
 window.onclick = function (event) {
     if (event.target == myModal) {
@@ -23,9 +24,10 @@ window.onclick = function (event) {
     }
 };
 
-
+//This document ready function loads the DOM.
 $(document).ready(function () {
 
+    //This block of code is for floating scroll button, so when a user scrolls down a certain amount it will be visible and if they scroll up a certain amount, it will not be visible.
     let topButton = $('#to-top-btn');
     $(window).scroll(function () {
         if ($(window).scrollTop() > 100) {
@@ -35,6 +37,7 @@ $(document).ready(function () {
         }
     });
 
+    //This is part of the floating scroll button, so when a user clicks the button it will take the user back to the top of the page.
     topButton.on('click', function (event) {
         event.preventDefault();
         $('html, body').animate({
@@ -42,6 +45,7 @@ $(document).ready(function () {
         }, '100');
     });
 
+    //This click function is to show the google results once the show results heading is clicked.
     $(".result-heading-show").click(function () {
         $('.result-con').slideDown(750);
         $('.result-heading-show').hide();
@@ -49,6 +53,7 @@ $(document).ready(function () {
         $('#result').show(750, "linear");
     });
 
+    //This click function is to hide the google results once the hide results heading is clicked.
     $(".result-heading-hide").click(function () {
         $('.result-con').slideUp(750);
         $('.result-heading-show').show();
@@ -56,14 +61,20 @@ $(document).ready(function () {
         $('#result').hide(750, "linear");
     });
 
+    //Contact Modal
+    //When a user clicks the contact link it will add the css class active-nav and removes the css class hvr-pulse.
     $(".contact-me").click(function () {
         $(".contact-me").addClass("active-nav").removeClass("hvr-pulse");
     });
 
+    //When the users clicks the time button in the contact modal, it will reload the whole page.
     $(".close").click(function () {
         location.reload();
     });
 
+    //When a user accesses the contact model, there are two radio button and the user has to check one them to display either the general question form or add a business form.
+
+    //This click function is for the general question form, this will make the form slide down and if the other contact form is showing, it will slide up at a speed of 200 milliseconds.
     $("#gen_question").click(function () {
         if ($("#gen_question").is(':checked')) {
             $(".gen-question-form").slideDown();
@@ -71,6 +82,7 @@ $(document).ready(function () {
         }
     });
 
+    //This click function is for the add business form, this will make the form slide down and if the other contact form is showing, it will slide up at a speed of 200 milliseconds.
     $("#add_business").click(function () {
         if ($("#add_business").is(':checked')) {
             $(".add-business-form").slideDown();
@@ -78,11 +90,12 @@ $(document).ready(function () {
         }
     });
 
+    //This block of code is for the contact modal so that is can be accessed from any page within the project and was taken and modified from the bootstrap documentation. Originally i had duplicate code so that i could access the modal from another page, but with this block of code it allows me to reduce the code and just find the modal body once it is accessed.
     $('#contact-modal').on('show.bs.modal', function () {
 
-        var modal = $(this);
+        let modal = $(this);
 
-        //This loads the rest of my modal body content from a HTML string using backtick quotes
+        //This stores and loads the rest of the contact modal body from a HTML string using backtick quotes. Inside of the backticks i have both the general question form and the add business form and this makes up the contact modal body. The EmailJS API script is also in the html string below the body, it had to go there to allows users to send me emails using the contact modal.
         modal.find('.modal-body').html(`<!--General Question Contact Form-->
 <div class="gen-question-form">
 <form id="gen-form">
