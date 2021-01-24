@@ -26,11 +26,12 @@
     }
 
     /*Local Search*/
-    /*This block of code is for the Important notice banner for the text scrolling across*/
+    /*This block of code is for the Important notice banner*/
     .notice-message {
         font-size: 30px;
     }
 
+    /*This block of code styles the local search select a trade*/
     .choose-trade-local {
         height: 100%;
     }
@@ -57,6 +58,7 @@
         margin-bottom: 10px;
     }
 
+    /*This block of code styles the dynamic divs within the local search page*/
     .card {
         margin-bottom: 5px;
     }
@@ -187,13 +189,14 @@
         font-size: 15px;
     }
 
-    .card-body {
-        padding: 5px;
-    }
-
     /*This styles the reset button for the google maps search*/
     #reset-btn-local {
         margin-top: 25px;
+    }
+
+    /*This block of code styles the dynamic divs and its content within the local search page*/
+    .card-body {
+        padding: 5px;
     }
 
     .table-card h6 {
@@ -294,12 +297,12 @@
     }
 
     /*Local Search*/
-    /*This block of code is for the Important notice banner for the text scrolling across*/
+    /*This block of code is for the Important notice banner*/
     .notice-message {
         font-size: 16px;
     }
 
-    /*This styles the three steps divs within the google search section*/
+    /*This block of code styles the select a trade div within the local search page*/
     .empty-space-local {
         display: none;
     }
@@ -330,6 +333,7 @@
         border: none;
     }
 
+    /*This block of code styles the dynamic divs and its content within the local search page*/
     .card {
         margin-bottom: 5px;
     }
@@ -528,7 +532,7 @@
         display: none;
     }
 
-    /*This styles the three steps divs within the google search section*/
+    /*This styles the select a trade div in the locals page*/
     .choose-trade-local {
         height: 320px;
         border: none;
@@ -551,18 +555,19 @@
         font-size: 15px;
     }
 
+    /*This styles the two middle dynamic divs and removes there borders for smartphones*/
     .plumber-1,
     .plasterer-1 {
         border: none;
     }
 
     /*Local Search*/
-    /*This block of code is for the Important notice banner for the text scrolling across*/
+    /*This block of code is for the Important notice banner*/
     .notice-message {
         font-size: 16px;
     }
 
-    /*This styles the three steps divs within the google search section*/
+    /*This block of code styles the select a trade div within the local search page*/
     .empty-space-local {
         display: none;
     }
@@ -601,6 +606,7 @@
         font-size: 15px;
     }
 
+    /*This block of code styles the dynamic divs and its content within the local search page*/
     .card {
         margin-bottom: 5px;
     }
@@ -729,6 +735,7 @@
     }
 
     /*Local Search*/
+    /*This block of code styles the select a trade div within the local search page*/
     .choose-trade-local {
         border: none;
     }
@@ -756,6 +763,7 @@
         font-size: 13px;
     }
 
+    /*This block of code styles the dynamic divs and its content within the local search page*/
     .table-card h6 {
         font-size: 12px;
     }
@@ -776,6 +784,7 @@
         font-size: 13px;
     }
 
+    /*This block of code styles the contact modal for smaller smartphone screen sizes*/
     .modal-title {
         font-size: 22px;
     }
