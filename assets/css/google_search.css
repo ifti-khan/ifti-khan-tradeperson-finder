@@ -1,43 +1,52 @@
-#city-town {
-    width: 75%;
-}
-
+/*This is for the select a country drop down option list*/
 #country-list {
     width: 75%;
 }
 
+/*This is for the the type a city town input field*/
+#city-town {
+    width: 75%;
+}
+
+/*This is for the embedded google maps*/
 #map {
     width: 100%;
     height: 100%;
     min-height: 600px;
 }
 
+/*This is for the results container for the google search*/
 .result-con {
     cursor: pointer;
     display: grid;
     grid-template-columns: auto auto auto auto;
 }
 
+/*This is for the individual google results*/
 .card-body {
     background-color: #f0f0f0;
     border: 1px solid #808080;
     margin: .5px;
 }
 
+/*This is for the google maps info window, by default it is hidden*/
 .pop-up-con {
     display: none;
 }
 
+/*This is to style the google map markers*/
 .gmapMarkers {
     width: 20px;
     height: 34px;
     margin: 10px;
 }
 
+/*This is to style the entire info window table*/
 #gmaps-popup-content {
     font-weight: normal;
 }
 
+/*This styles the info window icons*/
 .popUp-table-icon {
     font-size: 40px;
     color: green;
@@ -45,6 +54,7 @@
     text-align: right
 }
 
+/*This styles the info window business name*/
 #popUp-name {
     font-weight: bold;
     margin-top: 20px;
@@ -53,33 +63,38 @@
     text-align: left;
 }
 
+/*This styles the info window icons*/
 .popUp-table-row {
     height: 18px;
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
 }
 
+/*This styes the left attribute column in the info window*/
 .popUp-attrib-name {
     font-weight: bold;
     text-align: right;
 }
 
+/*This styles the ratings in the info window*/
 #popUp-rating {
     font-size: 20px;
     padding: 0px 0px 5px 0px;
 }
 
+/*This styles the website link in the info window*/
 .popUp-website a {
     color: #000000;
 }
 
+/*This styles the website link in the info window and gives it a hover effect*/
 #popUp-website a:hover {
     color: #000000;
     text-decoration: underline;
 }
 
 /*Media Queries*/
-
+/*This media query block styles three elements for a 4K screen size*/
 @media (min-width: 2560px) {
 
     #city-town {
@@ -94,9 +109,9 @@
         display: grid;
         grid-template-columns: auto auto auto auto auto auto
     }
-
 }
 
+/*This media query block styles two elements for a Small Laptop screen size*/
 @media (max-width: 991px) {
 
     #city-town {
@@ -106,9 +121,9 @@
     #country-list {
         width: 50%;
     }
-
 }
 
+/*This media query block styles two elements for a Tablet screen size*/
 @media (max-width: 768px) {
 
     #city-town {
@@ -118,9 +133,9 @@
     #country-list {
         width: 50%;
     }
-
 }
 
+/*This media query block styles nine elements for a medium mobile screen size*/
 @media (max-width: 425px) {
 
     #city-town {
@@ -156,7 +171,7 @@
         font-size: 16px;
     }
 
-    /*I used !important here to overide the gmap class inline style for the infow window*/
+    /*I used !important here to overide the gmap class inline style for the info window so that i could style it for mobile devices*/
     .gm-style .gm-style-iw-c {
         max-width: 275px !important;
     }
