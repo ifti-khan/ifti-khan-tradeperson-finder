@@ -19,6 +19,7 @@
 
     <!--This is for the EmailJS API browser integration for my modal contact forms-->
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <!--My JS Script for my contact modal forms-->
     <script>
         (function() {
             emailjs.init("user_5ufwrdpLONQqmdzUjcdEi");
@@ -46,15 +47,15 @@
         <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <!--Nav links with hover.css class of hvr-sweep-to-bottom and hv-pulse-->
+                    <!--This is the google search nav links which is the homepage and with hover.css class of hvr-sweep-to-bottom and hv-pulse.-->
                     <a class="nav-link hvr-sweep-to-bottom hvr-pulse" href="index.html" id="google-search">Google</a>
                 </li>
                 <li class="nav-item">
-                    <!--Nav links with hover.css class of hvr-sweep-to-bottom and hv-pulse-->
+                    <!--This is the local search nav link with hover.css class of hvr-sweep-to-bottom and hv-pulse.-->
                     <a class="nav-link active-nav hvr-sweep-to-bottom hvr-pulse" href="locals.html" id="local-search">Local</a>
                 </li>
                 <li class="nav-item">
-                    <!--Nav links with hover.css class of hvr-sweep-to-bottom and hv-pulse-->
+                    <!--This nav link is for the contact modal and uses bootstrap data attributes to call upon it and has hover.css classes set.-->
                     <a href="#contact-modal" class="nav-link hvr-sweep-to-bottom hvr-pulse contact-me" data-toggle="modal" data-target="#contact-modal">Contact</a>
                 </li>
 
@@ -67,24 +68,29 @@
         </div>
     </nav>
 
+    <!--This is the main container for my select a trade search and dynamic divs.-->
     <main class="local-search">
+
+        <!--This block of code is for the important notice banner-->
         <div class="row no-gutters">
             <div class="col-12 col-lg-12 notice-banner">
                 <h5 class="notice-message">Important Notice: Limited Search Availability And Dummy Data Provided</h5>
             </div>
         </div>
 
+        <!--Fluid container for my select a trade checkboxes.-->
         <div class="container-fluid">
             <div class="row">
-                <!--Step one for find a local business, fixed to UK only-->
-                <div class="col-12 col-lg-2 empty-space-local">
 
-                </div>
+                <!--Bootstrap empty column-->
+                <div class="col-12 col-lg-2 empty-space-local"></div>
 
-                <!--Step two select a city or town for local search-->
+                <!--This block of code is for the select a trade search which contain three boostrap columns-->
                 <div class="col-12 col-lg-8 choose-trade-local">
                     <h3>select a trade</h3>
                     <div class="row">
+
+                        <!--Left column with two checkbox elements and labels-->
                         <div class="col-12 col-md-4 col-lg-4 left-options-local">
                             <input type="checkbox" id="electrician-local" name="tradesperson-local" value="electrician-local">
                             <label for="electrician-local">electrician</label><br>
@@ -93,6 +99,7 @@
                             <label for="plumber-local">plumber</label><br>
                         </div>
 
+                        <!--Middle column with two checkbox elements and labels-->
                         <div class="col-12 col-md-4 col-lg-4 middle-options-local">
                             <input type="checkbox" id="carpenter-local" name="tradesperson-local" value="carpenter-local">
                             <label for="carpenter-local">Carpenter</label><br>
@@ -101,6 +108,7 @@
                             <label for="mechanic-local">Mechanic</label><br>
                         </div>
 
+                        <!--Right column with two checkbox elements and labels-->
                         <div class="col-12 col-md-4 col-lg-4 right-options-local">
                             <input type="checkbox" id="plasterer-local" name="tradesperson-local" value="plasterer-local">
                             <label for="plasterer-local">Plasterer</label><br>
@@ -109,16 +117,18 @@
                             <label for="decorator-local">Decorator</label><br>
                         </div>
                     </div>
+
+                    <!--Reset button that clears all selected checkboxes in every column-->
                     <input type="reset" onclick="resetLocalSearch()" id="reset-btn-local">
                 </div>
 
-                <!--Step three select a tradesperson-->
-                <div class="col-12 col-lg-2 empty-space-local">
+                <!--Bootstrap empty column-->
+                <div class="col-12 col-lg-2 empty-space-local"></div>
 
-                </div>
             </div>
         </div>
 
+        <!--This div element is the parent element that contains the dynamic divs which are created in my localsearch.js file.-->
         <div class="row dynamic-business-divs"></div>
 
     </main>
@@ -166,7 +176,7 @@
     <!--Back to top button-->
     <a id="to-top-btn" class="hvr-sweep-to-bottom"><i class="fas fa-angle-double-up" aria-hidden="true"></i></a>
 
-    <!--Here I have created a modal contact form using bootstraps modal. I have used the code and then modified it to what i needed it to be and that is a two seperate contact forms. The first form is for general questions and the second form is for adding a business for my local search page. Both forms are linked to the EmailJS API but because i am using the free servie they are sharing the same email template.-->
+    <!--Here I have created a modal contact form using bootstraps modal. I have used the code and then modified it to what i needed it to be. The main body is located in a js file so that i can call upon it and access the modal on different pages. The modal body has two seperate contact forms. The first form is for general questions and the second form is for adding a business for my local search page. Both forms are linked to the EmailJS API but because i am using the free servie they are sharing the same email template.-->
 
     <!--My Modal Contact Forms-->
     <div class="modal fade" id="contact-modal">
