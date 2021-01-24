@@ -5,7 +5,7 @@
     min-height: calc(100vh - 280px);
 }
 
-/*This block of code is for the Important notice banner for the text scrolling across*/
+/*This block of code is for the Important notice banner*/
 .notice-message {
     background-color: #808080;
     color: #ffffff;
@@ -14,7 +14,7 @@
     letter-spacing: 2px;
 }
 
-/*This styles the three steps divs within the google search section*/
+/*This block of code styles the select a trade search for local search*/
 .empty-space-local,
 .choose-trade-local {
     background-color: #f0f0f0;
@@ -76,27 +76,32 @@
     height: 35px
 }
 
+/*This styles the dynamic divs from the js file*/
 .dynamic-business-divs {
     padding: 15px;
     width: 100%;
 }
 
+/*This styles the bootstrap card class for the dynamic divs*/
 .card {
     background-color: #f0f0f0;
     border-radius: 0;
     display: none;
 }
 
+/*This styles the headings in the dynamic divs bootstrap card*/
 .heading-card {
     text-align: center;
     margin-top: 10px
 }
 
+/*This styles the icons in the dynamic divs bootstrap card*/
 .icon-card {
     text-align: center;
     font-size: 60px;
 }
 
+/*This styles the business info in the dynamic divs bootstrap card, i used important to override the inline style*/
 .info-card {
     background-color: #f0f0f0;
     border: none !important;
@@ -104,6 +109,7 @@
     text-align: center;
 }
 
+/*This block of code styles the table and its columns within in the dynamic divs bootstrap card*/
 .table-card {
     margin: 0 auto;
 }
@@ -117,6 +123,7 @@
     text-align: left;
 }
 
+/*This styles the more and less button within the dynamic divs bootstrap card*/
 .more-btn,
 .less-btn {
     width: 125px;
@@ -125,6 +132,7 @@
     margin-bottom: 10px;
 }
 
+/*This gives the button a hover effect within dynamic divs bootstrap card*/
 .more-btn:hover,
 .less-btn:hover {
     background-color: transparent;
