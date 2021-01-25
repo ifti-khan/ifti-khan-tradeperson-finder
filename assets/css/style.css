@@ -411,7 +411,7 @@ button:focus {
 
 .send-btn:hover {
     color: #ffffff;
-    background-color: #ffffff;
+    background-color: transparent;
 }
 
 /*This block styles the reset form buttons in the two contact modal forms*/
@@ -427,5 +427,5 @@ button:focus {
 
 .reset-btn:hover {
     color: #ffffff;
-    background-color: #ffffff;
+    background-color: transparent;
 }
