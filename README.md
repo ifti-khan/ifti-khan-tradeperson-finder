@@ -2,7 +2,7 @@
 
 [Click Here To Visit My Deployed Project Site](#)
 
-![Image of Project](assets/img/main-site-img.jpg)
+![Image of Project](writeup_files/screenshots/main-site-img.jpg)
 
 ## Google Powered API Tradesperson Platform
 
@@ -188,6 +188,17 @@ Here is a list of programming languages that i used to create this project along
     * This online tool helped me to create the markdown tables for testing section of my readme file.
 
 # Validation
+In this section I have used a few different validation techniques to thoroughly make sure my project is fully compliant and accessible. I have used the W3C HTML5 and CSS3 online validation tools as well as a online contrast checker for the colours that i used in my project.
+
+If there is any non-compliant code or warnings within the project I will document it and then fix it and this will be the first step of my testing and debugging.
+
+HTML5 Validation -> [Visit Site]( https://validator.w3.org/)
+
+CSS3 Validation -> [Visit Site]( https://jigsaw.w3.org/css-validator/)
+
+WebAIM Contrast Checker -> [Visit Site]( https://webaim.org/resources/contrastchecker/)
+
+### Validation Document -> [Visit Document](writeup_files/validation/validation_document.md)
 
 # Testing
 
