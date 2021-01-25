@@ -45,6 +45,9 @@ My users for this project are people who are in need of a tradesperson who requi
 * As a user, I want to be able to see my search results displayed on Google maps via markers, so that I can see how many tradespeople and businesses are in my town/city. 
 
 
+* As a user, I want to be able drag the map around after i have inputted my search parameters, so that i can find even more tradespeople or businesses in my town/city.
+
+
 * As a user, I want to able to see additional search result, so that I can see the business or tradesperson information like a contact number, address or an email address.
 
 
@@ -54,7 +57,7 @@ My users for this project are people who are in need of a tradesperson who requi
 * As a user, I want to be able to choose between a registered and unregistered business/person, so that I can look around for the best service and quote. 
 
 
-* As a user, I want to be able to get in contact with the developer, so that I can add myself or business to this tradesperson platform. 
+* As a user, I want to be able to get in contact with the developer, so that I can ask a general question and add myself or business to this tradesperson platform.
 
 # Wireframes
 
