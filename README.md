@@ -2,7 +2,7 @@
 
 [Click Here To Visit My Deployed Project Site](#)
 
-![Image of Project]()
+![Image of Project](assets/img/main-site-img.jpg)
 
 ## Google Powered API Tradesperson Platform
 
@@ -106,7 +106,7 @@ Here is a list of features that will be implemented and utilized within my proje
 
 * Feature 9 – A set of quick links will be located in the footer to help users navigate around the site quickly.
 
-* Feature 10 – Social links to my Facebook, LinkedIn, GitHub and Personal Portfolio will be provided in the footer.
+* Feature 10 – Social links Facebook, LinkedIn, GitHub and Personal Portfolio will be provided in the footer.
 
 * Feature 11 – A fully functioning contact form will be added so that users can get in contact me with using an Email API.
 
@@ -151,6 +151,15 @@ Here is a list of programming languages that i used to create this project along
 * JQuery v3.5.1 -> [Visit Site](https://cdnjs.com/libraries/jquery)
     * JQuery will be used to manipulate the Document Object Model (DOM), create animations and events.
 
+* Bootstrap JS v4.5.3 -> [Visit Site](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
+    * Bootstrap JS will be used for some of the bootstrap elements that require it like the contact modal.
+
+* Google Maps API -> [Visit Site](https://developers.google.com/maps/gmp-get-started)
+    * I followed the steps and created a Google Cloud Platform Account and generated an API key for my Google Maps and Places API.
+
+* Email JS -> [Visit Site](https://www.emailjs.com/docs/sdk/installation/)
+    * This will be used for the contact modal, so that a user can send an actual email to me via an input forms provided.
+
 * Google Fonts -> [Visit Site]( https://fonts.google.com/)
     * Google fonts has been used to import the font i have chosen directly from google into my main CSS file.
 
@@ -174,6 +183,9 @@ Here is a list of programming languages that i used to create this project along
 
 * Google Chrome & Chrome Dev Tools -> [Visit Site](https://support.google.com/chrome/answer/95346?co=GENIE.Platform%3DDesktop&hl=en)
     * Google Chrome and Chrome Dev Tools was used to help create my project as well as testing it using the developer tools.
+
+* Markdown Table Generator -> [Visit Site](https://www.tablesgenerator.com/markdown_tables)
+    * This online tool helped me to create the markdown tables for testing section of my readme file.
 
 # Validation
 
