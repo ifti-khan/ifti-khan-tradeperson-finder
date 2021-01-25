@@ -213,8 +213,6 @@ Here in this section i will provide a user story scenario with screenshot exampl
 
 ### UX User Story Testing Document -> [Visit Document](writeup_files/testing/user_story_document.md)
 
-# UX - User Story Testing
-
 # Further Testing
 
 # Known Issues

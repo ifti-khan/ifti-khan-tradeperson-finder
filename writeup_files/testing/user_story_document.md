@@ -45,8 +45,6 @@
 ### Step Two
 ![User Story Google Maps Additional Search Step 1](/writeup_files/testing/ux-gmap-additional-result-step2.jpg)
 
-################################
-
 ## Visual Markers
 * As a user, I want to see visual markers to help with navigation and selection, so as I navigate through the website I know where I am and what I am clicking on.
 
