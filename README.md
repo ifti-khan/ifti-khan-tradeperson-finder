@@ -201,6 +201,14 @@ WebAIM Contrast Checker -> [Visit Site]( https://webaim.org/resources/contrastch
 ### Validation Document -> [Visit Document](writeup_files/validation/validation_document.md)
 
 # Testing
+When it comes to testing and debugging I found it easier and good practise to test as I went along with my project and this can be seen in my git commit messages to my repository every time I pushed my completed files. The tool that i used through out my project to help me with my test and debug was Google Chrome Dev Tools.
+
+In this section I will test my project against my user stories and further text by doing some manual testing. These test will be done using a variety of different browsers and a variety of different screen sizes as well to ensure my projects compatibly and responsiveness.
+
+# UX - User Story Testing
+Here in this section i will provide a user story scenario with screenshot examples with steps if necessary to test my project against my user story.
+
+### UX User Story Testing Document -> [Visit Document](writeup_files/testing/user_story_document.md)
 
 # UX - User Story Testing
 
