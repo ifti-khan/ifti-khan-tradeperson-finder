@@ -31,7 +31,7 @@ a {
 
 /*From hover.css Sweep To bottom bg color*/
 .hvr-sweep-to-bottom:before {
-    background: #808080;
+    background: #595959;
     color: #ffffff;
 }
 
@@ -87,7 +87,7 @@ button:focus {
 /*This is for the active class for the nav links*/
 .navbar-light .navbar-nav .nav-link.active-nav {
     color: #ffffff;
-    background-color: #808080;
+    background-color: #595959;
 }
 
 /*This styles the dark mode button in navigation bar*/
@@ -158,7 +158,7 @@ button:focus {
 }
 
 #social_icons a:hover {
-    color: #808080;
+    color: #595959;
 }
 
 /*This block of code styles my the copyright column in the footer element*/
