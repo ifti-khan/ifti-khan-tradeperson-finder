@@ -29,6 +29,12 @@
     margin: .5px;
 }
 
+/*This is for the Google search result cards*/
+.active-result {
+    color: #ffffff;
+    background-color: #595959;
+}
+
 /*This is for the google maps info window, by default it is hidden*/
 .pop-up-con {
     display: none;

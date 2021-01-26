@@ -460,22 +460,23 @@ function dropMarker(i) {
     };
 }
 
-//This function creates a new bootstrap card-body element and adds the found results into the bootstrap card-body below the google maps in the results container and if a user click on the card body it will open up the pop up info window for that tradesperson or business.
+//This function creates a new bootstrap card-body element and adds the found results into the bootstrap card-body below the google maps in the results container and if a user click on the card body it will open up the pop up info window for that tradesperson or business and be active highlighted for 2 seconds and then go back to normal.
 function addResult(result, i) {
     let results = document.getElementById("results");
     let markerLetter = String.fromCharCode("A".charCodeAt(0) + (i % 26));
     let markerIcon = MARKER_PATH + markerLetter + ".png";
 
-    let card = document.createElement("div");
-    card.setAttribute("class", "card-body");
-    card.setAttribute("className", "card-body");
-
     let cbody = document.createElement("div");
-    cbody.setAttribute("class", "card-body");
-    cbody.setAttribute("className", "card-body");
+    cbody.className = "card-body hvr-sweep-to-bottom";
+
+    function removeActiveResult() {
+        cbody.classList.remove("active-result");
+    }
 
     cbody.onclick = function () {
-        google.maps.event.trigger(markers[i], "click");
+        google.maps.event.trigger(markers[i], "click", "active-result");
+        cbody.classList.add("active-result");
+        setTimeout(removeActiveResult, 2000);
     };
 
     let iconSpan = document.createElement("span");
@@ -484,8 +485,7 @@ function addResult(result, i) {
 
     let icon = document.createElement("img");
     icon.src = markerIcon;
-    icon.setAttribute("class", "gmapMarkers");
-    icon.setAttribute("className", "gmapMarkers");
+    icon.className = "gmapMarkers";
 
     let name = document.createTextNode(result.name);
     let address = document.createTextNode(result.vicinity);
