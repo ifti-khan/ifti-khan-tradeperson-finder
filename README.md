@@ -214,6 +214,11 @@ Here in this section i will provide a user story scenario with screenshot exampl
 ### UX User Story Testing Document -> [Visit Document](writeup_files/testing/user_story_document.md)
 
 # Further Testing
+I have decided to further test my project by listing all features and functions within my project and then manually test each one. I will test my project in a variety of different browser to ensure it is fully compatible. The browsers I have chosen are Google Chrome, Microsoft Edge, Firefox and Opera. I will test to see if all of the features and functions work as well as my font, images, hover animation and project responsiveness.
+
+### Further Testing Document -> [Visit Document](writeup_files/testing/further_testing_document.md)
+
+Throughout the whole project i developed my porject on my Dell Inspiron 15inch Laptop and my Acer 24inch Monitor. I also used used Chrome Dev tools whilst programming my project and used the responsive tool to simulate different device sizes. I also did some physical testing on a few devices such as my Samsung Galaxy S20+, Samsung Galaxy Tab 6.
 
 # Known Issues
 
