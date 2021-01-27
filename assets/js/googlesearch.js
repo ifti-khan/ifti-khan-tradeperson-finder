@@ -460,11 +460,12 @@ function dropMarker(i) {
     };
 }
 
-//This function creates a new bootstrap card-body element and adds the found results into the bootstrap card-body below the google maps in the results container and if a user click on the card body it will open up the pop up info window for that tradesperson or business and be active highlighted for 2 seconds and then go back to normal.
+//This function creates a new bootstrap card-body element and adds the found results into the bootstrap card-body below the google maps in the results container and if a user click on the card body it will open up the pop up info window for that tradesperson or business and be active highlighted for 2 seconds and then go back to normal as well as scrolling up to the map.
 function addResult(result, i) {
     let results = document.getElementById("results");
     let markerLetter = String.fromCharCode("A".charCodeAt(0) + (i % 26));
     let markerIcon = MARKER_PATH + markerLetter + ".png";
+    let scrollToMap = document.getElementById('resultClickAnchor');
 
     let cbody = document.createElement("div");
     cbody.className = "card-body hvr-sweep-to-bottom";
@@ -477,6 +478,7 @@ function addResult(result, i) {
         google.maps.event.trigger(markers[i], "click", "active-result");
         cbody.classList.add("active-result");
         setTimeout(removeActiveResult, 2000);
+        scrollToMap.scrollIntoView();
     };
 
     let iconSpan = document.createElement("span");
