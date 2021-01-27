@@ -40,9 +40,7 @@ $(document).ready(function () {
     //This is part of the floating scroll button, so when a user clicks the button it will take the user back to the top of the page.
     topButton.on('click', function (event) {
         event.preventDefault();
-        $('html, body').animate({
-            scrollTop: 0
-        }, '100');
+        $('html, body').scrollTop(0);
     });
 
     //This click function is to show the google results once the show results heading is clicked.
