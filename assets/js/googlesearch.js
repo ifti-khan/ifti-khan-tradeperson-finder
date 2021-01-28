@@ -468,7 +468,7 @@ function addResult(result, i) {
     let scrollToMap = document.getElementById('resultClickAnchor');
 
     let cbody = document.createElement("div");
-    cbody.className = "card-body hvr-sweep-to-bottom";
+    cbody.className = "card-body";
 
     function removeActiveResult() {
         cbody.classList.remove("active-result");

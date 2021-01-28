@@ -29,6 +29,12 @@
     margin: .5px;
 }
 
+/*This is for the individual google results hover effect*/
+.card-body:hover {
+    background-color: #595959;
+    color: #ffffff;
+}
+
 /*This is for the Google search result cards*/
 .active-result {
     color: #ffffff;
@@ -113,7 +119,7 @@
 
     .result-con {
         display: grid;
-        grid-template-columns: auto auto auto auto auto auto
+        grid-template-columns: auto auto auto auto auto auto;
     }
 }
 
@@ -127,17 +133,9 @@
     #country-list {
         width: 50%;
     }
-}
 
-/*This media query block styles two elements for a Tablet screen size*/
-@media (max-width: 768px) {
-
-    #city-town {
-        width: 50%;
-    }
-
-    #country-list {
-        width: 50%;
+    .result-con {
+        text-align: center
     }
 }
 

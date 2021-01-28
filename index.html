@@ -13,9 +13,9 @@
     <!--Hover.css v2.3.1 CDN-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" integrity="sha512-csw0Ma4oXCAgd/d4nTcpoEoz4nYvvnk21a8VA2h2dzhPAvjbUIK6V3si7/g/HehwdunqqW18RwCJKpD7rL67Xg==" crossorigin="anonymous" />
     <!--My CSS Files-->
+    <link rel="stylesheet" href="assets/css/google_search.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/media_queries.css" type="text/css" />
-    <link rel="stylesheet" href="assets/css/google_search.css" type="text/css" />
 
     <!--This is for the EmailJS API browser integration for my modal contact forms-->
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
@@ -67,8 +67,6 @@
             </ul>
         </div>
     </nav>
-
-    <a id="resultClickAnchor"></a>
 
     <!--This block of code below is for the main section of my html and i used the bootstrap grid sytem to create a fluid container, then a row and last the columns that i needed-->
     <main class="google-search">
@@ -137,6 +135,9 @@
                             <input type="radio" id="hardware_store" name="tradesperson" value="hardware_store">
                             <label for="hardware_store">Hardware Store</label><br>
                         </div>
+
+                        <!--Anchor link for when a user clicks on a result card-->
+                        <a id="resultClickAnchor"></a>
 
                     </div>
                 </div>
