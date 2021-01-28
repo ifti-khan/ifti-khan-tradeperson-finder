@@ -189,11 +189,6 @@
         font-size: 15px;
     }
 
-    /*This styles the reset button for the google maps search*/
-    #reset-btn-local {
-        margin-top: 25px;
-    }
-
     /*This block of code styles the dynamic divs and its content within the local search page*/
     .card-body {
         padding: 5px;
@@ -302,16 +297,6 @@
         font-size: 16px;
     }
 
-    /*This block of code styles the select a trade div within the local search page*/
-    .empty-space-local {
-        display: none;
-    }
-
-    .choose-trade-local {
-        border: none;
-        height: 100%;
-    }
-
     .choose-trade-local h3 {
         font-size: 24px
     }
@@ -322,6 +307,7 @@
 
     /*This styles the reset button for the locals search*/
     #reset-btn-local {
+        margin-top: 5px;
         margin-bottom: 10px;
     }
 
@@ -330,7 +316,7 @@
     .middle-options-local,
     .right-options-local {
         font-size: 15px;
-        border: none;
+
     }
 
     /*This block of code styles the dynamic divs and its content within the local search page*/
@@ -527,38 +513,8 @@
     }
 
     /*Bootstrap empty column in footer*/
-    .empty-space,
-    .empty-space-local {
+    .empty-space {
         display: none;
-    }
-
-    /*This styles the select a trade div in the locals page*/
-    .choose-trade-local {
-        height: 320px;
-        border: none;
-    }
-
-    /*This styles the left radio buttons in select a trade*/
-    .left-options-local {
-        text-align: center;
-        font-size: 15px;
-    }
-
-    /*This styles the middle radio buttons in select a trade*/
-    .middle-options-local {
-        font-size: 15px;
-        border: none;
-    }
-
-    /*This styles the middle radio buttons in select a trade*/
-    .right-options-local {
-        font-size: 15px;
-    }
-
-    /*This styles the two middle dynamic divs and removes there borders for smartphones*/
-    .plumber-1,
-    .plasterer-1 {
-        border: none;
     }
 
     /*Local Search*/
@@ -567,14 +523,8 @@
         font-size: 16px;
     }
 
-    /*This block of code styles the select a trade div within the local search page*/
-    .empty-space-local {
-        display: none;
-    }
-
     .choose-trade-local {
         border: none;
-        height: 100%;
     }
 
     .choose-trade-local h3 {
@@ -583,11 +533,6 @@
 
     .choose-trade-local label {
         margin-bottom: 10px
-    }
-
-    /*This styles the reset button for the locals search*/
-    #reset-btn-local {
-        margin-bottom: 10px;
     }
 
     /*This styles the left radio buttons in select a trade*/
@@ -736,10 +681,6 @@
 
     /*Local Search*/
     /*This block of code styles the select a trade div within the local search page*/
-    .choose-trade-local {
-        border: none;
-    }
-
     .choose-trade-local h3 {
         font-size: 18px
     }
