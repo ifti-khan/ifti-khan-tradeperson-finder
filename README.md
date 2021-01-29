@@ -221,6 +221,13 @@ I have decided to further test my project by listing all features and functions 
 Throughout the whole project i developed my porject on my Dell Inspiron 15inch Laptop and my Acer 24inch Monitor. I also used used Chrome Dev tools whilst programming my project and used the responsive tool to simulate different device sizes. I also did some physical testing on a few devices such as my Samsung Galaxy S20+, Samsung Galaxy Tab 6.
 
 # Known Issues
+### Google Maps API Freezes
+
+### Duel Javascript File Issue
+
+### Modal Code Duplication
+
+### Accessing Modal From Multiple Pages
 
 # Deployment
 
