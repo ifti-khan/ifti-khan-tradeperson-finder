@@ -2,6 +2,7 @@
 function resetLocalSearch() {
     $('input[type=checkbox]').prop('checked', false);
     $('.card').fadeOut('fast');
+    $('.info-card').slideUp();
 }
 
 //Here i have create a loop to dynamicaly create me business bootstrap cards for the local search page, at the moment it has been set to create 6 dynamic bootstrap cards.
