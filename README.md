@@ -222,12 +222,13 @@ Throughout the whole project i developed my porject on my Dell Inspiron 15inch L
 
 # Known Issues
 ### Google Maps API Freezes
+This is an issue that i found early on in the development of my project, I was testing the Google Places API once i had implemented it. I found out that when i pushed the search parameters and made quick changes and fast searches the API froze and did not update and the only way to get it working again was to refresh the page. To solve this issue i added a delayed page refresh when the user clicks the reset button to clear the search parameters.
 
-### Duel Javascript File Issue
-
-### Modal Code Duplication
+### Dual Javascript File Issue
+This was another interesting Issue that i had encountered, originally for my project i wanted all of my HTML on a single page in seperate sections and then have my javascript hide and show each section. After achieving what i set out to do, I then encountered a script conflict specifically with my trade radio button. After trying to find a solution i then decided to seperate my HTML code by creating two HTML documents. One document for my Google search and another for my Local search. After i had done this i then seperated my javascript files and this solved the issue i was having.
 
 ### Accessing Modal From Multiple Pages
+When i first created my contact modal, the only way i could access it was on the page the HTML code was written in and that was the homepage. After creating another page for my local search i then could not access it anymore. A temporary fix was to duplicate the code and have the same code in the HTML of the local search page. After doing some research i then found a solution in the bootstrap documentation, i needed to use javascript to help reduce the code by storing the body of the contact modal in a script. But still needed to have the contact modal HTML code present of both pages but not all of it.
 
 # Deployment
 
