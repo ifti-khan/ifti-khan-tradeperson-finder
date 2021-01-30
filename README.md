@@ -23,7 +23,7 @@ The projects has a dual purpose, the first purpose is that it will help users fi
 When I say unregistered I mean a business or person who is not registered to Google Places, not in the sense that the business or person is not certified in that trade. So this project will help those who are not registered with Google Places to help them advertise their service and find work, not only through a friend or the spoken word but online using the Google Maps API.   
 
 ## The what?
-The project will help users of the platform to find a tradesperson where ever they are in thr world. It will also be a platform for businesses around the world, in cities, towns or even a small villages to advertise their services to users in the same area or around them.
+The project will help users of the platform to find a tradesperson where ever they are in the world. It will also be a platform for businesses around the world, in cities, towns or even a small villages to advertise their services to users in the same area or around them.
 
 ## The how?
 I will be using a variety of different technologies to create this project, the first and most important is utilising Googles API which are Google Places and Google Maps. To help the user search for a tradesperson a search form will be created that will allow users to select a country. Then a town or city they are in and then filtering the search further to a specific tradesperson not all at once. Once the search parameters have been inputted to then display the results to the user using Google maps with markers and also displaying the business or tradespersons info below for them to see.  
@@ -45,7 +45,7 @@ My users for this project are people who are in need of a tradesperson who requi
 * As a user, I want to be able to see my search results displayed on Google maps via markers, so that I can see how many tradespeople and businesses are in my town/city. 
 
 
-* As a user, I want to be able drag the map around after i have inputted my search parameters, so that i can find even more tradespeople or businesses in my town/city.
+* As a user, I want to be able drag the map around after I have inputted my search parameters, so that i can find even more tradespeople or businesses in my town/city.
 
 
 * As a user, I want to able to see additional search result, so that I can see the business or tradesperson information like a contact number, address or an email address.
@@ -138,7 +138,7 @@ Here is a list of programming languages that i used to create this project along
     - CSS3 was used to give my project and its content style, layout, colours, a different font and format.
 
 * JavaScript -> [Visit Site](https://en.wikipedia.org/wiki/JavaScript)
-    - JavaScript was used to give my project an iteractive look and feel and to be used to interact with APIs.
+    - JavaScript was used to give my project an interactive look and feel and to be used to interact with APIs.
 
 ### Frameworks, Libraries & Tools Used
 
@@ -191,7 +191,7 @@ Here is a list of programming languages that i used to create this project along
     * This online tool helped me to create the markdown tables for testing section of my readme file.
 
 # Validation
-In this section I have used a few different validation techniques to thoroughly make sure my project is fully compliant and accessible. I have used the W3C HTML5 and CSS3 online validation tools as well as a online contrast checker for the colours that i used in my project.
+In this section I have used a few different validation techniques to thoroughly make sure my project is fully compliant and accessible. I have used the W3C HTML5 and CSS3 online validation tools as well as an online contrast checker for the colours that I used in my project.
 
 If there is any non-compliant code or warnings within the project I will document it and then fix it and this will be the first step of my testing and debugging.
 
@@ -204,12 +204,12 @@ WebAIM Contrast Checker -> [Visit Site]( https://webaim.org/resources/contrastch
 ### Validation Document -> [Visit Document](writeup_files/validation/validation_document.md)
 
 # Testing
-When it comes to testing and debugging I found it easier and good practise to test as I went along with my project and this can be seen in my git commit messages to my repository every time I pushed my completed files. The tool that i used through out my project to help me with my test and debug was Google Chrome Dev Tools.
+When it comes to testing and debugging I found it easier and good practise to test as I went along with my project and this can be seen in my git commit messages to my repository every time I pushed my completed files. The tool that I used throughout my project to help me with my test and debug was Google Chrome Dev Tools.
 
 In this section I will test my project against my user stories and further text by doing some manual testing. These test will be done using a variety of different browsers and a variety of different screen sizes as well to ensure my projects compatibly and responsiveness.
 
 # UX - User Story Testing
-Here in this section i will provide a user story scenario with screenshot examples with steps if necessary to test my project against my user story.
+Here in this section I will provide a user story scenario with screenshot examples with steps if necessary to test my project against my user story.
 
 ### UX User Story Testing Document -> [Visit Document](writeup_files/testing/user_story_document.md)
 
@@ -218,19 +218,36 @@ I have decided to further test my project by listing all features and functions 
 
 ### Further Testing Document -> [Visit Document](writeup_files/testing/further_testing_document.md)
 
-Throughout the whole project i developed my porject on my Dell Inspiron 15inch Laptop and my Acer 24inch Monitor. I also used used Chrome Dev tools whilst programming my project and used the responsive tool to simulate different device sizes. I also did some physical testing on a few devices such as my Samsung Galaxy S20+, Samsung Galaxy Tab 6.
+Throughout the whole project I developed my project on my Dell Inspiron 15inch Laptop and my Acer 24inch Monitor. I also used Chrome Dev tools whilst programming my project and used the responsive tool to simulate different device sizes. I also did some physical testing on a few devices such as my Samsung Galaxy S20+, Samsung Galaxy Tab 6.
 
 # Known Issues
 ### Google Maps API Freezes
-This is an issue that i found early on in the development of my project, I was testing the Google Places API once i had implemented it. I found out that when i pushed the search parameters and made quick changes and fast searches the API froze and did not update and the only way to get it working again was to refresh the page. To solve this issue i added a delayed page refresh when the user clicks the reset button to clear the search parameters.
+This is an issue that I found early on in the development of my project, I was testing the Google Places API once I had implemented it. I found out that when I pushed the search parameters and made quick changes and fast searches the API froze and did not update and the only way to get it working again was to refresh the page. To solve this issue I added a delayed page refresh when the user clicks the reset button to clear the search parameters.
 
-### Dual Javascript File Issue
-This was another interesting Issue that i had encountered, originally for my project i wanted all of my HTML on a single page in seperate sections and then have my javascript hide and show each section. After achieving what i set out to do, I then encountered a script conflict specifically with my trade radio button. After trying to find a solution i then decided to seperate my HTML code by creating two HTML documents. One document for my Google search and another for my Local search. After i had done this i then seperated my javascript files and this solved the issue i was having.
+### Dual JavaScript File Issue
+This was another interesting Issue that I had encountered, originally for my project I wanted all of my HTML on a single page in separate sections and then have my JavaScript hide and show each section. After achieving what I set out to do, I then encountered a script conflict specifically with my trade radio button. After trying to find a solution I then decided to separate my HTML code by creating two HTML documents. One document for my Google search and another for my Local search. After i had done this I then separated my JavaScript files and this solved the issue i was having.
 
 ### Accessing Modal From Multiple Pages
-When i first created my contact modal, the only way i could access it was on the page the HTML code was written in and that was the homepage. After creating another page for my local search i then could not access it anymore. A temporary fix was to duplicate the code and have the same code in the HTML of the local search page. After doing some research i then found a solution in the bootstrap documentation, i needed to use javascript to help reduce the code by storing the body of the contact modal in a script. But still needed to have the contact modal HTML code present of both pages but not all of it.
+When I first created my contact modal, the only way I could access it was on the page the HTML code was written in and that was the homepage. After creating another page for my local search I then could not access it anymore. A temporary fix was to duplicate the code and have the same code in the HTML of the local search page. After doing some research I then found a solution in the bootstrap documentation, I needed to use JavaScript to help reduce the code by storing the body of the contact modal in a script. But still needed to have the contact modal HTML code present of both pages but not all of it.
 
 # Deployment
+## GitHub Pages
+The first thing I did was I logged into my GitHub and created my milestone two repository. I used GitHub because of the wide variety of features it has like the version control, storage and deployment of my project. Throughout the whole project every time I made progress, made a change or fixed a bug, I committed to my milestone two repository with a commit message.
+
+I deployed my project using GitHub and this was done by going to my milestone two repository settings. Once I was in the settings, I went to the GitHub pages section which allowed me to deploy my project live. Once i deployed my project, it was then provided with a live URL to my fully published website.
+
+![Screenshot Of GitHub Pages Deployment](writeup_files/screenshots/deployment.jpg)
+
+## Local Clone
+Whilst i was developing my project, I ran my code locally by cloning my GitHub repo to my laptop hard drive. I did this by downloading the GitHub desktop application, once it was installed I was able to clone my online repo to my local hard drive.
+
+I then used a text editor called Brackets to run my code locally and develop my project. With this text editor i was able to download an extension which allowed me to connect my text editor to my GitHub repo. With this I was allowed to commit, push and get file to and from my GitHub repo. The text editor also allowed me to download several plugins such as Emmet, Beautify and Markdown Previewer to help me develop my project.
+
+The main reason I chose brackets over Gitpod is the overall interface and the wide variety of features it had to offer. The Live Preview feature that bracket has allowed me to view and edit my project live in Google Chrome without refreshing the page every time.
+
+Another feature is the vertical split panel which allowed me to have two separate files open side by side to view and edit. Another feature is the file tree which allowed me create, rename and delete files easily. This also made it easier for me to switch between different directories within the repo and switch between other repos I have in my GitHub.
+
+![Screenshot Of GitHub Pages Deployment](writeup_files/screenshots/brackets.jpg)
 
 # Credits
 
