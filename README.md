@@ -250,11 +250,19 @@ Another feature is the vertical split panel which allowed me to have two separat
 ![Screenshot Of GitHub Pages Deployment](writeup_files/screenshots/brackets.jpg)
 
 # Credits
-
 ## Content
-
-## Code
+Here in this section I have listed the various different types of content and code I used in my project. The majority of code and content has come from the Google Developers Map Samples. The biggest help and guidance has come from the Code Institutes lessons, challenges and video tutorials.
 
 ## Media
+* Fontawesome Icons – All of the icons used in the project are from Font Awesome CDN which I declared in the head of every HTML webpage. (https://use.fontawesome.com/releases/v5.14.0/css/all.css)
+
+* Hover Transition – The hover transition was used from another CDN and again was declared in the head in all HTML webpages. (https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css)
+
+* Google Maps - The Google map located in the homepage is linked to my Google developer platform account by using an API key that i generated when i created the account and has been declared in the script tags at the bottom of body. (https://maps.googleapis.com/maps/api/js?key=AIzaSyBY5zt-488Aq3MH-93TXudTj4sCSoa5N6o&callback=initMap&libraries=places,geometry&v=weekly" async)
+
+## Code
+Here I have listed all of the external URLs that helped me during the development of the project.
+
+### External URL Document -> [Visit Document](writeup_files/testing/ext_url_document.md)
 
 ## Acknowledgements
