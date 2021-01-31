@@ -1,8 +1,9 @@
-//This function below resets the checkboxes for the selec a trade and fades out the business cards.
+//This function below resets the checkboxes for the selec a trade and fades out the business cards, slides up the business info and delays reloading the page.
 function resetLocalSearch() {
     $('input[type=checkbox]').prop('checked', false);
     $('.card').fadeOut('fast');
     $('.info-card').slideUp();
+    setTimeout(location.reload.bind(location), 1000);
 }
 
 //Here i have create a loop to dynamicaly create me business bootstrap cards for the local search page, at the moment it has been set to create 6 dynamic bootstrap cards.
@@ -144,15 +145,15 @@ function business(name, location, trade, address, number, email, social) {
 //Here i have created six dummy business object for my local search, each business represents a trade for the search checkboxes.
 let electrician1 = new business("Ifti Electric", "St Albans", "Electrician", "123 Unkown Street", "0123456789", "ifti-electrician@elec.com", "www.facebook.com");
 
-let plumber1 = new business("Ifti Plumber", "St Albans", "Plumber", "123 Unkown Street", "0123456789", "ifti-plumber@plumb.com", "www.facebook.com");
+let plumber1 = new business("Ifti Plumber", "St Albans", "Plumber", "", "0123456789", "ifti-plumber@plumb.com", "www.facebook.com");
 
-let carpenter1 = new business("Ifti Carpenter", "St Albans", "Carpenter", "123 Unkown Street", "0123456789", "ifti-carpenter@carp.com", "www.facebook.com");
+let carpenter1 = new business("Ifti Carpenter", "St Albans", "Carpenter", "123 Unkown Street", "0123456789", "", "www.facebook.com");
 
-let mechanic1 = new business("Ifti Mechanic", "St Albans", "Mechanic", "123 Unkown Street", "0123456789", "ifti-mechanic@mech.com", "www.facebook.com");
+let mechanic1 = new business("Ifti Mechanic", "St Albans", "Mechanic", "", "0123456789", "ifti-mechanic@mech.com", "www.facebook.com");
 
-let plasterer1 = new business("Ifti Plasterer", "St Albans", "Plasterer", "123 Unkown Street", "0123456789", "ifti-plasterer@plast.com", "www.facebook.com");
+let plasterer1 = new business("Ifti Plasterer", "St Albans", "Plasterer", "123 Unkown Street", "", "ifti-plasterer@plast.com", "www.facebook.com");
 
-let decorator1 = new business("Ifti Decorator", "St Albans", "Decorator", "123 Unkown Street", "0123456789", "ifti-decorator@deco.com", "www.facebook.com");
+let decorator1 = new business("Ifti Decorator", "St Albans", "Decorator", "123 Unkown Street", "0123456789", "ifti-decorator@deco.com", "");
 
 //Here i getting the dynamic right column cells using the unique ids from the table and then inserting the business object information into them along with the icon variables and setting a data-trade attribute according to the trade in the business object and this is linked to the checkbox search below and this is done for all six dummy businesses.
 
