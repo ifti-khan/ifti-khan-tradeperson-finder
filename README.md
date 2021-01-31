@@ -266,3 +266,8 @@ Here I have listed all of the external URLs that helped me during the developmen
 ### External URL Document -> [Visit Document](writeup_files/testing/ext_url_document.md)
 
 ## Acknowledgements
+I want to acknowledge my student mentor Adegbenga Adeye for his helpful advice and guidance throughout the whole project. I would also like to thank the Code Institute for the course lessons, challenges and video tutorials they supplied. Lastly I would like to thank Stack Overflow, W3C School, Bootstrap, jQuery, the slack community and the other URL links that help my develop my project.
+
+My inspiration came from The Code Institute Holiday Planner project located in the student project section of their website. When I first stumbled upon the project, I really like the whole concept and idea, so I decided to do some further research of my own to see if it was possible to do it for other businesses. Whilst I was doing my research I did find away on the Google Developer Platform documentation that the Google Place API can be used for other business types.
+
+The reason I chose to base my project on tradespeople is that DIY is one of my hobbies, but at the time I was looking for a plumber to do some work around my house. The Overall development of this project was a challenge throughout but who doesn't like a challenge. I learnt a lot from developing this project and just how powerful and useful JavaScript can be.
