@@ -43,7 +43,7 @@
 ![User Story Google Maps Additional Search Step 1](/writeup_files/testing/ux-gmap-additional-result-step1.jpg)
 
 ### Step Two
-![User Story Google Maps Additional Search Step 1](/writeup_files/testing/ux-gmap-additional-result-step2.jpg)
+![User Story Google Maps Additional Search Step 2](/writeup_files/testing/ux-gmap-additional-result-step2.jpg)
 
 ## Visual Markers
 * As a user, I want to see visual markers to help with navigation and selection, so as I navigate through the website I know where I am and what I am clicking on.
@@ -66,17 +66,23 @@
 ### Local Search Page
 ![User Story Local Search Page Step 1](/writeup_files/testing/ux-local-search-step1.jpg)
 
-## Contact Modal Duel Forms
+## Contact Modal Dual Forms
 * As a user, I want to be able to get in contact with the developer, so that I can ask a general question and add myself or business to this tradesperson platform.
 
 ### Contact Modal - General Question Form Step 1
 ![User Story General Question Form Step 1](/writeup_files/testing/ux-modal-genform-step1.jpg)
 
 ### Contact Modal - General Question Form Step 2
-![User Story General Question Form Step 1](/writeup_files/testing/ux-modal-genform-step2.jpg)
+![User Story General Question Form Step 2](/writeup_files/testing/ux-modal-genform-step2.jpg)
+
+### Contact Modal - General Question Form Step 3
+![User Story General Question Form Step 3](/writeup_files/testing/ux-modal-genform-step3.jpg)
 
 ### Contact Modal - Add A Business Form Step 1
 ![User Story Add A Business Form Step 1](/writeup_files/testing/ux-modal-addform-step1.jpg)
 
 ### Contact Modal - Add A Business Form Step 2
-![User Story Add A Business Form Step 1](/writeup_files/testing/ux-modal-addform-step2.jpg)
+![User Story Add A Business Form Step 2](/writeup_files/testing/ux-modal-addform-step2.jpg)
+
+### Contact Modal - Add A Business Form Step 3
+![User Story Add A Business Form Step 3](/writeup_files/testing/ux-modal-addform-step3.jpg)
