@@ -1,6 +1,6 @@
 # Ifti Khan Milestone Project 2 - Interactive Frontend Development
 
-[Click Here To Visit My Deployed Project Site](#)
+[Click Here To Visit My Deployed Project Site](https://ifti-khan.github.io/ifti-khan-milestone-project-2/)
 
 ![Image of Project](writeup_files/screenshots/main-site-img.jpg)
 
