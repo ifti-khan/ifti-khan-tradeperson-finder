@@ -263,7 +263,7 @@ Here in this section I have listed the various different types of content and co
 ## Code
 Here I have listed all of the external URLs that helped me during the development of the project.
 
-### External URL Document -> [Visit Document](writeup_files/testing/ext_url_document.md)
+### External URL Document -> [Visit Document](writeup_files/documents/ext_url_document.md)
 
 ## Acknowledgements
 I want to acknowledge my student mentor Adegbenga Adeye for his helpful advice and guidance throughout the whole project. I would also like to thank the Code Institute for the course lessons, challenges and video tutorials they supplied. Lastly I would like to thank Stack Overflow, W3C School, Bootstrap, jQuery, the slack community and the other URL links that help my develop my project.
