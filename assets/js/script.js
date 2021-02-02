@@ -5,14 +5,13 @@ function darkTheme() {
 
     let darkButton = document.getElementById("dark-btn");
     darkButton.classList.toggle("active-nav");
-    darkButton.classList.toggle("hvr-sweep-to-bottom");
 
-    if (darkButton.innerHTML === "Dark Mode<br> On") {
-        darkButton.innerHTML = "Dark Mode<br> Off";
-    } else if (darkButton.innerHTML === "Dark Mode<br> Off") {
+    if (darkButton.innerHTML === "Dark Mode<br> Off") {
         darkButton.innerHTML = "Dark Mode<br> On";
-    } else {
+    } else if (darkButton.innerHTML === "Dark Mode<br> On") {
         darkButton.innerHTML = "Dark Mode<br> Off";
+    } else {
+        darkButton.innerHTML = "Dark Mode<br> On";
     }
 }
 

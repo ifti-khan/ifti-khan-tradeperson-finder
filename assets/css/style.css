@@ -102,6 +102,12 @@ button:focus {
     line-height: normal;
 }
 
+/*This styles the dark mode button hover in navigation bar*/
+#dark-btn:hover {
+    background: #595959;
+    color: #ffffff;
+}
+
 /*This if for the collapsable nav icon border*/
 .navbar-light .navbar-toggler {
     border-color: #f0f0f0;
