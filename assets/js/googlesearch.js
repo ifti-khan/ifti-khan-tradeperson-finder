@@ -108,11 +108,17 @@ function initMap() {
 
 //When a user types and selects a city or town, they then have to selct a tradesperson using the radio buttons, once all search steps are done. It will then get the details of the tradesperson in the city or town the user has chosen and zoom the map in on the city or town.
 function getTradeDetails() {
+    let defaultIcon = document.getElementById("defaultIcon");
+
+    if (defaultIcon === null) {
+        window.location.reload();
+        return;
+    }
+
     if ($("#electrician").is(':checked')) {
         let place = autocomplete.getPlace();
 
         //This switches to the bolt icon from the default set icon if the electrician radio button is selected.
-        let defaultIcon = document.getElementById("defaultIcon");
         defaultIcon.className = "fas fa-bolt";
 
         if (place.geometry) {
@@ -126,7 +132,7 @@ function getTradeDetails() {
         let place = autocomplete.getPlace();
 
         //This switches to the wrench icon from the default set icon if the plumber radio button is selected.
-        let defaultIcon = document.getElementById("defaultIcon");
+
         defaultIcon.className = "fas fa-wrench";
 
         if (place.geometry) {
@@ -140,7 +146,6 @@ function getTradeDetails() {
         let place = autocomplete.getPlace();
 
         //This switches to the paint roller icon from the default set icon if the painter radio button is selected.
-        let defaultIcon = document.getElementById("defaultIcon");
         defaultIcon.className = "fas fa-paint-roller";
 
         if (place.geometry) {
@@ -153,8 +158,7 @@ function getTradeDetails() {
     } else if ($("#car_repair").is(':checked')) {
         let place = autocomplete.getPlace();
 
-        //This switches to the car battery icon from the default set icon if the mechanic radio button is selected.
-        let defaultIcon = document.getElementById("defaultIcon");
+        //This switches to the car battery icon from the default set icon if the mechanic radio button is selected
         defaultIcon.className = "fas fa-car-battery";
 
         if (place.geometry) {
@@ -167,8 +171,7 @@ function getTradeDetails() {
     } else if ($("#locksmith").is(':checked')) {
         let place = autocomplete.getPlace();
 
-        //This switches to the key icon from the default set icon if the locksmith radio button is selected.
-        let defaultIcon = document.getElementById("defaultIcon");
+        //This switches to the key icon from the default set icon if the locksmith radio button is selected
         defaultIcon.className = "fas fa-key";
 
         if (place.geometry) {
@@ -182,7 +185,6 @@ function getTradeDetails() {
         let place = autocomplete.getPlace();
 
         //This switches to the shopping cart icon from the default set icon if the hardware store radio button is selected.
-        let defaultIcon = document.getElementById("defaultIcon");
         defaultIcon.className = "fas fa-shopping-cart";
 
         if (place.geometry) {
