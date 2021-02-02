@@ -220,11 +220,11 @@ I have decided to further test my project by listing all features and functions 
 
 Throughout the whole project I developed my project on my Dell Inspiron 15inch Laptop and my Acer 24inch Monitor. I also used Chrome Dev tools whilst programming my project and used the responsive tool to simulate different device sizes. I also did some physical testing on a few devices such as my Samsung Galaxy S20+, Samsung Galaxy Tab 6.
 
-# Known Issues
+# Known Issues And Solutions
 ### Google Maps API Freezes
-This is an issue that I found early on in the development of my project, I was testing the Google Places API once I had implemented it. I found out that when I pushed the search parameters and made quick changes and fast searches the API froze and did not update because it could not find the info window icons and the only way to get it working again was to refresh the page.
+This is an issue that I found early on in the development of my project, I found out that when I pushed the search parameters and made quick changes and fast searches the API froze and did not update because it could not find the info window icons and could not set them accordingly and the only way to get it working again was to refresh the whole page. To solve this issue I added a page refresh delay of a second so when the user clicks the reset button it clears the search parameters and then does a page refresh.
 
-To solve this issue I added a delayed page refresh when the user clicks the reset button to clear the search parameters and then do a page refresh. I also added an if null statement to the google search js file to also refresh the page if the icons cannot be found.
+After speaking to my mentor, he then also suggested an if null statement to be added to the google search JS file to also refresh the page if the icons could not be set them accordingly. After implementing the if null statement, I then added an alert window to inform the users that too many search request where made and for them to click ok button to refresh the whole page, this solved the issue.
 
 ### Dual JavaScript File Issue
 This was another interesting Issue that I had encountered, originally for my project I wanted all of my HTML on a single page in separate sections and then have my JavaScript hide and show each section. After achieving what I set out to do, I then encountered a script conflict specifically with my trade radio button. After trying to find a solution I then decided to separate my HTML code by creating two HTML documents. One document for my Google search and another for my Local search. After i had done this I then separated my JavaScript files and this solved the issue i was having.

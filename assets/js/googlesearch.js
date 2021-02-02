@@ -110,7 +110,9 @@ function initMap() {
 function getTradeDetails() {
     let defaultIcon = document.getElementById("defaultIcon");
 
+    //This if statement checks to see if the default icon is null, it will then display an alert message to the user that they have made too many search request and for them to press ok so the page can refresh.
     if (defaultIcon === null) {
+        alert("Too many search request, press OK to refresh the page");
         window.location.reload();
         return;
     }
@@ -132,7 +134,6 @@ function getTradeDetails() {
         let place = autocomplete.getPlace();
 
         //This switches to the wrench icon from the default set icon if the plumber radio button is selected.
-
         defaultIcon.className = "fas fa-wrench";
 
         if (place.geometry) {
