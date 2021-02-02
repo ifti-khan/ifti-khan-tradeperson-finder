@@ -43,16 +43,16 @@ document.getElementById('gen-form')
                 btn1.textContent = 'Sent';
                 console.log("Message Has Been Sent", response.status, response.text);
                 alert('Your message has been sent!');
-                setTimeout(changeSendBtn1Text, 5000);
-                setTimeout(resetFormGen, 5000);
+                resetFormGen();
+                setTimeout(changeSendBtn1Text, 3000);
 
                 //Here is the error object and if there is an error it will display that in the console of the browser informing of the error. As well as changing the button text to error and opening an alert window to the user infroming them that there was an error. The timing event uses the function above and changes the text back to send and resets the form.
             }, (error) => {
                 btn1.textContent = 'Error';
                 console.log("Message Failed To Send", error);
                 alert(`Oops something went wrong!`);
-                setTimeout(changeSendBtn1Text, 5000)
-                setTimeout(resetFormGen, 5000);
+                resetFormGen();
+                setTimeout(changeSendBtn1Text, 3000)
 
             });
     });
@@ -96,15 +96,15 @@ document.getElementById('add-form')
                 btn2.textContent = 'Sent';
                 console.log("Message Has Been Sent", response.status, response.text);
                 alert('Your message has been sent!');
-                setTimeout(changeSendBtn2Text, 5000);
-                setTimeout(resetFormAdd, 5000);
+                resetFormAdd();
+                setTimeout(changeSendBtn2Text, 3000);
 
             }, (error) => {
                 btn2.textContent = 'Error';
                 console.log("Message Failed To Send", error);
                 alert(`Oops something went wrong!`);
-                setTimeout(changeSendBtn2Text, 5000);
-                setTimeout(resetFormAdd, 5000);
+                resetFormAdd();
+                setTimeout(changeSendBtn2Text, 3000);
 
             });
     });
