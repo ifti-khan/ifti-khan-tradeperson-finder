@@ -1,8 +1,8 @@
 # Ifti Khan Milestone Project 2 - Interactive Frontend Development
 
-[Click Here To Visit My Deployed Project Site](https://ifti-khan.github.io/ifti-khan-milestone-project-2/)
+[Click Here To Visit Site](https://ifti-khan.github.io/ifti-khan-tradeperson-finder/)
 
-![Image of Project](writeup_files/screenshots/main-site-img.jpg)
+![Image of Project](assets/images/tradesperson-multi-device-img.png)
 
 ## Google Powered API Tradesperson Platform
 
