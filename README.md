@@ -1,6 +1,8 @@
 # Ifti Khan Milestone Project 2 - Interactive Frontend Development
 
-[Click Here To Visit Site](https://ifti-khan.github.io/ifti-khan-tradeperson-finder/)
+[Click Here To Visit Site](https://ifti-khan.github.io/tradeperson-finder/)
+
+## Hey, I Know Someone
 
 ![Image of Project](assets/images/tradesperson-multi-device-img.png)
 
